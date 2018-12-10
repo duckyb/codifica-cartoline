@@ -1,0 +1,299 @@
+<?xml version="1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang=""/>
+        <author xml:id=""/>
+        <respStmt>
+          <resp/>
+          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" xpointer="" href="">
+            <xi:fallback/>
+          </xi:include>
+          <name xml:id="" full="" instant=""/>
+          <name xml:id="" full="" instant=""/>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <!-- ??Note: modificare quando daremo esame -->
+          <date when="" instant=""/>
+        </edition>
+        <respStmt>
+          <resp/>
+          <name ref="" full="" instant=""/>
+          <name ref="" full="" instant=""/>
+          <!-- <name ref="#GC">G.Cerretini</name> -->
+        </respStmt>
+      </editionStmt>
+      <publicationStmt>
+        <publisher/>
+        <pubPlace/>
+        <availability default="">
+          <licence target=""/>
+        </availability>
+      </publicationStmt>
+      <sourceDesc default="">
+        <bibl type="" default="" status="">
+          <author>
+            <!-- autore (mittente) della cartolina -->
+            <persName ref="" instant="" full="">
+              <forename full=""/>
+              <surname full=""/>
+            </persName>
+          </author>
+          <!-- editore della cartolina -->
+          <date xml:id="" when="" instant=""/>
+          <publisher/>
+          <pubPlace/>
+        </bibl>
+        <msDesc status="">
+          <msIdentifier>
+            <country/>
+            <settlement xml:id=""/>
+            <idno type=""/>
+          </msIdentifier>
+          <msContents>
+            <msItem>
+              <textLang xml:id="" mainLang=""/>
+            </msItem>
+          </msContents>
+          <physDesc>
+            <objectDesc>
+              <supportDesc>
+                <support>
+                  <material/>
+                  <!-- descrizione fisica dei timbri -->
+                  <stamp type=""/>
+                  <!-- descrizione fisica del francobollo -->
+                  <stamp type=""/>
+                  <!-- descrizione fisica della cartolina -->
+                  <p part=""/>
+                </support>
+                <!-- grandezza appossimativa del documento elettronico -->
+                <extent>
+                  <measure type="" unit="" quantity=""/>
+                  <dimensions unit="">
+                    <height/>
+                    <width/>
+                  </dimensions>
+                </extent>
+                <!-- descrizione delle condizioni fisiche di conservazione della cartolina -->
+                <condition>
+                  <p part=""/>
+                </condition>
+              </supportDesc>
+            </objectDesc>
+            <!-- descrizione del tipo di scrittura usato nella cartolina -->
+            <handDesc>
+              <p part=""/>
+            </handDesc>
+          </physDesc>
+          <!-- ??Note: Completare o rimuovere <additional /> -->
+          <!-- <additional>
+						<adminInfo>
+							<note></note>
+						</adminInfo>
+					</additional> -->
+        </msDesc>
+      </sourceDesc>
+      <!-- ??Note: Da revisionare -->
+      <!-- <xenoData></xenoData> -->
+    </fileDesc>
+    <profileDesc>
+      <correspDesc default="">
+        <correspAction type="">
+          <persName ref="" role="" instant="" full=""/>
+          <placeName ref="" instant="" full=""/>
+          <date when="" instant=""/>
+        </correspAction>
+        <correspAction type="">
+          <persName xml:id="" role="" instant="" full=""/>
+          <placeName xml:id="" instant="" full=""/>
+          <date when="" instant=""/>
+        </correspAction>
+      </correspDesc>
+      <langUsage default="">
+        <!--language ref="lang_ITA">Italiano</language-->
+        <language ident=""/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <p part=""/>
+    </encodingDesc>
+    <revisionDesc status="">
+      <change when="" resp="" status=""/>
+      <change when="" resp="" status=""/>
+    </revisionDesc>
+  </teiHeader>
+  <!-- ...................................... T E X T ...................................... -->
+  <facsimile>
+    <!-- zonazione retro della cartolina -->
+    <surface>
+      <!--graphic xml:id="retro_postcard" start="#retro-postcard" url="'retro.jpg'" width="'1628px'" height="'1053px'" /-->
+      <graphic xml:id="" url="" width="" height=""/>
+      <!-- prima pagina, lato sx -->
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <!-- Eliocromia fumagalli -->
+      <zone xml:id="" start="" ulx="" uly="" lrx="" lry="" rotate=""/>
+      <!-- seconda pagina - testo -->
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <zone xml:id="" start="" points="" rotate=""/>
+      <!-- 11 -->
+      <zone xml:id="" start="" ulx="" uly="" lrx="" lry="" rotate=""/>
+      <!-- 1006 -->
+      <zone xml:id="" start="" ulx="" uly="" lrx="" lry="" rotate=""/>
+      <!-- timbro SX -->
+      <zone xml:id="" start="" points="" rotate=""/>
+      <!-- timbro DX e francobollo-->
+      <zone xml:id="" start="" points="" rotate=""/>
+    </surface>
+    <!-- immagine | fronte della cartolina -->
+    <surface>
+      <graphic xml:id="" url="" width="" height=""/>
+      <!-- firma dell'autore dell'immagine -->
+      <zone xml:id="" start="" ulx="" uly="" lrx="" lry="" rotate=""/>
+    </surface>
+  </facsimile>
+  <text xml:lang="">
+    <!-- timbri e francobolli -->
+    <front/>
+    <body>
+      <!-- ............ FRONTE | IMG | RECTO ............ -->
+      <div type="" part="" org="" sample="">
+        <figure>
+          <!-- Descrizione dell'immagine in linguaggio naturale -->
+          <figDesc/>
+        </figure>
+      </div>
+      <!-- ............ RETRO | TEXT | VERSO ............ -->
+      <div type="" xml:id="" facs="" part="" org="" sample="">
+        <div type="" part="" org="" sample="">
+          <!--luogo e data di scrittura della cartolina-->
+          <opener xml:id="" facs="">
+            <dateline rend="">
+              <placeName ref="" instant="" full=""/>
+              <date when="" instant=""/>
+            </dateline>
+            <salute>
+              <s part="">
+                <lb xml:id="" facs=""/>
+                <lb xml:id="" facs=""/>
+              </s>
+              <s part="">
+                <lb xml:id="" facs=""/>
+                <lb xml:id="" facs=""/>
+              </s>
+            </salute>
+          </opener>
+          <!--saluto iniziale-->
+          <!--contenuto del messaggio-->
+          <p part="">
+            <s xml:id="" facs="" part=""/>
+            <s xml:id="" facs="" part="">
+              <country/>
+            </s>
+          </p>
+          <!--saluto finale e firma-->
+          <p xml:id="" facs="" part="">
+            <!-- Testo ruotato 90° -->
+            <s type="" style="" part="">
+              <unclear reason="" agent="" cert="" instant=""/>
+            </s>
+            <s type="" style="" part="">
+              <orgName key="" type="" instant="" full="">
+                <persName instant="" full="">
+                  <surname full=""/>
+                </persName>
+                <placeName key="" instant="" full=""/>
+              </orgName>
+            </s>
+          </p>
+          <closer rend="">
+            <!-- Firma del mittente -->
+            <lb xml:id="" facs=""/>
+            <signed xml:id="" facs="">
+              <persName ref="" instant="" full="">
+                <forename full=""/>
+                <surname full=""/>
+              </persName>
+            </signed>
+          </closer>
+        </div>
+        <div type="" part="" org="" sample="">
+          <div n="" part="" org="" sample="">
+            <ab part="">
+              <!-- Timbro SX -->
+              <stamp type="" style="">
+                <mentioned rend="">
+                  <gap reason="" agent="" atLeast="" atMost="" unit="" instant=""/>
+                  <mentioned>
+                    <hi style="">
+                      <unclear reason="" agent="" cert="" instant=""/>
+                      <gap reason="" agent="" atLeast="" atMost="" unit="" instant=""/>
+                    </hi>
+                  </mentioned>
+                </mentioned>
+              </stamp>
+              <!-- Timbro DX -->
+              <stamp type="">
+                <mentioned rend="">
+                  <gap reason="" agent="" atLeast="" atMost="" unit="" instant=""/>
+                  <mentioned>
+                    <hi style="">
+                      <unclear reason="" agent="" cert="" instant=""/>
+                      <unclear reason="" agent="" cert="" instant=""/>
+                      <gap reason="" agent="" atLeast="" atMost="" unit="" instant=""/>
+                    </hi>
+                  </mentioned>
+                </mentioned>
+              </stamp>
+              <!-- Francobollo -->
+              <stamp type="" style="">
+                <mentioned style="">
+                  <hi/>
+                  <hi>
+                    <hi rend=""/>
+                    <hi rend=""/>
+                  </hi>
+                </mentioned>
+              </stamp>
+            </ab>
+          </div>
+          <div n="" part="" org="" sample="">
+            <p part="">
+              <!--address type="receiver"-->
+              <address>
+                <!-- Righe della sezione: Destinatario -->
+                <addrLine xml:id="" facs=""/>
+                <addrLine xml:id="" facs="">
+                  <persName instant="" full="">
+                    <surname full=""/>
+                    <forename full=""/>
+                  </persName>
+                </addrLine>
+                <addrLine xml:id="" facs=""/>
+                <addrLine xml:id="" facs=""/>
+                <addrLine xml:id="" facs=""/>
+                <addrLine xml:id="" facs=""/>
+              </address>
+            </p>
+          </div>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>
