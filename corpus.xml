@@ -8,17 +8,17 @@
     </xi:include>
 
     <!-- Cartolina 011 -->
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./cartolina7694-011/main.xml">
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" xpointer="cartolina7694-011" href="./cartolina7694-011/main.xml">
         <xi:fallback>risorsa cartolina 1 mancante</xi:fallback>
     </xi:include>
 
     <!-- Cartolina 016 -->
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./cartolina7694-016/main.xml">
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" xpointer="cartolina7694-016" href="./cartolina7694-016/main.xml">
         <xi:fallback>risorsa cartolina 2 mancante</xi:fallback>
     </xi:include>
 
     <!-- Cartolina 020 -->
-    <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./cartolina7694-020/main.xml">
+    <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" xpointer="cartolina7694-020" href="./cartolina7694-020/main.xml">
         <xi:fallback>risorsa cartolina 3 mancante</xi:fallback>
     </xi:include> -->
 
