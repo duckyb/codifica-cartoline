@@ -32,3 +32,7 @@
 ```cmd
 xmllint main.xml --xinclude --postvalid --noout
 ```
+### Validazione con JING
+```cmd
+java -jre jing.jre -fit teiCustom.xml main.xml
+```
