@@ -29,10 +29,6 @@
 > ???
 
 ### Validazione con XINCLUDE
-```cmd
-xmllint main.xml --xinclude --postvalid --noout
-```
+`xmllint main.xml --xinclude --postvalid --noout`
 ### Validazione con JING
-```cmd
-java -jre jing.jre -fit teiCustom.xml main.xml
-```
+`java -jar jing.jar -t teiCustom.rng .\ext\lists.xml .\cartolina7694-011\main.xml .\cartolina7694-016\main.xml .\cartolina7694-020\main.xml`

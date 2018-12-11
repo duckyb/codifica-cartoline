@@ -36,6 +36,7 @@
 <!-- ____________________________ LISTA 2 - PERSONE ____________________________ -->
                 <listPerson>
                     <head>Lista delle persone</head>
+                    <!--cartolina _011-->
                     <person xml:id="pGF" >
                         <persName>
                             <forename>Giulio</forename>
@@ -56,37 +57,64 @@
                             <surname>Fumagalli</surname>
                         </persName>
                     </person>
+                    <!--cartolina _016-->
                     <person xml:id="pM">
                         <persName>
                             <forename>Mario</forename>
                         </persName>
+                        <sex>M</sex>
                     </person>
                     <person xml:id="pG">
                         <persName>
                             <forename>Ginevra</forename>
                         </persName>
+                        <sex>F</sex>
                     </person>
                     <person xml:id="pN">
                         <persName>
                             <forename>Nino</forename>
                         </persName>
+                        <sex>M</sex>
                     </person>
                     <person xml:id="pOT">
                         <persName>
                             <forename>Oliva</forename>
                             <surname>Turtura</surname>
                         </persName>
+                        <sex>F</sex>
                     </person>
                     <person xml:id="pAT">
                         <persName>
                             <forename>Antonietta</forename>
                             <surname>Turtura</surname>
                         </persName>
+                        <sex>F</sex>
+                    </person>
+                    <!--cartolina _020-->
+                    <person xml:id="pGO">
+                        <persName>
+                            <forename>Giovannino</forename>
+                        </persName>
+                        <sex>M</sex>
+                    </person>
+                    <person xml:id="pDM">
+                        <persName>
+                            <forename>Domenico</forename>
+                            <surname>Mastroianni</surname>
+                        </persName>
+                        <sex>M</sex>
+                    </person>
+                    <person xml:id="pAM">
+                        <persName>
+                            <forename>A.</forename>
+                            <surname>Marzi</surname>
+                        </persName>
                     </person>
                 </listPerson>
 <!-- ____________________________ LISTA 3 - LUOGHI   ___________________________ -->
                 <listPlace>
                     <head>Lista dei luoghi</head> 
+                    <!--cartolina _011-->
                     <place xml:id="lRV" >
                         <placeName ref="http://www.geonames.org/3169561/ravenna.html http://www.treccani.it/enciclopedia/ravenna/">Ravenna</placeName>
                         <location>
@@ -94,6 +122,7 @@
                             <country key="IT" >Italia</country>
                         </location>
                     </place>
+                    <!--cartolina _011-->
                     <place xml:id="lMI" >
                         <placeName ref="http://www.geonames.org/3173435/milan.html http://www.treccani.it/enciclopedia/milano/">Milano</placeName>
                         <location>
@@ -107,6 +136,14 @@
                             <country key="IT" ref="http://www.geonames.org/3175395/italian-republic.html">Italia</country>
                         </location>
                     </place>
+                    <!--cartolina _020-->
+                    <place xml:id="lRO" >
+                        <placeName ref="http://www.geonames.org/3169070/rome.html http://www.treccani.it/enciclopedia/roma/">Roma</placeName>
+                        <location>
+                            <bloc>EU</bloc>
+                            <country key="IT" >Italia</country>
+                        </location>
+                    </place>
                 </listPlace>
 <!-- ____________________________ LISTA 4 - ORGANIZZAZIONI   ___________________ -->
                 <listOrg>
@@ -116,6 +153,9 @@
                             <persName ref="pF">Fumagalli</persName> &amp; C.
                         </orgName>
                     	<placeName ref="#MI">Milano</placeName>
+                        <desc>
+                            Servizio di stampa.
+                        </desc>
                     </org>
                     <org type="military" xml:id="oGDCF">
                         <orgName>11&#176; Gruppo D'Assalto, 2&#7491; Divisione, 5&#7491; Compagnia, Faro di Guerra</orgName>
@@ -126,7 +166,15 @@
                     <org type="society" xml:id="oPI">
                         <orgName ref="https://it.wikipedia.org/wiki/Poste_italiane">Poste Italiane</orgName>
                         <desc>
-                            Servizio postale italiano.
+                            Servizio per la stampa di cartoline
+                        </desc>
+                    </org>
+                    <!--cartolina _020-->
+                    <org type="typography" xml:id="oMCM">
+                        <orgName >Sculture MASTROIANNI Roma Cromogliptica A. Marzi</orgName>
+                        <placeName ref="#RO">Roma</placeName>
+                        <desc>
+                            Servizio di stampa.
                         </desc>
                     </org>
                 </listOrg>
@@ -145,7 +193,7 @@
             <div type="notes">
                 <div type="annotation">
                     <note resp="#CP #DB #CG">
-                        <ref target="#note_dimension1 #note_dimension2">
+                        <ref target="#note_dimension1 #note_dimension2 #note_dimension3">
                             Le dimensioni delle cartoline sono state ricavate dalle immagini digitali di esse.
                         </ref>
                     </note>

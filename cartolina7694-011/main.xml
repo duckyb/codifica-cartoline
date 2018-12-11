@@ -41,8 +41,8 @@
                     </author>
                     <!-- editore della cartolina -->
                     <date xml:id="postcard_date" when="1918-11-09">09 Novembre 1918</date>
-                    <publisher ref="#oEF">Eliocromia Fumagalli &amp; C</publisher>
-                    <pubPlace ref="#pMI">Milano</pubPlace>
+                    <publisher ref="#oEF">Eliocromia <persName ref="pF">Fumagalli</persName> &amp; C</publisher>
+                    <pubPlace ref="#lMI">Milano</pubPlace>
                 </bibl>
                 <msDesc>
                     <msIdentifier>
@@ -143,7 +143,6 @@
     <facsimile>
         <!-- zonazione retro della cartolina -->
         <surface>
-            <!--graphic xml:id="retro_postcard" start="#retro-postcard" url="'retro.jpg'" width="'1628px'" height="'1053px'" /-->
             <graphic xml:id="retro_postcard_011" url="retro.jpg" width="1628px" height="1053px" />
             <!-- prima pagina, lato sx -->
             <zone xml:id="line_PlaceDate" start="#line-PlaceDate" points="190,165 261,32 301,41 298,83 499,88 573,28 742,10 851,51 755,169 637,161 598,229 477,191 429,155 273,161 247,205" />
@@ -184,7 +183,7 @@
     <text xml:lang="it">
         <body>
             <!-- ............ FRONTE | IMG | RECTO ............ -->
-            <div type="recto">
+            <div type="recto" xml:id="fronte-postcard-011" facs="#fronte_postcard_011">
                 <figure>
                     <!-- Descrizione dell'immagine in linguaggio naturale -->
                     <figDesc>
@@ -194,10 +193,10 @@
                 </figure>
             </div>
             <!-- ............ RETRO | TEXT | VERSO ............ -->
-            <div type="verso" xml:id="retro-postcard-011" facs="retro_postcard_011">
+            <div type="verso" xml:id="retro-postcard-011" facs="#retro_postcard_011">
                 <div type="message">
                     <!--luogo e data di scrittura della cartolina-->
-                    <opener xml:id="line-PlaceDate" facs="line_PlaceDate">
+                    <opener xml:id="line-PlaceDate" facs="#line_PlaceDate">
                         <dateline rend="align(right)">
                             <placeName ref="#lRV">Ravenna</placeName>
                             <date when="1918-11-09">9/11/918</date>
@@ -221,15 +220,15 @@
                     </p>
                     <!--saluto finale e firma-->
                     <p xml:id="line-vertical-011" facs="#line_vertical_011">
-                            <!-- Testo ruotato 90° -->
-                            <s type="hand_w" style="writing-mode: vertical-rl; text-orientation: sideways">Mi raccomando quella sola <unclear reason="illegible" agent="ink" cert="medium">XO</unclear></s>
-                            <s type="stamp_w" style="writing-mode: vertical-lr; text-orientation: sideways"> 
-                                <orgName ref="#oEF" type="typography">
-                                    Eliocromia 
-                                    <persName ref="#pF">Fumagalli</persName> &amp; C. -
-                                    <placeName ref="#lMI">Milano</placeName>
-                                </orgName>
-                            </s>
+                        <!-- Testo ruotato 90° -->
+                        <s type="hand_w" rend="writing-mode(vertical-rl) text-orientation(sideways)">Mi raccomando quella sola <unclear reason="illegible" agent="ink" cert="medium">XO</unclear></s>
+                        <s type="stamp_w" rend="writing-mode(vertical-lr) text-orientation(sideways)"> 
+                            <orgName ref="#oEF" type="typography">
+                                Eliocromia 
+                                <persName ref="#pF">Fumagalli</persName> &amp; C. -
+                                <placeName ref="#lMI">Milano</placeName>
+                            </orgName>
+                        </s>
                     </p>
                     <closer rend="align(right)">
                         <!-- Firma del mittente -->
@@ -246,11 +245,11 @@
                     <div n="1">
                         <ab>
                             <!-- Timbro SX -->
-                            <stamp type="postmark" style="transform:rotateZ(45deg);">
+                            <stamp type="postmark" rend="transform(rotateZ(45deg))">
                                 <mentioned rend="circle" >
                                     <gap reason="illegible" agent="ink" atLeast="15" atMost="25" unit="chars"/>
                                     <mentioned>
-                                        <hi style="text-align:center;">
+                                        <hi rend="align(center)">
                                             <unclear reason="faded" agent="time" cert="medium">10.11.</unclear>
                                             <gap reason="illegible" agent="faded" atLeast="2" atMost="4" unit="chars"/>
                                         </hi>
@@ -262,7 +261,7 @@
                                     <mentioned rend="circle" >
                                     <gap reason="illegible" agent="ink" atLeast="15" atMost="25" unit="chars"/>
                                     <mentioned>
-                                        <hi style="text-align:center;"> 
+                                        <hi rend="align(center)"> 
                                             <unclear reason="faded" agent="time" cert="medium">10</unclear>
                                             <unclear reason="faded" agent="time" cert="low">.11.</unclear>
                                             <gap reason="illegible" agent="faded" atLeast="2" atMost="4" unit="chars"/>
@@ -271,8 +270,8 @@
                                 </mentioned>
                             </stamp>
                             <!-- Francobollo -->
-                            <stamp type="postage" style="transform:rotateZ(180deg);">
-                                <mentioned style="color:red;">
+                            <stamp type="postage" rend="transform(rotateZ(180deg))">
+                                <mentioned rend="color(red)">
                                     <orgName ref="#oPI">Poste italiane</orgName>
                                     <hi><num rend="double" type="cardinal" value="10">10</num> centesimi <num rend="double" type="cardinal" value="10">10</num></hi>
                                 </mentioned>
@@ -285,12 +284,12 @@
                             <!--address type="receiver"-->
                             <address>
                                 <!-- Righe della sezione: Destinatario -->
-                                <addrLine xml:id="lineDest-1-011" facs="lineDest_1_011">Capitano</addrLine>
-                                <addrLine xml:id="lineDest-2-011" facs="lineDest_2_011"><persName ref="#pGC"> Cogliola Giovanni</persName></addrLine>
-                                <addrLine xml:id="lineDest-3-011" facs="lineDest_3_011">11&#176; Gruppo D'Assalto</addrLine>
-                                <addrLine xml:id="lineDest-4-011" facs="lineDest_4_011">2&#7491; Divisione</addrLine>
-                                <addrLine xml:id="lineDest-5-011" facs="lineDest_5_011">5&#7491; Compagnia</addrLine>
-                                <addrLine xml:id="lineDest-6-011" facs="lineDest_6_011"><unclear cert="low" reason="calligraphy">Faro</unclear> di Guerra</addrLine>
+                                <addrLine xml:id="lineDest-1-011" facs="#lineDest_1_011">Capitano</addrLine>
+                                <addrLine xml:id="lineDest-2-011" facs="#lineDest_2_011"><persName ref="#pGC"> Cogliola Giovanni</persName></addrLine>
+                                <addrLine xml:id="lineDest-3-011" facs="#lineDest_3_011">11&#176; Gruppo D'Assalto</addrLine>
+                                <addrLine xml:id="lineDest-4-011" facs="#lineDest_4_011">2&#7491; Divisione</addrLine>
+                                <addrLine xml:id="lineDest-5-011" facs="#lineDest_5_011">5&#7491; Compagnia</addrLine>
+                                <addrLine xml:id="lineDest-6-011" facs="#lineDest_6_011"><unclear cert="low" reason="calligraphy">Faro</unclear> di Guerra</addrLine>
                             </address>
                             <add xml:id="note_1_011" cert="medium"> 
                                 <num  type="cardinal" value="11">11</num>
