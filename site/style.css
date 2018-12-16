@@ -1,0 +1,30 @@
+body {
+  background-color: #111;
+}
+
+.postcard {
+  display: block;
+  width: 500px;
+  height: 323px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.image.back {
+  width: 100%;
+  margin: 0;
+}
+
+.computed {
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  color: #111;
+  font-family: 'Roboto', sans-serif;
+}
+
+.computed p {
+  overflow: hidden;
+  white-space: nowrap;
+}
