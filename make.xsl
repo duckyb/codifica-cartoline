@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-    <!-- xpath-default-namespace="http://www.tei-c.org/ns/1.0" -->
+    <!-- xpath-default-namespace="http://www.tei-c.org/ns/1.0" --> 
 <xsl:stylesheet 
     version="1.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
@@ -57,5 +57,5 @@
       </xsl:for-each>
       </ul>
     </xsl:template>
-
+    
 </xsl:stylesheet>

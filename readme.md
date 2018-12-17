@@ -31,7 +31,10 @@
 ### Validazione con XINCLUDE
 `xmllint main.xml --xinclude --postvalid --noout`
 ### Validazione con JING
+##microsoft
 `java -jar jing.jar -t teiCustom.rng .\ext\lists.xml .\cartolina7694-011\main.xml .\cartolina7694-016\main.xml .\cartolina7694-020\main.xml`
+##mac osx
+`java -jar jing.jar -t teiCustom.rng ./ext/lists.xml ./cartolina7694-011/main.xml ./cartolina7694-016/main.xml ./cartolina7694-020/main.xml`
 ### Trasformata XSLT
 `xsltproc --xinclude make.xslt corpus.xml > output.html`
 
