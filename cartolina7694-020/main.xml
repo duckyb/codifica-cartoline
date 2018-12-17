@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <?xml-model href="..//teiCustom.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina7694-016">
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -21,7 +21,7 @@
                 <respStmt>
                     <resp>Codificato da</resp>
                     <persName ref="#CP">C.Poggianti</persName>
-                    <persName ref="#DB">D.Breschi</persName>
+                    <persName ref="#DB">D.Breschi</persName> 
                     <persName ref="#GC">G.Cerretini</persName>
                 </respStmt>
             </editionStmt>
@@ -39,7 +39,7 @@
                         <persName ref="#pGO">Giovannino</persName>
                     </author>
                     <!-- editore della cartolina -->
-                    <date xml:id="postcard_date_016" when="1916-12-03">03 Dicembre 1916</date>
+                    <date when="1916-12-03">03 Dicembre 1916</date>
                     <!-- ?? editore della pubblicazione -->
                     <publisher ref="#oMCM">Sculture 
                         <persName ref="#pDM">MASTROIANNI</persName>

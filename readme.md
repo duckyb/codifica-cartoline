@@ -32,3 +32,5 @@
 `xmllint main.xml --xinclude --postvalid --noout`
 ### Validazione con JING
 `java -jar jing.jar -t teiCustom.rng .\ext\lists.xml .\cartolina7694-011\main.xml .\cartolina7694-016\main.xml .\cartolina7694-020\main.xml`
+### Trasformata XSLT
+`xsltproc --xinclude transform.xslt corpus.xml > output.html`
