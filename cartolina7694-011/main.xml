@@ -137,6 +137,7 @@
             <change when="2018-12-03" resp="#CP #DB #CG">Fine teiHeader, realizzazione delle zone e facsimili, inizio codifica del retro della cartolina.</change>
             <change when="2018-12-05" resp="#CP #DB #CG">Piccoli accorgimenti finali.</change>
             <change when="2018-12-10" resp="#CP #DB #CG">Fine codifica cartolina, piccole correzioni di attributi.</change>
+            <change when="2018-12-17" resp="#CP #DB #CG">Codifica delle info stampate sulla cartolina</change>
         </revisionDesc>
     </teiHeader>
     <!-- ...................................... T E X T ...................................... -->
@@ -154,8 +155,12 @@
             <zone xml:id="lineText_6_011" start="#lineText-6" points="68,792 139,768 166,802 243,799 266,785 451,768 601,765 779,780 876,772 804,872 361,863 186,876 0,913 0,858" />
             <zone xml:id="lineText_7_011" start="#lineText-7" points="168,959 160,910 236,878 316,872 399,903 648,898 802,936 744,972 499,960" />
             <zone xml:id="lineText_8_011" start="#lineText-8" points="87,1053 90,1031 314,958 526,999 597,958 623,961 573,1001 710,1009 782,988 888,996 839,1053" />
-            <!-- Eliocromia fumagalli -->
-            <zone xml:id="line_vertical" start="#line-vertical" ulx="18" uly="18" lrx="90" lry="776" />
+            <!-- Vertical hand-writing -->
+            <zone xml:id="line_vertical_hw_011" start="#line-vertical-hw-011" ulx="44" uly="22" lrx="69" lry="747" />
+            <!-- Vertical stamp-writing -->
+            <zone xml:id="line_vertical_sw_011" start="#line-vertical-sw-011" ulx="24" uly="283" lrx="48" lry="772" />
+              <!-- 1006 -->
+            <zone xml:id="line_1006_011" start="#line-1006" ulx="776" uly="980" lrx="832" lry="1005" />
             <!-- seconda pagina - testo -->
             <zone xml:id="lineDest_1_011" start="#lineDest-1" points="942,359 1160,410 1366,437 1280,497 946,508 871,563 851,559 896,503 783,502" />
             <zone xml:id="lineDest_2_011" start="#lineDest-2" points="897,643 786,636 805,605 915,537 946,540 916,587 984,583 1047,534 1091,536 1091,587 1112,581 1152,537 1201,542 1171,581 1206,584 1336,525 1409,548 1394,587 1459,578 1579,595 1602,561 1627,564 1627,647 1431,622 1244,638 1185,709 1149,698 1142,636 952,644 919,683 892,675" />
@@ -166,8 +171,6 @@
             <zone xml:id="lineDest_7_011" start="#lineDest-7" points="1465,470 1492,422 1545,413 1557,480 1496,492" />
             <!-- 11 -->
             <zone xml:id="line_11_011" start="#line-11" ulx="18" uly="18" lrx="90" lry="776" />
-            <!-- 1006 -->
-            <zone xml:id="line_1006_011" start="#line-1006" ulx="776" uly="980" lrx="832" lry="1005" />
             <!-- timbro SX -->
             <zone xml:id="stamp_left_011" start="#stamp-left" points="817,1 770,79 769,176 827,267 934,313 1044,281 1109,201 1115,101 1067,3" />
             <!-- timbro DX e francobollo-->
@@ -194,6 +197,21 @@
             </div>
             <!-- ............ RETRO | TEXT | VERSO ............ -->
             <div type="verso" xml:id="retro-postcard-011" facs="#retro_postcard_011">
+                <!-- div per le info di stampa della cartolina -->
+                <div type="typo">
+                    <p xml:id="line-vertical-sw-011" facs="#line_vertical_sw_011">
+                        <s rend="writing-mode(vertical-lr) text-orientation(sideways)"> 
+                            <orgName ref="#oEF" type="typography">
+                                Eliocromia 
+                                <persName ref="#pF">Fumagalli</persName> &amp; C. -
+                                <placeName ref="#lMI">Milano</placeName>
+                            </orgName>
+                        </s>
+                    </p>
+                    <!-- (HR) linea verticale che divide messaggio da destinazione -->
+                    <ab xml:id="line-1006-011" facs="#line_1006_011"><num type="cardinal" value="1006">1006</num></ab>
+                    <!-- (HR) linea orizzontale per la firma nella zona destinazione-->
+                </div>
                 <div type="message">
                     <!--luogo e data di scrittura della cartolina-->
                     <opener xml:id="line-PlaceDate" facs="#line_PlaceDate">
@@ -219,16 +237,9 @@
                         <s xml:id="lineText-6-011" facs="#lineText_6_011">Evviva l'<country ref="lIT">Italia</country>!</s>
                     </p>
                     <!--saluto finale e firma-->
-                    <p xml:id="line-vertical-011" facs="#line_vertical_011">
+                    <p xml:id="line-vertical-hw-011" facs="#line_vertical_hw_011">
                         <!-- Testo ruotato 90° -->
-                        <s type="hand_w" rend="writing-mode(vertical-rl) text-orientation(sideways)">Mi raccomando quella sola <unclear reason="illegible" agent="ink" cert="medium">XO</unclear></s>
-                        <s type="stamp_w" rend="writing-mode(vertical-lr) text-orientation(sideways)"> 
-                            <orgName ref="#oEF" type="typography">
-                                Eliocromia 
-                                <persName ref="#pF">Fumagalli</persName> &amp; C. -
-                                <placeName ref="#lMI">Milano</placeName>
-                            </orgName>
-                        </s>
+                        <s rend="writing-mode(vertical-rl) text-orientation(sideways) overwrite">Mi raccomando quella sola <unclear reason="illegible" agent="ink" cert="medium">XO</unclear></s>
                     </p>
                     <closer rend="align(right)">
                         <!-- Firma del mittente -->
@@ -237,9 +248,6 @@
                             <persName ref="#pGF">Giulio Fantoni</persName>
                         </signed>
                     </closer>
-                </div>
-                <div type="stamp_info">
-                    <ab xml:id="line-1006-011" type="stamp_w" facs="#line_1006_011"><num type="cardinal" value="1006">1006</num></ab>
                 </div>
                 <div type="destination">
                     <div n="1">

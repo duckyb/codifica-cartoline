@@ -125,6 +125,8 @@
             </encodingDesc>
         <revisionDesc>
             <change when="2018-12-11" resp="#CP #DB #CG">Compilazione della TeiHeader, inizio della codifica della cartolina.</change>
+            <change when="2018-12-12" resp="#CP #DB #CG">Modifiche e normalizzazione del testo della cartolina</change>
+            <change when="2018-12-17" resp="#CP #DB #CG">Codifica delle info stampate sulla cartolina</change>
         </revisionDesc>
     </teiHeader>
     <!-- ...................................... T E X T ...................................... -->
@@ -147,7 +149,7 @@
             <!-- N.31 -->
             <zone xml:id="n31_20" start="#n31-20" ulx="133" uly="744" lrx="161" lry="823" />
             <!-- riproduzione interdetta -->    
-            <zone xml:id="inedita_20" start="#inedita-20" ulx="717" uly="700" lrx="749" lry="1003" />
+            <zone xml:id="interdetta_20" start="#interdetta-20" ulx="717" uly="700" lrx="749" lry="1003" />
             <!-- stampata in italia -->
             <zone xml:id="place_20" start="#place-20" ulx="723" uly="56" lrx="755" lry="302" />
             <!-- riquadro x bollo postale -->                                
@@ -175,7 +177,6 @@
             <zone xml:id="line_text_12_20" start="#line_text-12-20" ulx="1271" uly="862" lrx="1432" lry="924" />
             <!-- Giovannino -->
             <zone xml:id="line_text_13_20" start="#line_text-13-20" ulx="813" uly="944" lrx="1517" lry="1058" />
-
         </surface>
         <!-- immagine | fronte della cartolina -->
         <surface>
@@ -196,31 +197,65 @@
                         La metà inferiore dell'opera è occupata da mucchi di paglia su cui sono seduti l'uomo, 
                         al centro, e la donna, più in alto. 
                         Inoltre al di sotto dell'uomo sono appoggiati sulla paglia un piatto, un'anfora e una cesta contenente altri oggetti. 
-                        Dietro i mucchi di paglia si scorgono i tetti di alcune case e il cielo sereno. Nella parte bassa, a destra, è presente la firma dell'autore e il luogo: <mentioned xml:id="firma-20" facs="#firma_20">"D.Mastroianni Roma"</mentioned>
+                        Dietro i mucchi di paglia si scorgono i tetti di alcune case e il cielo sereno. Nella parte bassa, a destra, è presente la firma dell'autore e il luogo: 
+                        <mentioned xml:id="firma-20" facs="#firma_20">
+                            <persName ref="#pDM">D.Mastroianni</persName> 
+                            <placeName ref="#lRO">Roma</placeName>
+                        </mentioned>
                     </figDesc>
                 </figure>
             </div>
             <!-- ............ RETRO | TEXT | VERSO ............ -->
             <div type="verso" xml:id="retro-postcard-20" facs="#retro_postcard_20">
                 <div type="typo">
-                    <p>
-                        <lb/>
+                    <lb/>
+                    <ab>
                         <orgName ref="#oMCM"> 
                             <hi xml:id="autore-20" facs="#autore_20" rend="align(left)"> Sculture                        
                                 <persName ref="#pDM">MASTROIANNI</persName>
                                 <placeName ref="#lRO">Roma</placeName>
                             </hi>
-                            <hi xml:id="edit-20" facs="#edit" rend="align(right)">
+                            <hi xml:id="edit-20" facs="#edit_20" rend="align(right)">
                                 "Cromogliptica" 
-                                <persName ref="pAM">A. Marzi</persName>
+                                <persName ref="#pAM">A. Marzi</persName>
                                 <placeName ref="#lRO">Roma</placeName>
                             </hi>
                         </orgName> 
-                    </p> 
-                    <lb /><ab>Edizione propria</ab><figure><figDesc>Piccolo simbolo stampato in nero</figDesc></figure>
-                    <lb /><ab>Il frutto dell'amore</ab>
-                    <lb /><ab xml:lang="fr">le fruit de l'amour</ab>
-                    <lb /><ab>Riproduzione interdetta</ab><ab>Stampata in Italia</ab>
+                    </ab> 
+                    <lb/>
+                    <ab>
+                        <hi xml:id="ediz-20" facs="#ediz_20" rend="align(left)">Edizione propria</hi>
+                        <hi xml:id="sym-20" facs="#sym_20" rend="align(right)">
+                            <figure> 
+                                <figDesc>
+                                    Piccolo simbolo stampato in nero con scritto: 
+                                    <mentioned>
+                                        <choice>
+                                            <abbr>AM</abbr>
+                                            <expan>
+                                                <persName ref="#pAM">A.Marzi</persName>
+                                            </expan>
+                                        </choice>
+                                    </mentioned>
+                                </figDesc>
+                            </figure>
+                        </hi>
+                    </ab>
+                    <lb />
+                    <ab rend="align(center)">
+                        <hi xml:id="frutto-20" facs="#frutto_20">Il frutto dell'amore</hi>
+                        <lb/>
+                        <hi xml:id="fruit-20" facs="#fruit_20" xml:lang="fr">le fruit de l'amour</hi>
+                    </ab>
+                    <lb/>
+                    <ab>
+                        <hi xml:id="interdetta-20" facs="#interdetta_20" rend="align(left)">Riproduzione interdetta</hi>
+                        <hi xml:id="place-20" facs="#place_20" rend="align(right)">Stampata in <placeName ref="#lIT">Italia</placeName></hi>
+                    </ab>
+                    <!-- (HR) verticale divisone tra messaggio e destinazione-->
+                    <!-- (RECT) rettangolo per francobollo -->
+                    <!-- (3*HR) orizzontale per descrizione destinazione-->
+                    <!-- (HR) orizzontale per firma in zona destinazione-->
                 </div>
                 <div type="message">
                     <!--luogo e data di scrittura della cartolina-->
