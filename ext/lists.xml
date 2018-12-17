@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <!DOCTYPE TEI SYSTEM "../teiCustom.dtd"> -->
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader xml:id="corpusHeader">
         <fileDesc>
@@ -8,9 +7,9 @@
 <!-- ____________________________ LISTA 1 - RESPONSABILI _______________________ -->
                 <respStmt>
                     <resp>Codifica di luoghi, persone e organizzazioni a cura di</resp>
-                    <name xml:id="CG">Giacomo Cerretini</name>
-                    <name xml:id="DB">Duccio Breschi</name>
-                    <name xml:id="CP">Camilla Poggianti</name>
+                    <name type="person" xml:id="CG">Giacomo Cerretini</name>
+                    <name type="person" xml:id="DB">Duccio Breschi</name>
+                    <name type="person" xml:id="CP">Camilla Poggianti</name>
                 </respStmt>
 <!-- ___________________________________________________________________________ -->
             </titleStmt>

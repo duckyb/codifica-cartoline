@@ -7,17 +7,18 @@
     xmlns="http://www.w3.org/1999/xhtml">
     <xsl:output omit-xml-declaration="yes" method="html" version="5" encoding="UTF-8" indent="yes"/>
     <xsl:template match="tei:teiCorpus">
-        <xsl:comment>Entering teiCorpus</xsl:comment>
         <html>
             <head>
-                <link href="foo" type="text/css"/>
+                <link rel="stylesheet" href="style.css" type="text/css"/>
                 <script src="bar" type="text/javascript"/>
                 <title>Cartoline</title>
             </head>
             <body>
-                <h1>My corpus pippo</h1>
+                <xsl:apply-templates select="tei:respStmt"/>
+                <h1>Codifica cartoline</h1>
                 <xsl:for-each select="tei:TEI">
                     <section>
+                        <span class="debug">Questa è una cartolina</span>
                         <xsl:apply-templates />
                     </section>
                 </xsl:for-each>
@@ -26,18 +27,35 @@
     </xsl:template>
 
     <xsl:template match="tei:teiHeader">
-    <xsl:comment>*****TeiHeader*****</xsl:comment>
+      <xsl:apply-templates />
+    </xsl:template>
+
+    <xsl:template match="tei:fileDesc">
       <xsl:apply-templates />
     </xsl:template>
 
     <xsl:template match="tei:body">
-        <xsl:comment>*****Body*****</xsl:comment>
-        <p>
+        <div>
           <xsl:apply-templates />
-        </p>
+        </div>
     </xsl:template>
 
     <xsl:template match="text()">
       <xsl:value-of select="normalize-space(.)"/>
     </xsl:template> 
+
+    <xsl:template match="tei:editionStmt">
+      <xsl:apply-templates />
+    </xsl:template>
+
+    <xsl:template match="tei:respStmt">
+      <ul class="debug">
+      <xsl:for-each select="tei:persName">
+        <li class="debug">
+        <xsl:apply-templates />
+        </li>
+      </xsl:for-each>
+      </ul>
+    </xsl:template>
+
 </xsl:stylesheet>
