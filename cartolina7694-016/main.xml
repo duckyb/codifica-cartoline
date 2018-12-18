@@ -5,19 +5,20 @@
         <fileDesc>
             <titleStmt>
                 <title xml:lang="ita">Mario Ginevra Nino, a Antonietta e Oliva, Milano, 22 Marzo 1913</title>
-                <author ref="#pM">Mario</author>
-                <author ref="#pG">Ginevra</author>
-                <author ref="#pN">Nino</author>
                 <respStmt>
                     <resp>Trascrizione a cura di</resp>
                     <persName ref="#GC">Giacomo Cerretini</persName>
                     <persName ref="#DB">Duccio Breschi</persName>
                     <persName ref="#CP">Camilla Poggianti</persName>                
                 </respStmt>
+                <respStmt>
+                    <resp>Ente di Appartenenza</resp>
+                    <name type="comune" ref="#lSP">Comune della Spezia</name>
+                </respStmt>
             </titleStmt>
+
             <editionStmt>
-                <edition>Edizione digitale
-                    <!-- ??Note: modificare quando daremo esame -->
+                <edition>Studenti di Codifica di Testi, Corso di Laurea Triennale di Informatica Umanistica, Università di Pisa
                     <date when="2018-12">Dicembre 2018</date>
                 </edition>
                 <respStmt>
@@ -26,72 +27,88 @@
                     <persName ref="#DB">D.Breschi</persName>
                     <persName ref="#GC">G.Cerretini</persName>
                 </respStmt>
-            </editionStmt>
+                <!--Referente scientifico-->
+                <respStmt>
+                    <resp>Compilatore</resp>
+                    <persName ref="#pTC">Tommaso Castagneto</persName>
+                    <!-- <name xml:id="XZ1">chi interviene sulla schedatura</name> -->
+                </respStmt>
+                <!--responsabile scientifico-->
+                <respStmt>
+                    <resp>Responsabile scientifico</resp>
+                    <persName ref="#pGP">Giacomo Paolicchi</persName>
+                    <persName ref="#pES">Enrica Salvatori</persName>
+                </respStmt>
+                <!--funzionario responsabile-->
+                <respStmt>
+                    <resp>Funzionario responsabile</resp>
+                    <persName ref="#pER">E. Ratti</persName>
+                </respStmt>
+            </editionStmt> 
+
             <publicationStmt>
-                <publisher>Museo di La Spezia</publisher>
-                <pubPlace>La Spezia(SP)</pubPlace>
+                <publisher>Unipi</publisher>
+                <pubPlace ref="#lPI">Pisa</pubPlace>
                 <availability>
-                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</licence>
+                    <p>Available under licence only</p>
                 </availability>
+                <date when="2019">2019</date>
+                <distributor ref="#oCD">LabCD</distributor>
+                <address>
+                    <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                    <addrLine>Pisa</addrLine>
+                </address>
             </publicationStmt>
             <sourceDesc>
                 <bibl type="postcard">
-                    <author>
-                        <!-- autore (mittente) della cartolina -->
-                        <persName ref="#pM">Mario</persName>
-                        <persName ref="#pG">Ginevra</persName>
-                        <persName ref="#pN">Nino</persName>
-                    </author>
-                    <!-- editore della cartolina -->
-                    <date xml:id="postcard_date_016" when="1913-03-22">22 Marzo 1913</date>
-                    <!-- ?? editore della pubblicazione -->
-                    <!-- <publisher ref="#oEF">Eliocromia Fumagalli &amp; C</publisher>
-                    <pubPlace ref="#pMI">Milano</pubPlace> -->
+                    <title>La lezione</title>
                 </bibl>
                 <msDesc>
                     <msIdentifier>
                         <country ref="#lIT">Italia</country>
-                        <settlement ref="#lMI">Milano</settlement>
-                        <idno type="postcard_id">7694_016</idno>
+                        <settlement ref="#lSP">La Spezia (SP)</settlement>
+                        <repository ref="#lMCE">Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
+                        <idno type="postcard_id">7694_016_001/002</idno>
                     </msIdentifier>
+
                     <msContents>
+                        <summary>Cartolina Artistica</summary>
                         <msItem>
-                            <textLang mainLang="ita">Italiano</textLang>
+                            <textLang xml:id="lang_ITA" mainLang="ita">Italiano</textLang>
                         </msItem>
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material>Cartoncino</material>
+                                    <objectType>Cartolina</objectType>
+                                    <material>Carta</material>
+                                    <dimensions unit="cm">
+                                        <height>9</height>
+                                        <width>14</width>
+                                    </dimensions>                                   
                                     <!-- descrizione fisica dei timbri -->
                                     <stamp type="postmark"> 
-                                        Sul retro, nella metà destra della cartolina, è presente il timbro circolare di partenza. 
+                                        Sul retro, nella metà destra della cartolina, è presente un timbro circolare. 
+								    </stamp>
+                                    <stamp type="postmark">
                                         Sul fronte, in alto a destra, sono presenti due presunti timbri circolari:
                                         il primo più in alto, parzialmente visibile per 1/4; il secondo, leggermente sotto il primo, totalmente illeggibile.
-								    </stamp>
+                                    </stamp>
                                     <!-- descrizione fisica del francobollo -->
                                     <stamp type="postage"> 
-                                         Francobollo di dimensione rettangolare color verde scuro, parzialmente coperto dall'annullo postale.
+                                         Francobollo di forma rettangolare color verde scuro, parzialmente coperto dall'annullo postale.
                                     </stamp>
                                     <!-- descrizione fisica della cartolina -->
                                     <p>
                                         Cartolina in buone condizioni fisiche, sul verso è presente testo manoscritto in inchiostro nero su cartoncino color avorio, sul retro è presente una fotografia d'epoca. 
-                                        Sulla parte posteriore, il testo è scritto su due colonne le quali dividono mittenti e destinatari, il francobollo e il timbro di partenza;
-                                        La parte frontale presenta l'immagine, le informazioni editoriali e nell'angolo in alto a destra sono presenti due timbri.
+                                        Sulla parte posteriore, il testo è scritto su due colonne le quali dividono mittenti e destinatari, il francobollo e un timbro circolare;
+                                        La parte frontale presenta l'immagine, delle informazioni stampate e nell'angolo in alto a destra sono presenti due timbri.
                                     </p>
                                 </support>
-                                <!-- grandezza appossimativa del documento elettronico -->
-                                <extent>
-                                    <measure type="composition" unit="folio" quantity="1">1</measure>
-                                    <dimensions unit="mm" xml:id="note_dimension2">
-                                        <height>91</height>
-                                        <width>140</width>
-                                    </dimensions>
-                                </extent>
                                 <!-- descrizione delle condizioni fisiche di conservazione della cartolina -->
                                 <condition>
-                                    <p>Cartolina in discrete condizioni fisiche, eccetto i timbri dei quali è solo parzialmente leggibile quello sul retro.</p>
+                                    <p>Cartolina in buone condizioni fisiche, eccetto i timbri dei quali è solo parzialmente leggibile quello sul retro.</p>
                                 </condition>
                             </supportDesc>
                         </objectDesc>
@@ -103,39 +120,61 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-            <profileDesc>
-                <correspDesc>
-                    <correspAction type="sent">
-                        <persName ref="#pM">Mario</persName>
-                        <persName ref="#pG">Ginevra</persName>
-                        <persName ref="#pN">Nino</persName>
-                        <placeName ref="#lMI">Milano</placeName>
-                        <date when="1913-03-22">22 Marzo 1913</date>
-                    </correspAction>
-                    <correspAction type="received">
-                        <persName ref="#pAT">Antonietta Turtura</persName>
-                        <persName ref="#pOT">Oliva Turtura</persName>
-                        <placeName ref="#lRV">Ravanna</placeName>
-                        <location type="address">
-                            <address>
-                                <addrLine>Via Gir.Rossi N.60</addrLine>
-                            </address>
-                        </location>                            
-                    </correspAction>
-                </correspDesc>
-                <langUsage>
-                    <!--language ref="lang_ITA">Italiano</language-->
-                    <language ident="it-IT">Italiano</language>
-                </langUsage>
-            </profileDesc>
-            <encodingDesc>
-                <p>
-                    Sono state rispettate le forme lessicali, la punteggiatura e la sillabazione del documento, 
-                    normalizzando il tutto per la codifica.
-                </p>
-            </encodingDesc>
+
+        <profileDesc>
+            <correspDesc>
+                <correspAction type="sent">
+                    <persName ref="#pM">Mario</persName>
+                    <persName ref="#pG">Ginevra</persName>
+                    <persName ref="#pN">Nino</persName>
+                    <placeName ref="#lMI">Milano</placeName>
+                    <date type="writing" when="1913-03-22">22 Marzo 1913</date>
+                </correspAction>
+                <correspAction type="received">
+                    <persName ref="#pAT">Antonietta Turtura</persName>
+                    <persName ref="#pOT">Oliva Turtura</persName>
+                    <placeName ref="#lRV">Ravenna</placeName>
+                    <location type="address">
+                        <address>
+                            <addrLine>Via Gir.Rossi N.60</addrLine>
+                        </address>
+                    </location>                            
+                </correspAction>
+            </correspDesc>
+
+            <textClass>
+                <keywords>
+                    <term>Cartolina</term>
+                    <term>Cartolina Artistica</term>
+                    <term>Lezione</term>
+                    <term>Anziano</term>
+                    <term>Bambina</term>
+                </keywords>
+            </textClass>
+
+            <langUsage>
+                <!--language ref="lang_ITA">Italiano</language-->
+                <language ident="it-IT">Italiano</language>
+            </langUsage>
+        </profileDesc>
+
+        <encodingDesc>
+            <p>
+                Check sintattico con xmllint e validazione con schema RNG.
+                Codifica seguendo il metodo "parallel-trascription".                        
+                Codifica di base rispettando le forme e le informazioni lessicali, la punteggiatura e la sillabazione del documento, 
+                normalizzando il tutto per la codifica. 
+                Con appositi attributi è stata specificata anche la resa grafica di alcuni elementi.
+            </p>
+        </encodingDesc>
+        
         <revisionDesc>
-            <change when="2018-12-10" resp="#CP #DB #CG">Compilazione della TeiHeader, inizio e fine della codifica della cartolina.</change>
+            <change when="2018-11-28" resp="#CP #DB #CG">Inizio creazione teiHeader e bozza dati spedizione.</change>
+            <change when="2018-12-03" resp="#CP #DB #CG">Fine teiHeader, realizzazione delle zone e facsimili, inizio codifica del retro della cartolina.</change>
+            <change when="2018-12-05" resp="#CP #DB #CG">Piccoli accorgimenti finali.</change>
+            <change when="2018-12-10" resp="#CP #DB #CG">Fine codifica cartolina, piccole correzioni di attributi.</change>
+            <change when="2018-12-17" resp="#CP #DB #CG">Codifica delle info stampate sulla cartolina</change>
+            <change when="2018-12-18" resp="#CP #DB #CG">Correzione della codifica seguendo il modello fornito dal docente</change>
         </revisionDesc>
     </teiHeader>
     <!-- ...................................... T E X T ...................................... -->
@@ -182,12 +221,14 @@
             <div type="recto" xml:id="front-postcard-016" facs="#front_postcard_016">
                 <figure xml:id="image-016" facs="#image_016">
                     <!-- Descrizione dell'immagine in linguaggio naturale -->
+                    <graphic url="fronte.jpg" />
                     <figDesc>
                         Sul fronte della cartolina una fotografia color sepia ritrae un uomo anziano e una bambina, seduti su una panchina in un parco o cortile, intenti a leggere un libro.
                         L'uomo ha i capelli bianchi e gli occhiali, con la mano destra sorregge il libro mentre la sinistra è poggiata sulla spalla della bambina.
                         La bambina piega verso di sé il libro con la mano sinistra, indossa un vestito bianco e delle calze scure.
                         Dietro le due figure, in secondo piano, un albero copre la maggior parte dello sfondo. Dietro di esso si scorge una staccionata, altri alberi e un cielo sereno.
                     </figDesc>
+                    <head>La lezione</head>
                 </figure>
                  <!-- Timbri -->
                  <ab xml:id="stampFront-016" facs="#stampFront_016">

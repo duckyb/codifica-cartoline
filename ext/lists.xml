@@ -31,10 +31,51 @@
                     <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</licence>
                 </availability>
             </publicationStmt>
+
+            <notesStmt>
+                <note xml:id="note_1" resp="#CP #DB #CG">
+                        Si deduce che questo numero possa essere stato aggiunto a priori o posteriori da un soggetto differente dall'autore, probabilmente per soddisfare un criterio di catalogazione. Basti guardare l'evidente differenza di stile tra la calligrafia dall'autore e il carattere della presenuta aggiunta.
+                </note>
+            </notesStmt>
+
             <sourceDesc>
 <!-- ____________________________ LISTA 2 - PERSONE ____________________________ -->
                 <listPerson>
                     <head>Lista delle persone</head>
+                    <!--persone comuni a tutte le cartoline-->
+                    <person xml:id="pTC" >
+                        <persName>
+                            <forename>Tommaso</forename>
+                            <surname>Castagneto</surname>
+                        </persName>
+                        <sex>M</sex>
+                        <note>Compilatore e referente scientifico della cartolina</note>
+                    </person>
+                    <person xml:id="pGP" >
+                        <persName>
+                            <forename>Giacomo</forename>
+                            <surname>Paolocchi</surname>
+                        </persName>
+                        <sex>M</sex>
+                        <note>Responsabile scientifico della cartolina</note>
+                    </person>
+                    <person xml:id="pES" >
+                        <persName>
+                            <forename>Enrica</forename>
+                            <surname>Salvatori</surname>
+                        </persName>
+                        <sex>F</sex>
+                        <note>Responsabile scientifico della cartolina</note>
+                    </person>
+                    <person xml:id="pER" >
+                        <persName>
+                            <forename>
+                                <abbr>E.</abbr>
+                            </forename>
+                            <surname>Ratti</surname>
+                        </persName>
+                        <note>Funzionario responsabile</note>
+                    </person>
                     <!--cartolina _011-->
                     <person xml:id="pGF" >
                         <persName>
@@ -105,7 +146,9 @@
                     </person>
                     <person xml:id="pAM">
                         <persName>
-                            <forename>A.</forename>
+                            <forename>
+                                <abbr>A.</abbr>
+                            </forename>
                             <surname>Marzi</surname>
                         </persName>
                     </person>
@@ -113,17 +156,40 @@
 <!-- ____________________________ LISTA 3 - LUOGHI   ___________________________ -->
                 <listPlace>
                     <head>Lista dei luoghi</head> 
-                    <!--cartolina _011-->
-                    <place xml:id="lRV" >
-                        <placeName ref="http://www.geonames.org/3169561/ravenna.html http://www.treccani.it/enciclopedia/ravenna/">Ravenna</placeName>
+                    <!--luoghi comuni a tutte le cartoline-->
+                    <place xml:id="lPI" >
+                        <placeName ref="http://www.geonames.org/3170647/pisa.html http://www.treccani.it/enciclopedia/pisa/">
+                            <settlement type="town">Pisa</settlement>
+                            <region>Toscana</region>
+                            <district type="common">Pisa</district>
+                            <district type="province">PI</district>
+                        </placeName>
                         <location>
                             <bloc>EU</bloc>
                             <country key="IT" >Italia</country>
                         </location>
                     </place>
                     <!--cartolina _011-->
+                    <place xml:id="lRV" >
+                        <placeName ref="http://www.geonames.org/3169561/ravenna.html http://www.treccani.it/enciclopedia/ravenna/">
+                            <settlement type="town">Ravenna</settlement>
+                            <region>Emilia-Romagna</region>
+                            <district type="common">Ravenna</district>
+                            <district type="province">RV</district>
+                        </placeName>
+                        <location>
+                            <bloc>EU</bloc>
+                            <country key="IT" >Italia</country>
+                        </location>
+                    </place>
+                    <!--cartolina _016-->
                     <place xml:id="lMI" >
-                        <placeName ref="http://www.geonames.org/3173435/milan.html http://www.treccani.it/enciclopedia/milano/">Milano</placeName>
+                        <placeName ref="http://www.geonames.org/3173435/milan.html http://www.treccani.it/enciclopedia/milano/">
+                            <settlement type="town">Mil</settlement>
+                            <region>Emilia-Romagna</region>
+                            <district type="common">Ravenna</district>
+                            <district type="province">RV</district>
+                        </placeName>
                         <location>
                             <bloc>EU</bloc>
                             <country key="IT" >Italia</country>
@@ -188,19 +254,5 @@
         <body>
             <p>Questo è un template TEI header contenente dati relativi a luoghi, persone e organizzazioni.</p>
         </body>
-        <back>
-            <div type="notes">
-                <div type="annotation">
-                    <note resp="#CP #DB #CG">
-                        <ref target="#note_dimension1 #note_dimension2 #note_dimension3">
-                            Le dimensioni delle cartoline sono state ricavate dalle immagini digitali di esse.
-                        </ref>
-                    </note>
-                    <note target="#note_1_011 #note_1_016" resp="#CP #DB #CG">
-                        Si deduce che questo numero possa essere stato aggiunto a priori o posteriori da un soggetto differente dall'autore, probabilmente per soddisfare un criterio di catalogazione. Basti guardare l'evidente differenza di stile tra la calligrafia dall'autore e il carattere della presenuta aggiunta.
-                    </note>
-                </div>
-            </div>
-        </back>
     </text>
 </TEI>

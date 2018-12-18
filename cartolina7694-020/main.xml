@@ -5,7 +5,6 @@
         <fileDesc>
             <titleStmt>
                 <title xml:lang="ita">Giovannino a Oliva, 03 Dicembre 1916</title>
-                <author ref="#pGO">Giovannino</author>
                 <respStmt>
                     <resp>Trascrizione a cura di</resp>
                     <persName ref="#GC">Giacomo Cerretini</persName>
@@ -14,46 +13,67 @@
                 </respStmt>
             </titleStmt>
             <editionStmt>
-                <edition>Edizione digitale
-                    <!-- ??Note: modificare quando daremo esame -->
+                <edition>Studenti di Codifica di Testi, Corso di Laurea Triennale di Informatica Umanistica, Università di Pisa
                     <date when="2018-12">Dicembre 2018</date>
                 </edition>
                 <respStmt>
                     <resp>Codificato da</resp>
                     <persName ref="#CP">C.Poggianti</persName>
-                    <persName ref="#DB">D.Breschi</persName> 
+                    <persName ref="#DB">D.Breschi</persName>
                     <persName ref="#GC">G.Cerretini</persName>
                 </respStmt>
-            </editionStmt>
+                <!--Referente scientifico-->
+                <respStmt>
+                    <resp>Compilatore</resp>
+                    <persName ref="#pTC">Tommaso Castagneto</persName>
+                    <!-- <name xml:id="XZ1">chi interviene sulla schedatura</name> -->
+                </respStmt>
+                <!--responsabile scientifico-->
+                <respStmt>
+                    <resp>Responsabile scientifico</resp>
+                    <persName ref="#pGP">Giacomo Paolicchi</persName>
+                    <persName ref="#pES">Enrica Salvatori</persName>
+                </respStmt>
+                <!--funzionario responsabile-->
+                <respStmt>
+                    <resp>Funzionario responsabile</resp>
+                    <persName ref="#pER">E. Ratti</persName>
+                </respStmt>
+            </editionStmt> 
             <publicationStmt>
-                <publisher>Museo di La Spezia</publisher>
-                <pubPlace>La Spezia(SP)</pubPlace>
+                <publisher>Unipi</publisher>
+                <pubPlace ref="#lPI">Pisa</pubPlace>
                 <availability>
-                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</licence>
+                    <p>Available under licence only</p>
                 </availability>
+                <date when="2019">2019</date>
+                <distributor ref="#oCD">LabCD</distributor>
+                <address>
+                    <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                    <addrLine>Pisa</addrLine>
+                </address>
             </publicationStmt>
+
             <sourceDesc>
                 <bibl type="postcard">
-                    <author>
-                        <!-- autore (mittente) della cartolina -->
-                        <persName ref="#pGO">Giovannino</persName>
-                    </author>
-                    <!-- editore della cartolina -->
-                    <date when="1916-12-03">03 Dicembre 1916</date>
-                    <!-- ?? editore della pubblicazione -->
+                    <title>Il frutto dell'amore</title>
                     <publisher ref="#oMCM">Sculture 
                         <persName ref="#pDM">MASTROIANNI</persName>
                         <placeName ref="#lRO">Roma</placeName> Cromogliptica 
                         <persName ref="#pAM"> A. Marzi</persName>
                     </publisher>
                     <pubPlace ref="#lRO">Roma</pubPlace>
-                </bibl> 
+                    <date when="1916">1916</date>
+                </bibl>
                 <msDesc>
                     <msIdentifier>
                         <country ref="#lIT">Italia</country>
-                        <idno type="postcard_id">7694_020</idno>
+                        <settlement ref="#lSP">La Spezia (SP)</settlement>
+                        <repository ref="#lMCE">Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
+                        <idno type="postcard_id">7694_020_001/002</idno>
                     </msIdentifier>
                     <msContents>
+                        <summary>Cartolina Artistica</summary>
                         <msItem>
                             <textLang mainLang="ita" otherLangs="fr">Testo in italiano con una frase stampata in francese</textLang>
                         </msItem>
@@ -62,35 +82,32 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material>Cartoncino</material>
+                                    <objectType>Cartolina</objectType>
+                                    <material>Carta</material>
+                                    <dimensions unit="cm">
+                                        <height>9</height>
+                                        <width>14</width>
+                                    </dimensions>                                   
                                     <!-- descrizione fisica dei timbri -->
                                     <stamp type="postmark"> 
                                         Non è presente nessun timbro o francobollo sulla cartolina.
 								    </stamp>
                                     <!-- descrizione fisica del francobollo -->
-                                    <stamp type="postage"> 
+                                    <stamp type="postage">
                                         Sulla cartolina non è stato applicato nessun francobollo, ma c'è soltanto la stampa rettangolare 
                                         (realizzata dalla tipografia che ha pubblicato la cartolina) che identifica dove il francobollo avrebbe dovuto essere applicato.
                                     </stamp>
                                     <!-- descrizione fisica della cartolina -->
                                     <p>
-                                        Cartolina in ottime condizioni fisiche. Sul verso è presente testo manoscritto in inchiostro nero su cartoncino color bianco; 
+                                        Cartolina in buone condizioni fisiche. Sul verso è presente testo manoscritto in inchiostro nero su cartoncino color bianco; 
                                         il testo si estende per tutta la lunghezza del verso della cartolina, senza rispettare la suddivisione proposta dalla tipografia. 
                                         Le parole si sovrappongono con le informazioni editoriali stampate e invadono l'area dedicata all'applicazione del francobollo, che infatti non è presente.
                                         Sul retro è presente un dipinto d'autore, con firma dello stesso in basso a destra.
                                     </p>
                                 </support>
-                                <!-- grandezza appossimativa del documento elettronico -->
-                                <extent>
-                                    <measure type="composition" unit="folio" quantity="1">1</measure>
-                                    <dimensions unit="mm" xml:id="note_dimension3">
-                                        <height>90</height>
-                                        <width>140</width>
-                                    </dimensions>
-                                </extent>
                                 <!-- descrizione delle condizioni fisiche di conservazione della cartolina -->
                                 <condition>
-                                    <p>Cartolina in ottime condizioni fisiche.</p>
+                                    <p>Cartolina in buone condizioni fisiche.</p>
                                 </condition>
                             </supportDesc>
                         </objectDesc>
@@ -102,31 +119,40 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-            <profileDesc>
-                <correspDesc>
-                    <correspAction type="sent">
-                        <persName ref="#pGO">Giovannino</persName>
-                        <date when="1916-12-03">03 Dicembre 1916</date>
-                    </correspAction>
-                    <correspAction type="received">
-                        <persName ref="#pOT">Oliva Turtura</persName>
-                    </correspAction>
-                </correspDesc>
-                <langUsage>
-                    <!--language ref="lang_ITA">Italiano</language-->
-                    <language ident="it-IT">Italiano</language>
-                </langUsage>
-            </profileDesc>
-            <encodingDesc>
-                <p>
-                    Sono state rispettate le forme lessicali, la punteggiatura e la sillabazione del documento, 
-                    normalizzando il tutto per la codifica.
-                </p>
-            </encodingDesc>
+
+        <profileDesc>
+            <correspDesc>
+                <correspAction type="sent">
+                    <persName ref="#pGO">Giovannino</persName>
+                    <date when="1916-12-03">03 Dicembre 1916</date>
+                </correspAction>
+                <correspAction type="received">
+                    <persName ref="#pOT">Oliva Turtura</persName>
+                </correspAction>
+            </correspDesc>
+            <langUsage>
+                <!--language ref="lang_ITA">Italiano</language-->
+                <language ident="it-IT">Italiano</language>
+            </langUsage>
+        </profileDesc>
+
+        <encodingDesc>
+            <p>
+                Check sintattico con xmllint e validazione con schema RNG.
+                Codifica seguendo il metodo "parallel-trascription".                        
+                Codifica di base rispettando le forme e le informazioni lessicali, la punteggiatura e la sillabazione del documento, 
+                normalizzando il tutto per la codifica. 
+                Con appositi attributi è stata specificata anche la resa grafica di alcuni elementi.
+            </p>
+        </encodingDesc>
+        
         <revisionDesc>
-            <change when="2018-12-11" resp="#CP #DB #CG">Compilazione della TeiHeader, inizio della codifica della cartolina.</change>
-            <change when="2018-12-12" resp="#CP #DB #CG">Modifiche e normalizzazione del testo della cartolina</change>
+            <change when="2018-11-28" resp="#CP #DB #CG">Inizio creazione teiHeader e bozza dati spedizione.</change>
+            <change when="2018-12-03" resp="#CP #DB #CG">Fine teiHeader, realizzazione delle zone e facsimili, inizio codifica del retro della cartolina.</change>
+            <change when="2018-12-05" resp="#CP #DB #CG">Piccoli accorgimenti finali.</change>
+            <change when="2018-12-10" resp="#CP #DB #CG">Fine codifica cartolina, piccole correzioni di attributi.</change>
             <change when="2018-12-17" resp="#CP #DB #CG">Codifica delle info stampate sulla cartolina</change>
+            <change when="2018-12-18" resp="#CP #DB #CG">Correzione della codifica seguendo il modello fornito dal docente</change>
         </revisionDesc>
     </teiHeader>
     <!-- ...................................... T E X T ...................................... -->
@@ -186,10 +212,63 @@
         </surface>
     </facsimile>
     <text xml:lang="it">
+        <front>
+            <div type="typo">
+                <lb/>
+                <ab>
+                    <orgName ref="#oMCM"> 
+                        <hi xml:id="autore-20" facs="#autore_20" rend="align(left)"> Sculture                        
+                            <persName ref="#pDM">MASTROIANNI</persName>
+                            <placeName ref="#lRO">Roma</placeName>
+                        </hi>
+                        <hi xml:id="edit-20" facs="#edit_20" rend="align(right)">
+                            "Cromogliptica" 
+                            <persName ref="#pAM">A. Marzi</persName>
+                            <placeName ref="#lRO">Roma</placeName>
+                        </hi>
+                    </orgName> 
+                </ab> 
+                <lb/>
+                <ab>
+                    <hi xml:id="ediz-20" facs="#ediz_20" rend="align(left)">Edizione propria</hi>
+                    <hi xml:id="sym-20" facs="#sym_20" rend="align(right)">
+                        <figure> 
+                            <figDesc>
+                                Piccolo simbolo stampato in nero con scritto: 
+                                <mentioned>
+                                    <choice>
+                                        <abbr>AM</abbr>
+                                        <expan>
+                                            <persName ref="#pAM">A.Marzi</persName>
+                                        </expan>
+                                    </choice>
+                                </mentioned>
+                            </figDesc>
+                        </figure>
+                    </hi>
+                </ab>
+                <lb />
+                <ab rend="align(center)">
+                    <hi xml:id="frutto-20" facs="#frutto_20">Il frutto dell'amore</hi>
+                    <lb/>
+                    <hi xml:id="fruit-20" facs="#fruit_20" xml:lang="fr">le fruit de l'amour</hi>
+                </ab>
+                <lb/>
+                <ab>
+                    <hi xml:id="interdetta-20" facs="#interdetta_20" rend="align(left)">Riproduzione interdetta</hi>
+                    <hi xml:id="place-20" facs="#place_20" rend="align(right)">Stampata in <placeName ref="#lIT">Italia</placeName></hi>
+                </ab>
+                <!-- (HR) verticale divisone tra messaggio e destinazione-->
+                <!-- (RECT) rettangolo per francobollo -->
+                <!-- (3*HR) orizzontale per descrizione destinazione-->
+                <!-- (HR) orizzontale per firma in zona destinazione-->
+            </div>        
+        </front>
         <body>
             <!-- ............ FRONTE | IMG | RECTO ............ -->
             <div type="recto" xml:id="front-postcard-20" facs="#front_postcard_20">
                 <figure>
+                    <graphic url="fronte.jpg" />
                     <!-- Descrizione dell'immagine in linguaggio naturale -->
                     <figDesc>
                         Sul fronte della cartolina è presente la riproduzione di un opera di Domenico Mastroianni. 
@@ -203,60 +282,11 @@
                             <placeName ref="#lRO">Roma</placeName>
                         </mentioned>
                     </figDesc>
+                    <head>Il frutto dell'amore</head>
                 </figure>
             </div>
             <!-- ............ RETRO | TEXT | VERSO ............ -->
             <div type="verso" xml:id="retro-postcard-20" facs="#retro_postcard_20">
-                <div type="typo">
-                    <lb/>
-                    <ab>
-                        <orgName ref="#oMCM"> 
-                            <hi xml:id="autore-20" facs="#autore_20" rend="align(left)"> Sculture                        
-                                <persName ref="#pDM">MASTROIANNI</persName>
-                                <placeName ref="#lRO">Roma</placeName>
-                            </hi>
-                            <hi xml:id="edit-20" facs="#edit_20" rend="align(right)">
-                                "Cromogliptica" 
-                                <persName ref="#pAM">A. Marzi</persName>
-                                <placeName ref="#lRO">Roma</placeName>
-                            </hi>
-                        </orgName> 
-                    </ab> 
-                    <lb/>
-                    <ab>
-                        <hi xml:id="ediz-20" facs="#ediz_20" rend="align(left)">Edizione propria</hi>
-                        <hi xml:id="sym-20" facs="#sym_20" rend="align(right)">
-                            <figure> 
-                                <figDesc>
-                                    Piccolo simbolo stampato in nero con scritto: 
-                                    <mentioned>
-                                        <choice>
-                                            <abbr>AM</abbr>
-                                            <expan>
-                                                <persName ref="#pAM">A.Marzi</persName>
-                                            </expan>
-                                        </choice>
-                                    </mentioned>
-                                </figDesc>
-                            </figure>
-                        </hi>
-                    </ab>
-                    <lb />
-                    <ab rend="align(center)">
-                        <hi xml:id="frutto-20" facs="#frutto_20">Il frutto dell'amore</hi>
-                        <lb/>
-                        <hi xml:id="fruit-20" facs="#fruit_20" xml:lang="fr">le fruit de l'amour</hi>
-                    </ab>
-                    <lb/>
-                    <ab>
-                        <hi xml:id="interdetta-20" facs="#interdetta_20" rend="align(left)">Riproduzione interdetta</hi>
-                        <hi xml:id="place-20" facs="#place_20" rend="align(right)">Stampata in <placeName ref="#lIT">Italia</placeName></hi>
-                    </ab>
-                    <!-- (HR) verticale divisone tra messaggio e destinazione-->
-                    <!-- (RECT) rettangolo per francobollo -->
-                    <!-- (3*HR) orizzontale per descrizione destinazione-->
-                    <!-- (HR) orizzontale per firma in zona destinazione-->
-                </div>
                 <div type="message">
                     <!--luogo e data di scrittura della cartolina-->
                     <opener>

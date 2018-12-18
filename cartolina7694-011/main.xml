@@ -5,17 +5,19 @@
         <fileDesc>
             <titleStmt>
                 <title xml:lang="ita">Giulio Fantoni al capitano Cogliola Giovanni, Ravenna, 9 Novembre 1918</title>
-                <author ref="#pGF">Giulio Fantoni</author>
                 <respStmt>
                     <resp>Trascrizione a cura di</resp>
                     <persName ref="#GC">Giacomo Cerretini</persName>
                     <persName ref="#DB">Duccio Breschi</persName>
                     <persName ref="#CP">Camilla Poggianti</persName>                
                 </respStmt>
+                <respStmt>
+                    <resp>Ente di Appartenenza</resp>
+                    <name type="comune" ref="#lSP">Comune della Spezia</name>
+                </respStmt>
             </titleStmt>
             <editionStmt>
-                <edition>Edizione digitale
-                    <!-- ??Note: modificare quando daremo esame -->
+                <edition>Studenti di Codifica di Testi, Corso di Laurea Triennale di Informatica Umanistica, Università di Pisa
                     <date when="2018-12">Dicembre 2018</date>
                 </edition>
                 <respStmt>
@@ -24,51 +26,84 @@
                     <persName ref="#DB">D.Breschi</persName>
                     <persName ref="#GC">G.Cerretini</persName>
                 </respStmt>
+                <!--Referente scientifico-->
+                <respStmt>
+                    <resp>Compilatore</resp>
+                    <persName ref="#pTC">Tommaso Castagneto</persName>
+                    <!-- <name xml:id="XZ1">chi interviene sulla schedatura</name> -->
+                </respStmt>
+                <!--responsabile scientifico-->
+                <respStmt>
+                    <resp>Responsabile scientifico</resp>
+                    <persName ref="#pGP">Giacomo Paolicchi</persName>
+                    <persName ref="#pES">Enrica Salvatori</persName>
+                </respStmt>
+                <!--funzionario responsabile-->
+                <respStmt>
+                    <resp>Funzionario responsabile</resp>
+                    <persName ref="#pER">E. Ratti</persName>
+                </respStmt>
             </editionStmt>
+            
             <publicationStmt>
-                <publisher>Museo di La Spezia</publisher>
-                <pubPlace>La Spezia(SP)</pubPlace>
+                <publisher>Unipi</publisher>
+                <pubPlace ref="#lPI">Pisa</pubPlace>
                 <availability>
-                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</licence>
+                    <p>Available under licence only</p>
                 </availability>
+                <date when="2019">2019</date>
+                <distributor ref="#oCD">LabCD</distributor>
+                <address>
+                    <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                    <addrLine>Pisa</addrLine>
+                </address>
             </publicationStmt>
+ 
             <sourceDesc>
                 <bibl type="postcard">
-                    <author>
-                        <!-- autore (mittente) della cartolina -->
-                        <persName ref="#pGF">Giulio Fantoni</persName>
-                    </author>
-                    <!-- editore della cartolina -->
-                    <date xml:id="postcard_date" when="1918-11-09">09 Novembre 1918</date>
+                    <title type="custom" resp="#pES">[Soldati al fronte]</title>
+                    <!-- stampa della cartolina -->
                     <publisher ref="#oEF">Eliocromia <persName ref="pF">Fumagalli</persName> &amp; C</publisher>
                     <pubPlace ref="#lMI">Milano</pubPlace>
+                    <date when="1916">1916</date>                    
                 </bibl>
                 <msDesc>
                     <msIdentifier>
                         <country ref="#lIT">Italia</country>
-                        <settlement ref="#lRV">Ravenna</settlement>
-                        <idno type="postcard_id">7694_011</idno>
+                        <settlement ref="#lSP">La Spezia (SP)</settlement>
+                        <repository ref="#lMCE">Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
+                        <idno type="postcard_id">7694_011_001/002</idno>
                     </msIdentifier>
+
                     <msContents>
+                        <summary>Cartolina Artistica</summary>
                         <msItem>
                             <textLang xml:id="lang_ITA" mainLang="ita">Italiano</textLang>
                         </msItem>
                     </msContents>
+
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material>Cartoncino</material>
-                                    <!-- descrizione fisica dei timbri -->
+                                    <objectType>Cartolina</objectType>
+                                    <material>Carta</material>
+                                    <dimensions unit="cm">
+                                        <height>9</height>
+                                        <width>14</width>
+                                    </dimensions>                                   
+                                    <!-- descrizione fisica dei 2 timbri -->
                                     <stamp type="postmark"> 
-                                        Sul retro, nella metà destra della cartolina, sono presenti due timbri circolari: 
-                                        uno di partenza e l'altro di arrivo. 
-                                        Il timbro di arrivo (a sinistra) è parzialmente tagliato superiormente, mentre quello di partenza (a destra) è interamente contenuto sul supporto cartaceo. 
-                                        Entrambi i timbri sono leggibili soltanto parzialmente, causa anche di sbavature dell'inchiostro.
+                                        Il timbro sinistro è parzialmente tagliato superiormente.
+                                        È solo parzialmente leggibile a causa delle sbavature d'inchiostro.
 								    </stamp>
+                                    <stamp type="postmark">
+                                        Il timbro destro è interamente contenuto sul supporto cartaceo, ma è
+                                        solo parzialmente leggibile a causa di sbavature d'inchiostro.
+                                    </stamp>
                                     <!-- descrizione fisica del francobollo -->
-                                    <stamp type="postage"> 
-                                         Francobollo di dimensione rettangolare color rosso, applicato sotto il timbro di partenza e capovolto.
+                                    <stamp type="postage">
+                                         Francobollo di forma rettangolare color rosso e capovolto, parzialmente coperto dall'annullo postale.
                                     </stamp>
                                     <!-- descrizione fisica della cartolina -->
                                     <p>
@@ -77,17 +112,9 @@
                                         La parte fronte presenta una rappresentazione artistica. 
                                     </p>
                                 </support>
-                                <!-- grandezza appossimativa del documento elettronico -->
-                                <extent>
-                                    <measure type="composition" unit="folio" quantity="1">1</measure>
-                                    <dimensions unit="mm" xml:id="note_dimension1">
-                                        <height>89</height>
-                                        <width>138</width>
-                                    </dimensions>
-                                </extent>
                                 <!-- descrizione delle condizioni fisiche di conservazione della cartolina -->
                                 <condition>
-                                    <p>Cartolina in buone condizioni fisiche, eccetto i timbri solo parzialmente leggibili</p>
+                                    Cartolina in buone condizioni fisiche, eccetto i timbri solo parzialmente leggibili
                                 </condition>
                             </supportDesc>
                         </objectDesc>
@@ -96,47 +123,53 @@
                             <p>La cartolina presenta del testo stampato, contenente informazioni sulla cartolina e sull'edizione, e del testo scritto a mano dal mittente.</p>
                         </handDesc>
                     </physDesc>
-                    <!-- ??Note: Completare o rimuovere <additional /> -->
-                    <!-- <additional>
-						<adminInfo>
-							<note></note>
-						</adminInfo>
-					</additional> -->
                 </msDesc>
             </sourceDesc>
-            <!-- ??Note: Da revisionare -->
-            <!-- <xenoData></xenoData> -->
         </fileDesc>
-            <profileDesc>
-                <correspDesc>
-                    <correspAction type="sent">
-                        <persName ref="#pGF">Giulio Fantoni</persName>
-                        <placeName ref="#lRV">Ravenna</placeName>
-                        <date when="1918-11-10">10 Novembre 1918</date>
-                    </correspAction>
-                    <correspAction type="received">
-                        <persName ref="#pGC" role="captain">Cogliola Giovanni</persName>
-                        <placeName ref="#oGDCF">11&#176; Gruppo D'Assalto, 2&#7491; Divisione, 5&#7491; Compagnia</placeName>
-                        <date when="1918-11-10">10 Novembre 1918</date>
-                    </correspAction>
-                </correspDesc>
-                <langUsage>
-                    <!--language ref="lang_ITA">Italiano</language-->
-                    <language ident="it-IT">Italiano</language>
-                </langUsage>
-            </profileDesc>
-            <encodingDesc>
-                <p>
-                    Sono state rispettate le forme lessicali, la punteggiatura e la sillabazione del documento, 
-                    normalizzando il tutto per la codifica.
-                </p>
-            </encodingDesc>
+        
+        <profileDesc>
+            <correspDesc>
+                <correspAction type="sent">
+                    <persName ref="#pGF">Giulio Fantoni</persName>
+                    <placeName ref="#lRV">Ravenna</placeName>
+                    <date type="writing" when="1918-11-09">9 Novembre 1918</date>
+                </correspAction>
+                <correspAction type="received">
+                    <persName ref="#pGC">Cogliola Giovanni</persName>
+                    <placeName ref="#oGDCF">11&#176; Gruppo D'Assalto, 2&#7491; Divisione, 5&#7491; Compagnia</placeName>
+                </correspAction>
+            </correspDesc>
+        
+            <textClass>
+                <keywords>
+                    <term>Cartolina </term>
+                    <term>Cartolina Artistica </term>
+                    <term>Soldati</term>
+                    <term>Bandiera italiana</term>
+                </keywords>
+            </textClass>
+
+            <langUsage>
+                <language ident="it-IT">Italiano</language>
+            </langUsage>
+        </profileDesc>
+
+        <encodingDesc>
+            <p>
+                Check sintattico con xmllint e validazione con schema RNG.
+                Codifica seguendo il metodo "parallel-trascription".                        
+                Codifica di base rispettando le forme e le informazioni lessicali, la punteggiatura e la sillabazione del documento, 
+                normalizzando il tutto per la codifica. 
+                Con appositi attributi è stata specificata anche la resa grafica di alcuni elementi.
+            </p>
+        </encodingDesc>
         <revisionDesc>
             <change when="2018-11-28" resp="#CP #DB #CG">Inizio creazione teiHeader e bozza dati spedizione.</change>
             <change when="2018-12-03" resp="#CP #DB #CG">Fine teiHeader, realizzazione delle zone e facsimili, inizio codifica del retro della cartolina.</change>
             <change when="2018-12-05" resp="#CP #DB #CG">Piccoli accorgimenti finali.</change>
             <change when="2018-12-10" resp="#CP #DB #CG">Fine codifica cartolina, piccole correzioni di attributi.</change>
             <change when="2018-12-17" resp="#CP #DB #CG">Codifica delle info stampate sulla cartolina</change>
+            <change when="2018-12-18" resp="#CP #DB #CG">Correzione della codifica seguendo il modello fornito dal docente</change>
         </revisionDesc>
     </teiHeader>
     <!-- ...................................... T E X T ...................................... -->
@@ -182,35 +215,39 @@
             <zone xml:id="picture_sig_011" start="#picture-sign" ulx="2" uly="1599" lrx="181" lry="1639" />
         </surface>
     </facsimile>
-    <text xml:lang="it">
+    <text xml:lang="it" type="postcard">
+        <front>
+            <div type="typo">
+                <p xml:id="line-vertical-sw-011" facs="#line_vertical_sw_011">
+                    <s rend="writing-mode(vertical-lr) text-orientation(sideways)"> 
+                        <orgName ref="#oEF" type="typography">
+                            Eliocromia 
+                            <persName ref="#pF">Fumagalli</persName> &amp; C. -
+                            <placeName ref="#lMI">Milano</placeName>
+                        </orgName>
+                    </s>
+                </p>
+                <!-- (HR) linea verticale che divide messaggio da destinazione -->
+                <ab xml:id="line-1006-011" facs="#line_1006_011"><num type="cardinal" value="1006">1006</num></ab>
+                <!-- (HR) linea orizzontale per la firma nella zona destinazione-->
+            </div>
+        </front>
         <body>
             <!-- ............ FRONTE | IMG | RECTO ............ -->
             <div type="recto" xml:id="fronte-postcard-011" facs="#fronte_postcard_011">
                 <figure>
+                    <graphic url="fronte.jpg"/>
                     <!-- Descrizione dell'immagine in linguaggio naturale -->
                     <figDesc>
                         Il fronte della cartolina è la stampa di un dipinto raffigurante dei soldati vestiti in grigio armati di fucili e baionette. In primo piano, 3 soldati sono ben definiti, dietro di essi, gli altri soldati risultano più sfocati fino ad essere indistinguibili.
                         Il gruppo sta trasportando una bandiera italiana con al centro uno stemma del regno d'Italia.
                     </figDesc>
+                    <head>[Soldati al Fronte]</head>
                 </figure>
             </div>
             <!-- ............ RETRO | TEXT | VERSO ............ -->
             <div type="verso" xml:id="retro-postcard-011" facs="#retro_postcard_011">
                 <!-- div per le info di stampa della cartolina -->
-                <div type="typo">
-                    <p xml:id="line-vertical-sw-011" facs="#line_vertical_sw_011">
-                        <s rend="writing-mode(vertical-lr) text-orientation(sideways)"> 
-                            <orgName ref="#oEF" type="typography">
-                                Eliocromia 
-                                <persName ref="#pF">Fumagalli</persName> &amp; C. -
-                                <placeName ref="#lMI">Milano</placeName>
-                            </orgName>
-                        </s>
-                    </p>
-                    <!-- (HR) linea verticale che divide messaggio da destinazione -->
-                    <ab xml:id="line-1006-011" facs="#line_1006_011"><num type="cardinal" value="1006">1006</num></ab>
-                    <!-- (HR) linea orizzontale per la firma nella zona destinazione-->
-                </div>
                 <div type="message">
                     <!--luogo e data di scrittura della cartolina-->
                     <opener xml:id="line-PlaceDate" facs="#line_PlaceDate">
@@ -266,7 +303,7 @@
                             <!-- Timbro DX -->
                             <stamp type="postmark">
                                     <mentioned rend="circle" >
-                                    <gap reason="illegible" agent="ink" atLeast="15" atMost="25" unit="chars"/>
+                                        <gap reason="illegible" agent="ink" atLeast="15" atMost="25" unit="chars"/>
                                     <mentioned>
                                         <hi rend="align(center)"> 
                                             <unclear reason="faded" agent="time" cert="medium">10</unclear>
@@ -287,8 +324,6 @@
                     </div>
                     <div n="2">
                         <p>
-                            <!-- ?????? (1) -->
-                            <!--address type="receiver"-->
                             <address>
                                 <!-- Righe della sezione: Destinatario -->
                                 <addrLine xml:id="lineDest-1-011" facs="#lineDest_1_011">Capitano</addrLine>
