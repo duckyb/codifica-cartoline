@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <?xml-model href="..//teiCustom.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina_020">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="ita">Giovannino a Oliva, 03 Dicembre 1916</title>
+                <title xml:lang="ita">Giovannino a Oliva, 3 Dicembre 1916</title>
                 <respStmt>
                     <resp>Trascrizione a cura di</resp>
                     <persName ref="#GC">Giacomo Cerretini</persName>

@@ -31,9 +31,9 @@
 ### Validazione con XINCLUDE (MacOS/Linux)
 `xmllint main.xml --xinclude --postvalid --noout`
 ### Validazione con JING (Windows)
-`cls; java -jar jing.jar -t teiCustom.rng ./ext/lists.xml ./cartolina7694-011/main.xml ./cartolina7694-016/main.xml ./cartolina7694-020/main.xml`
+`cls; java -jar jing.jar -t teiCustom.rng ./ext/lists.xml ./cartolina_011/main.xml ./cartolina_016/main.xml ./cartolina_020/main.xml`
 ## Validazione Jing (MacOS/Linux)
-`java -jar jing.jar -t teiCustom.rng ./ext/lists.xml ./cartolina7694-011/main.xml ./cartolina7694-016/main.xml ./cartolina7694-020/main.xml`
+`java -jar jing.jar -t teiCustom.rng ./ext/lists.xml ./cartolina_011/main.xml ./cartolina_016/main.xml ./cartolina_020/main.xml`
 ### Trasformata XSLT (Windows/MacOS/Linux)
 `xsltproc --xinclude make.xslt corpus.xml > output.html`
 

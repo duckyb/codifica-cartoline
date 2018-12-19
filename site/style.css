@@ -1,12 +1,115 @@
+/* INDEX */
+/*
+      0 - GENERAL
+      1 - HEADER
+*/
+
+/*  0 - GENERAL   */
 body {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
 }
 
 section {
-  border: 2px solid coral;
+  margin-top: 5px;
+  align-items: center;
+  justify-content: center;
 }
 
-.debug {
-  color: white;
-  background-color: #111;
+.col3 {
+  text-align: center;
+}
+
+.scan, .digital {
+  width: calc(1651px/3);
+  height: calc(1081px/3);
+  margin: 0 auto;
+  border: 1px solid #DDDDDD;
+}
+
+h1{
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size:2.5em;  
+}
+h3{
+  font-family: 'Lato', serif;
+  font-weight: 500;
+}
+
+h4{
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+
+hr {
+  width: 15%;
+  height: 1px;
+  background: #DDDDDD;
+  border: none;
+}
+
+img.retro {
+  width: calc(1651px/3);
+  height: calc(1081px/3);  
+}
+
+/*  1 - HEADER      */
+div.contentFronte {
+  width: 20%;
+  text-align: center;
+}
+
+img.fronte {
+  height: calc(1651px/3);
+  width: calc(1081px/3);
+}
+
+.selectionWrapper {
+  height: 60vh;
+}
+
+.selection {
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.fullHeight {
+  height: 100vh;
+  padding-top: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.fullHeight ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.fullHeight ul li {
+  font-family: "Montserrat;", sans-serif;
+  font-weight: 100;
+  list-style-type: none;
+  margin: 0 10px;
+  color: #333;
 }
