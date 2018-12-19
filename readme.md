@@ -34,7 +34,7 @@
 `cls; java -jar jing.jar -t teiCustom.rng ./ext/lists.xml ./cartolina7694-011/main.xml ./cartolina7694-016/main.xml ./cartolina7694-020/main.xml`
 ## Validazione Jing (MacOS/Linux)
 `java -jar jing.jar -t teiCustom.rng ./ext/lists.xml ./cartolina7694-011/main.xml ./cartolina7694-016/main.xml ./cartolina7694-020/main.xml`
-### Trasformata XSLT (MacOS/Linux)
+### Trasformata XSLT (Windows/MacOS/Linux)
 `xsltproc --xinclude make.xslt corpus.xml > output.html`
 
 ###elementi da selezionare in xsl della teiHeader

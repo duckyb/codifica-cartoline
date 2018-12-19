@@ -3,18 +3,18 @@
     <teiHeader xml:id="corpusHeader">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="ita">Codifica digiale dei luoghi, persone, organizzazioni e organizzazioni presenti nelle cartoline</title>
+                <title xml:lang="ita">Codifica digiale dei luoghi, persone, organizzazioni e note presenti nelle cartoline</title>
 <!-- ____________________________ LISTA 1 - RESPONSABILI _______________________ -->
                 <respStmt>
-                    <resp>Codifica di luoghi, persone e organizzazioni a cura di</resp>
-                    <name type="person" xml:id="CG">Giacomo Cerretini</name>
-                    <name type="person" xml:id="DB">Duccio Breschi</name>
-                    <name type="person" xml:id="CP">Camilla Poggianti</name>
+                    <resp>Codifica a cura di</resp>
+                    <persName type="person" xml:id="CG">Giacomo Cerretini</persName>
+                    <persName type="person" xml:id="DB">Duccio Breschi</persName>
+                    <persName type="person" xml:id="CP">Camilla Poggianti</persName>
                 </respStmt>
 <!-- ___________________________________________________________________________ -->
             </titleStmt>
             <editionStmt>
-                <edition>Edizione digitale per luoghi, persone e organizzazioni
+                <edition>Studenti di Codifica di Testi, Corso di Laurea Triennale di Informatica Umanistica, Università di Pisa
                     <date when="2018-12"> Dicembre 2018 </date>
                 </edition>
                 <respStmt>
@@ -25,16 +25,22 @@
                 </respStmt>
             </editionStmt>
             <publicationStmt>
-                <publisher>Museo di La Spezia</publisher>
-                <pubPlace>La Spezia (SP)</pubPlace>
-                <availability > 
-                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</licence>
+                <publisher>Unipi</publisher>
+                <pubPlace ref="#lPI">Pisa</pubPlace>
+                <availability>
+                    <p>Available under licence only</p>
                 </availability>
+                <date when="2019">2019</date>
+                <distributor ref="#oCD">LabCD</distributor>
+                <address>
+                    <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                    <addrLine>Pisa</addrLine>
+                </address>
             </publicationStmt>
 
             <notesStmt>
                 <note xml:id="note_1" resp="#CP #DB #CG">
-                        Si deduce che questo numero possa essere stato aggiunto a priori o posteriori da un soggetto differente dall'autore, probabilmente per soddisfare un criterio di catalogazione. Basti guardare l'evidente differenza di stile tra la calligrafia dall'autore e il carattere della presenuta aggiunta.
+                        Si deduce che questo numero possa essere stato aggiunto in seguito alla scrittura della  da un soggetto differente dall'autore, probabilmente per soddisfare un criterio di catalogazione. Basti guardare l'evidente differenza di stile tra la calligrafia dall'autore e il carattere della presenuta aggiunta.
                 </note>
             </notesStmt>
 
@@ -75,6 +81,14 @@
                             <surname>Ratti</surname>
                         </persName>
                         <note>Funzionario responsabile</note>
+                    </person>
+                    <person xml:id="pGIPO" >
+                        <persName>
+                            <forename>Giovanni</forename>
+                            <surname>Podenzana</surname>
+                        </persName>
+                        <sex>M</sex>
+                        <note>Dedicatario del Museo Civico Etnografico di La Spezia</note>
                     </person>
                     <!--cartolina _011-->
                     <person xml:id="pGF" >
@@ -169,6 +183,18 @@
                             <country key="IT" >Italia</country>
                         </location>
                     </place>
+                    <place xml:id="lSP" >
+                        <placeName ref="http://www.geonames.org/3175081/la-spezia.html http://www.treccani.it/enciclopedia/la-spezia/">
+                            <settlement type="town">La Spezia</settlement>
+                            <region>Liguria</region>
+                            <district type="common">Comune della Spezia</district>
+                            <district type="province">SP</district>
+                        </placeName>
+                        <location>
+                            <bloc>EU</bloc>
+                            <country key="IT" >Italia</country>
+                        </location>
+                    </place>
                     <!--cartolina _011-->
                     <place xml:id="lRV" >
                         <placeName ref="http://www.geonames.org/3169561/ravenna.html http://www.treccani.it/enciclopedia/ravenna/">
@@ -213,11 +239,40 @@
 <!-- ____________________________ LISTA 4 - ORGANIZZAZIONI   ___________________ -->
                 <listOrg>
                     <head>Lista delle organizzazioni</head>
+                    <!--organizzazioni comuni a tutte le cartoline-->
+                    <org type="society" xml:id="oPI">
+                        <orgName ref="https://it.wikipedia.org/wiki/Poste_italiane">Poste Italiane</orgName>
+                        <desc>
+                            Servizio per la stampa di cartoline
+                        </desc>
+                    </org>
+                     <org type="university" xml:id="oUNIPI">
+                        <orgName ref="http://www.unipi.it/">Univeristà di Pisa</orgName>
+                        <placeName ref="#lPI">Pisa</placeName>
+                        <desc>
+                            Università di Pisa.
+                        </desc>
+                    </org>
+                    <org type="laboratory" xml:id="oCD">
+                        <orgName ref="http://www.labcd.unipi.it/">Laboratorio Cultura Digitale</orgName>
+                        <placeName ref="#lPI">Pisa</placeName>
+                        <desc>
+                            Centro interdipartimentale di ricerca e formazione dell'<orgName ref="#oUNIPI">Univeristà di Pisa</orgName>.
+                        </desc>
+                    </org>
+                    <org type="museum" xml:id="oMCE">
+                        <orgName ref="http://etnografico.museilaspezia.it/ https://it.wikipedia.org/wiki/Museo_civico_etnografico_Giovanni_Podenzana">Museo Civico Etnografico "<persName ref="#pGIPO">Giovanni Podenzana</persName>", Sezione dei cimeli garibaldini e della Prima Guerra Mondiale</orgName>
+                        <placeName ref="#lSP">La Spezia</placeName>
+                        <desc>
+                            Centro di ricerca e divulgazione dei temi dell'antropologia e della etnografia.
+                        </desc>
+                    </org>
+                    <!--cartolina _011-->
                     <org type="typography" xml:id="oEF">
                         <orgName>Eliocromia
-                            <persName ref="pF">Fumagalli</persName> &amp; C.
+                            <persName ref="#pF">Fumagalli</persName> &amp; C.
                         </orgName>
-                    	<placeName ref="#MI">Milano</placeName>
+                    	<placeName ref="#lMI">Milano</placeName>
                         <desc>
                             Servizio di stampa.
                         </desc>
@@ -228,16 +283,10 @@
                             Gruppo militare mobile.
                         </desc>
                     </org>
-                    <org type="society" xml:id="oPI">
-                        <orgName ref="https://it.wikipedia.org/wiki/Poste_italiane">Poste Italiane</orgName>
-                        <desc>
-                            Servizio per la stampa di cartoline
-                        </desc>
-                    </org>
                     <!--cartolina _020-->
                     <org type="typography" xml:id="oMCM">
                         <orgName >Sculture MASTROIANNI Roma Cromogliptica A. Marzi</orgName>
-                        <placeName ref="#RO">Roma</placeName>
+                        <placeName ref="#lRO">Roma</placeName>
                         <desc>
                             Servizio di stampa.
                         </desc>
@@ -247,7 +296,9 @@
 <!-- ___________________________________________________________________________ -->
         </fileDesc>
         <revisionDesc >
-            <change when="2018-12-05" resp="#CP #DB #CG">Creazione file e inizio liste relative alla cartolina n&#176;011.</change>
+            <change when="2018-12-05" resp="#CP #DB #CG">Creazione file e inizio liste relative alle cartoline n&#176;011, n&#176;016, n&#176;016.</change>
+            <change when="2018-12-10" resp="#CP #DB #CG">Accorgimenti e modifiche delle liste relative alle cartoline n&#176;011, n&#176;016, n&#176;016.</change>
+            <change when="2018-12-18" resp="#CP #DB #CG">Fine della creazione del file relativo alle liste alle cartoline n&#176;011, n&#176;016, n&#176;016.</change>
         </revisionDesc>
     </teiHeader>
     <text>

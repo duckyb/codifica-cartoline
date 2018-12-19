@@ -46,13 +46,23 @@
             </editionStmt>
             
             <publicationStmt>
-                <publisher>Unipi</publisher>
+                <publisher ref="#oUNIPI">
+                    <choice>
+                        <abbr>Unipi</abbr>
+                        <expan>Università di <placeName ref="#lPI">Pisa</placeName></expan>
+                    </choice>
+                </publisher>
                 <pubPlace ref="#lPI">Pisa</pubPlace>
                 <availability>
                     <p>Available under licence only</p>
                 </availability>
                 <date when="2019">2019</date>
-                <distributor ref="#oCD">LabCD</distributor>
+                <distributor ref="#oCD">
+                    <choice>
+                        <abbr>LabCD</abbr>
+                        <expan>Laboratorio di Cultura Digitale</expan>
+                    </choice>
+                </distributor>
                 <address>
                     <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
                     <addrLine>Pisa</addrLine>
@@ -71,7 +81,7 @@
                     <msIdentifier>
                         <country ref="#lIT">Italia</country>
                         <settlement ref="#lSP">La Spezia (SP)</settlement>
-                        <repository ref="#lMCE">Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
+                        <repository ref="#oMCE">Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
                         <idno type="postcard_id">7694_011_001/002</idno>
                     </msIdentifier>
 
@@ -166,10 +176,11 @@
         <revisionDesc>
             <change when="2018-11-28" resp="#CP #DB #CG">Inizio creazione teiHeader e bozza dati spedizione.</change>
             <change when="2018-12-03" resp="#CP #DB #CG">Fine teiHeader, realizzazione delle zone e facsimili, inizio codifica del retro della cartolina.</change>
-            <change when="2018-12-05" resp="#CP #DB #CG">Piccoli accorgimenti finali.</change>
+            <change when="2018-12-05" resp="#CP #DB #CG">Piccoli accorgimenti.</change>
             <change when="2018-12-10" resp="#CP #DB #CG">Fine codifica cartolina, piccole correzioni di attributi.</change>
             <change when="2018-12-17" resp="#CP #DB #CG">Codifica delle info stampate sulla cartolina</change>
             <change when="2018-12-18" resp="#CP #DB #CG">Correzione della codifica seguendo il modello fornito dal docente</change>
+            <change when="2018-12-19" resp="#CP #DB #CG">Aggiunta di informazioni e riferimenti</change>
         </revisionDesc>
     </teiHeader>
     <!-- ...................................... T E X T ...................................... -->
@@ -202,7 +213,7 @@
             <zone xml:id="lineDest_6_011" start="#lineDest-6" points="1013,985 1021,934 1140,888 1285,856 1286,869 1200,922 1336,929 1308,885 1359,879 1406,903 1533,863 1552,873 1494,925 1596,918 1627,929 1627,983 1490,974 1392,1001 1359,973 1134,980 1100,996 1041,1002" />
             <zone xml:id="lineDest_7_011" start="#lineDest-7" points="1465,470 1492,422 1545,413 1557,480 1496,492" />
             <!-- 11 -->
-            <zone xml:id="line_11_011" start="#line-11" ulx="18" uly="18" lrx="90" lry="776" />
+            <zone xml:id="number11_011" start="#number11-011" ulx="18" uly="18" lrx="90" lry="776" />
             <!-- timbro SX -->
             <zone xml:id="stamp_left_011" start="#stamp-left" points="817,1 770,79 769,176 827,267 934,313 1044,281 1109,201 1115,101 1067,3" />
             <!-- timbro DX e francobollo-->
@@ -333,10 +344,14 @@
                                 <addrLine xml:id="lineDest-5-011" facs="#lineDest_5_011">5&#7491; Compagnia</addrLine>
                                 <addrLine xml:id="lineDest-6-011" facs="#lineDest_6_011"><unclear cert="low" reason="calligraphy">Faro</unclear> di Guerra</addrLine>
                             </address>
-                            <add xml:id="note_1_011" cert="medium"> 
-                                <num  type="cardinal" value="11">11</num>
-                            </add>
                         </p>
+                    </div>
+                    <div type="add">
+                        <ab xml:id="number11-011" facs="#number11_011">
+                            <add cert="medium"> 
+                                <num type="cardinal" value="11"><ptr target="#note_1"/>11</num>
+                            </add>
+                        </ab>
                     </div>
                 </div>
             </div>

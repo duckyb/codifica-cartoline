@@ -41,13 +41,23 @@
                 </respStmt>
             </editionStmt> 
             <publicationStmt>
-                <publisher>Unipi</publisher>
+                <publisher ref="#oUNIPI">
+                    <choice>
+                        <abbr>Unipi</abbr>
+                        <expan>Università di <placeName ref="#lPI">Pisa</placeName></expan>
+                    </choice>
+                </publisher>
                 <pubPlace ref="#lPI">Pisa</pubPlace>
                 <availability>
                     <p>Available under licence only</p>
                 </availability>
                 <date when="2019">2019</date>
-                <distributor ref="#oCD">LabCD</distributor>
+                <distributor ref="#oCD">
+                    <choice>
+                        <abbr>LabCD</abbr>
+                        <expan>Laboratorio di Cultura Digitale</expan>
+                    </choice>
+                </distributor>
                 <address>
                     <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
                     <addrLine>Pisa</addrLine>
@@ -69,7 +79,7 @@
                     <msIdentifier>
                         <country ref="#lIT">Italia</country>
                         <settlement ref="#lSP">La Spezia (SP)</settlement>
-                        <repository ref="#lMCE">Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
+                        <repository ref="#oMCE">Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
                         <idno type="postcard_id">7694_020_001/002</idno>
                     </msIdentifier>
                     <msContents>
@@ -153,6 +163,7 @@
             <change when="2018-12-10" resp="#CP #DB #CG">Fine codifica cartolina, piccole correzioni di attributi.</change>
             <change when="2018-12-17" resp="#CP #DB #CG">Codifica delle info stampate sulla cartolina</change>
             <change when="2018-12-18" resp="#CP #DB #CG">Correzione della codifica seguendo il modello fornito dal docente</change>
+            <change when="2018-12-19" resp="#CP #DB #CG">Aggiunta di informazioni e riferimenti</change>
         </revisionDesc>
     </teiHeader>
     <!-- ...................................... T E X T ...................................... -->
@@ -181,7 +192,7 @@
             <!-- riquadro x bollo postale -->                                
             <zone xml:id="riquadro_20" start="#riquadro-20" ulx="1344" uly="78" lrx="1581" lry="355" />
             <!-- 20 -->
-            <zone xml:id="n20_20" start="#n20-20" ulx="916" uly="18" lrx="1011" lry="83" />
+            <zone xml:id="number20_20" start="#number20-20" ulx="916" uly="18" lrx="1011" lry="83" />
             <!-- h. 3/12 -->
             <zone xml:id="date312_20" start="#date312-20" ulx="1073" uly="0" lrx="1244" lry="91" />
             <!-- 1916 -->
@@ -346,7 +357,14 @@
                         </signed>
                     </closer>
                 </div>
+                <div type="add">
+                    <ab xml:id="number20-20" facs="#number20_20">
+                        <add  cert="medium"> 
+                            <num type="cardinal" value="20"><ptr target="#note_1"/>20</num>
+                        </add>
+                    </ab>
+                </div>             
             </div>
         </body>
     </text>
-</TEI>
+</TEI>  
