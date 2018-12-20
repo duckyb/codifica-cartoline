@@ -4,6 +4,7 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0" 
     xmlns="http://www.w3.org/1999/xhtml">
     <xsl:output omit-xml-declaration="yes" method="html" version="5" encoding="UTF-8" indent="no"/>
+    <xsl:strip-space elements="*" />
     <xsl:template match="tei:teiCorpus">
         <html>
             <head>
