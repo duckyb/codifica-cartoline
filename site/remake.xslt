@@ -99,7 +99,8 @@
     <xsl:template match="tei:div[@type='message']/tei:closer//tei:s">
         <xsl:for-each select="./tei:lb">
             <p class="manoscritto">
-                <xsl:if test="./following-sibling::text()[1]">
+                <xsl:value-of select="(following-sibling::text()|following-sibling::tei:persName)[1]"/>
+                <!-- <xsl:if test="./following-sibling::text()[1]">
                     <span class="debug lime">
                         <xsl:value-of select="./following-sibling::*[text()][1]"/>
                     </span>
@@ -108,7 +109,7 @@
                     <span class="debug purple">
                         test
                     </span>
-                </xsl:if>
+                </xsl:if> -->
             </p>
         </xsl:for-each>
     </xsl:template>
