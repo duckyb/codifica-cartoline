@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <?xml-model href="../teiCustom.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI
-    xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina_011">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina_011">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -19,7 +18,6 @@
             </titleStmt>
             <editionStmt>
                 <edition>Studenti di Codifica di Testi, Corso di Laurea Triennale di Informatica Umanistica, Università di Pisa
-                    
                     <date when="2018-12">Dicembre 2018</date>
                 </edition>
                 <respStmt>
@@ -108,7 +106,7 @@
                                     <stamp type="postmark"> 
                                         Il timbro sinistro è parzialmente tagliato superiormente.
                                         È solo parzialmente leggibile a causa delle sbavature d'inchiostro.
-								    </stamp>
+                                    </stamp>
                                     <stamp type="postmark">
                                         Il timbro destro è interamente contenuto sul supporto cartaceo, ma è
                                         solo parzialmente leggibile a causa di sbavature d'inchiostro.
@@ -235,9 +233,7 @@
                     <s rend="writing-mode(vertical-lr) text-orientation(sideways)">
                         <orgName ref="#oEF" type="typography">
                             Eliocromia 
-                            
                             <persName ref="#pF">Fumagalli</persName> &amp; C. -
-                            
                             <placeName ref="#lMI">Milano</placeName>
                         </orgName>
                     </s>
@@ -275,17 +271,17 @@
                         <!--saluto iniziale-->
                         <salute>
                             <s>
-                                <lb xml:id="lineText-1-011" facs="#lineText_1_011" />A voi miei cari
-                                
-                                <lb type="sameline" xml:id="lineText-2-011" facs="#lineText_2_011" />Eroi!
-                            
+                                <lb xml:id="lineText-1-011" facs="#lineText_1_011" />
+                                A voi miei cari
+                                <lb type="sameline" xml:id="lineText-2-011" facs="#lineText_2_011" />
+                                Eroi!
                             </s>
-                            <s> Il mio
-                                
-                                <lb xml:id="lineText-3-011" facs="#lineText_3_011" />bacio e il
-                                
-                                <lb xml:id="lineText-4-011" facs="#lineText_4_011" />mio saluto
-                            
+                            <s> 
+                                Il mio
+                                <lb xml:id="lineText-3-011" facs="#lineText_3_011" />
+                                bacio e il
+                                <lb xml:id="lineText-4-011" facs="#lineText_4_011" />
+                                mio saluto
                             </s>
                         </salute>
                     </opener>
@@ -293,14 +289,12 @@
                     <p>
                         <s>
                             <lb xml:id="lineText-5-011" facs="#lineText_5_011"/>
-                          Evviva la Vittoria!
-                        
+                            Evviva la Vittoria!
                         </s>
                         <s>
                             <lb xml:id="lineText-6-011" facs="#lineText_6_011"/>
-                          Evviva l'
+                            Evviva l'
                             <country ref="lIT">Italia</country>!
-                        
                         </s>
                     </p>
                     <!--saluto finale e firma-->
@@ -314,8 +308,8 @@
                         <!-- Firma del mittente -->
                         <signed xml:id="lineText-8-011" facs="#lineText_8_011">
                             <s>
-                                <lb xml:id="lineText-7-011" facs="#lineText_7_011" />Tuo amico
-                                
+                                <lb xml:id="lineText-7-011" facs="#lineText_7_011"/>
+                                Tuo amico
                                 <lb/>
                                 <persName ref="#pGF">Giulio Fantoni</persName>
                             </s>
@@ -327,7 +321,7 @@
                         <ab>
                             <!-- Timbro SX -->
                             <stamp type="postmark" rend="transform(rotateZ(45deg))">
-                                <mentioned rend="circle" >
+                                <mentioned rend="circle">
                                     <gap reason="illegible" agent="ink" atLeast="15" atMost="25" unit="chars"/>
                                     <mentioned>
                                         <hi rend="align(center)">
@@ -339,7 +333,7 @@
                             </stamp>
                             <!-- Timbro DX -->
                             <stamp type="postmark">
-                                <mentioned rend="circle" >
+                                <mentioned rend="circle">
                                     <gap reason="illegible" agent="ink" atLeast="15" atMost="25" unit="chars"/>
                                     <mentioned>
                                         <hi rend="align(center)">
@@ -383,7 +377,8 @@
                         <ab xml:id="number11-011" facs="#number11_011">
                             <add cert="medium">
                                 <num type="cardinal" value="11">
-                                    <ptr target="#note_1"/>11
+                                    <ptr target="#note_1"/>
+                                    11
                                 </num>
                             </add>
                         </ab>

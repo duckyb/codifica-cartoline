@@ -31,7 +31,8 @@ section {
   text-align: center;
 }
 
-.scan, .digital {
+.scan,
+.digital {
   width: calc(1651px/3);
   height: calc(1081px/3);
   margin: 0 auto;
@@ -41,17 +42,18 @@ section {
   border-radius: 4px;
 }
 
-h1{
+h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  font-size:2.5em;  
+  font-size: 2.5em;
 }
-h3{
+
+h3 {
   font-family: 'Lato', serif;
   font-weight: 500;
 }
 
-h4{
+h4 {
   font-family: "Lato", sans-serif;
   font-weight: 500;
   text-align: center;
@@ -128,10 +130,41 @@ img.fronte {
 }
 
 /* debug css */
-.debug {
+.blue {
   background: #0074D9;
   color: #fff;
 }
+
+.teal {
+  background: #39CCCC;
+  color: #fff;
+}
+
+.red {
+  background: #FF4136;
+  color: #fff;
+}
+
+.lime {
+  background: #01FF70;
+  color: #111;
+}
+
+.olive {
+  background: #3D9970;
+  color: #fff;
+}
+
+.black {
+  background: #111;
+  color: #fff;
+}
+
+.purple {
+  background: #B10DC9;
+  color: #fff;
+}
+
 .debug::before {
   content: '!';
   font-weight: bold;

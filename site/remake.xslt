@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<xsl:stylesheet 
-    version="1.0"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:tei="http://www.tei-c.org/ns/1.0"
+<xsl:stylesheet version="1.0" 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0" 
     xmlns="http://www.w3.org/1999/xhtml">
-    <xsl:output omit-xml-declaration="yes" method="html" version="5" encoding="UTF-8" indent="yes"/>
+    <xsl:output omit-xml-declaration="yes" method="html" version="5" encoding="UTF-8" indent="no"/>
     <xsl:template match="tei:teiCorpus">
         <html>
             <head>
@@ -97,12 +96,21 @@
         <xsl:apply-templates select="./tei:s/tei:lb"/>
     </xsl:template>
     <!-- CLOSER -->
-    <xsl:template match="tei:div[@type='message']/tei:closer">
-        <!-- salute s lb -->
-        <xsl:apply-templates select="./tei:salute/tei:s/tei:lb"/>
-        <!-- signed s lb-->
-        <xsl:apply-templates select="./tei:signed/tei:s/tei:lb"/>
-        <xsl:apply-templates select="./tei:dateline"/>
+    <xsl:template match="tei:div[@type='message']/tei:closer//tei:s">
+        <xsl:for-each select="./tei:lb">
+            <p class="manoscritto">
+                <xsl:if test="./following-sibling::text()[1]">
+                    <span class="debug lime">
+                        <xsl:value-of select="./following-sibling::*[text()][1]"/>
+                    </span>
+                </xsl:if>
+                <xsl:if test="./following-sibling::*[tei:persName]//text()">
+                    <span class="debug purple">
+                        test
+                    </span>
+                </xsl:if>
+            </p>
+        </xsl:for-each>
     </xsl:template>
     <!-- TEMPLATE DATELINE -->
     <xsl:template match="tei:div[@type='message']//tei:dateline">
@@ -112,10 +120,13 @@
     </xsl:template>
     <!-- TEMPLATE PER <S> CON <LB> DENTRO -->
     <xsl:template match="tei:div[@type='message']//tei:lb">
-        <xsl:variable name="pn" select="./following-sibling::*[1]/tei:persName"/>
+        <xsl:variable name="pn" select="./following-sibling::tei:persName"/>
         <p class="manoscritto">
-            <xsl:value-of select="./following-sibling::text()" />
-            <span class="debug">
+            <span class="debug teal">
+                <xsl:value-of select="./following-sibling::text()" />
+            </span>
+            <!-- il problema è qui -->
+            <span class="debug red">
                 <xsl:value-of select="$pn"/>
             </span>
             <xsl:value-of select="$pn/following-sibling::text()"/>
