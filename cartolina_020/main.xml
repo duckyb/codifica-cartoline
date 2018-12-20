@@ -304,7 +304,7 @@
                         <dateline rend="align(right)">
                             <date when="1913-12-03" rend="align(right)">
                                 <date xml:id="date312-20" facs="#date312_20">3/12</date>
-                                <date xml:id="date-20" facs="#date_20">1918</date>
+                                <date xml:id="date-20" facs="#date_20">-1916.</date>
                             </date>
                         </dateline>
                         <salute>
@@ -317,23 +317,23 @@
                     </opener>
                     <p>
                         <s>
-                            <lb xml:id="lineText-2-020"  facs="#lineText_2_020"/>Nè ieri, nè oggi ho ricevuto tuoi scritti.
+                            <lb type="sameline" xml:id="lineText-2-020"  facs="#lineText_2_020"/>Nè ieri, nè oggi ho ricevuto tuoi scritti.
                         </s>
                         <s>Perché?</s>
                         <s>
-                            <lb xml:id="lineText-3-020"  facs="#lineText_3_020"/>Vuoi addolorare il tuo 
+                            <lb type="sameline" xml:id="lineText-3-020"  facs="#lineText_3_020"/>Vuoi addolorare il tuo 
                             <persName ref="#pGO">Giovannino</persName> lontano?
                         </s>
                         <s>
                             Ho
                             <lb xml:id="lineText-4-020"  facs="#lineText_4_020"/>già fatto mille supposizioni e congetture, mi auguro
-                            <lb xml:id="lineText-5-020"  facs="#lineText_5_020"/>che la tua salute sia ottima.
+                            <lb type="sameline" xml:id="lineText-5-020"  facs="#lineText_5_020"/>che la tua salute sia ottima.
                         </s> 
                         <s>
                             Vorrei correre a te
-                            <lb xml:id="lineText-6-020"  facs="#lineText_6_020"/>volare sul tuo grembo adorato e carezzevolmente ba
+                            <lb xml:id="lineText-6-020"  facs="#lineText_6_020"/>volare sul tuo grembo adorato e carezzevolmente ba-
                             <lb xml:id="lineText-7-020"  facs="#lineText_7_020"/>ciarti la fronte, i capelli, il volto in segno di devoto
-                            <lb xml:id="lineText-8-020"  facs="#lineText_8_020"/>affetto e d'amore sublime.
+                            <lb type="sameline" xml:id="lineText-8-020"  facs="#lineText_8_020"/>affetto e d'amore sublime.
                         </s> 
                         <s>
                             Mi raccomando
@@ -344,7 +344,7 @@
                     <closer>
                         <salute rend="align(center)">
                             <s>
-                                <lb xml:id="lineText-11-020" facs="#lineText_11_020"/>
+                                <lb type="sameline" xml:id="lineText-11-020" facs="#lineText_11_020"/>
                                 Un bacio immenso, infinito.
                             </s>                        
                         </salute>

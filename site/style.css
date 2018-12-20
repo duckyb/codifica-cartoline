@@ -113,3 +113,7 @@ img.fronte {
   margin: 0 10px;
   color: #333;
 }
+
+.manoscritto {
+  border: 1px dashed brown;
+}

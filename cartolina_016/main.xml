@@ -314,9 +314,27 @@
                             <!--address type="receiver"-->
                             <address>
                                 <!-- Righe della sezione: Destinatario -->
-                                <addrLine xml:id="lineDest-1-016" facs="#lineDest_1">Gent.<hi rend="underline superscript">me</hi> Signorine</addrLine>
+                                <addrLine xml:id="lineDest-1-016" facs="#lineDest_1">
+                                    <choice>
+                                        <abbr>Gent.<hi rend="underline superscript">me</hi></abbr>
+                                        <expan>Gentilissime</expan>
+                                    </choice>
+                                    Signorine
+                                </addrLine>
                                 <addrLine xml:id="lineDest-2-016" facs="#lineDest_2"><persName ref="#pAT">Antonietta</persName> ed <persName ref="pOT">Oliva</persName> Turtura</addrLine>
-                                <addrLine xml:id="lineDest-4-016" facs="#lineDest_3">Via Gir. Rossi <hi rend="double-strikethrough">N</hi>.60</addrLine>
+                                <addrLine xml:id="lineDest-4-016" facs="#lineDest_3">
+                                    Via 
+                                    <choice>
+                                        <abbr>Gir.</abbr>
+                                        <expan>Girolamo</expan>
+                                    </choice>
+                                    Rossi 
+                                    <choice>
+                                        <abbr><hi rend="double-strikethrough">N</hi>.</abbr>
+                                        <expan>Numero</expan>
+                                    </choice>
+                                    <num type="cardinal">60</num>
+                                </addrLine>
                                 <addrLine xml:id="lineDest-5-016" facs="#lineDest_4" rend="underline">Ravenna</addrLine>
                             </address>
                         </p>

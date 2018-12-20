@@ -146,7 +146,7 @@
                 </correspAction>
                 <correspAction type="received">
                     <persName ref="#pGC">Cogliola Giovanni</persName>
-                    <placeName ref="#oGDCF">11&#176; Gruppo D'Assalto, 2&#7491; Divisione, 5&#7491; Compagnia</placeName>
+                    <placeName ref="#oGDCF"><num type="ordinal" value="11">11&#176;</num> Gruppo D'Assalto, <num type="ordinal" value="2">2&#7491;</num> Divisione, <num type="ordinal" value="5">5&#7491;</num> Compagnia</placeName>
                 </correspAction>
             </correspDesc>
         
@@ -270,7 +270,7 @@
                         <salute>
                             <s>
                                 <lb xml:id="lineText-1-011" facs="#lineText_1_011" />A voi miei cari
-                                <lb xml:id="lineText-2-011" facs="#lineText_2_011" />Eroi!
+                                <lb type="sameline" xml:id="lineText-2-011" facs="#lineText_2_011" />Eroi!
                             </s>
                             <s> Il mio
                                 <lb xml:id="lineText-3-011" facs="#lineText_3_011" />bacio e il
@@ -280,8 +280,14 @@
                     </opener>
                     <!--contenuto del messaggio-->
                     <p> 
-                        <s xml:id="lineText-5-011" facs="#lineText_5_011">Evviva la Vittoria!</s>
-                        <s xml:id="lineText-6-011" facs="#lineText_6_011">Evviva l'<country ref="lIT">Italia</country>!</s>
+                        <s>
+                          <lb xml:id="lineText-5-011" facs="#lineText_5_011"/>
+                          Evviva la Vittoria!
+                        </s>
+                        <s>
+                          <lb xml:id="lineText-6-011" facs="#lineText_6_011"/>
+                          Evviva l'<country ref="lIT">Italia</country>!
+                        </s>
                     </p>
                     <!--saluto finale e firma-->
                     <p xml:id="line-vertical-hw-011" facs="#line_vertical_hw_011">
