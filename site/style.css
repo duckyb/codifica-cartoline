@@ -66,7 +66,7 @@ hr {
 
 img.retro {
   width: calc(1651px/3);
-  height: calc(1081px/3);  
+  height: calc(1081px/3);
 }
 
 /*  1 - HEADER      */
@@ -127,21 +127,13 @@ img.fronte {
   color: #111;
 }
 
-.debug-black {
-  background: #111;
-  color: #ddd;
-}
-.debug-green {
+/* debug css */
+.debug {
   background: #0074D9;
   color: #fff;
 }
-.debug-red {
-  background: #FF4136;
-  color: #fff;
-  animation: 1s infinite alternate jump;
-}
-
-@keyframes jump {
-  from {margin-bottom:0px;}
-  to {margin-bottom:5px;}
+.debug::before {
+  content: '!';
+  font-weight: bold;
+  padding: 0 4px;
 }

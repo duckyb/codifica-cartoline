@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <?xml-model href="../teiCustom.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina_011">
+<TEI
+    xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina_011">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -9,7 +10,7 @@
                     <resp>Trascrizione a cura di</resp>
                     <persName ref="#GC">Giacomo Cerretini</persName>
                     <persName ref="#DB">Duccio Breschi</persName>
-                    <persName ref="#CP">Camilla Poggianti</persName>                
+                    <persName ref="#CP">Camilla Poggianti</persName>
                 </respStmt>
                 <respStmt>
                     <resp>Ente di Appartenenza</resp>
@@ -18,6 +19,7 @@
             </titleStmt>
             <editionStmt>
                 <edition>Studenti di Codifica di Testi, Corso di Laurea Triennale di Informatica Umanistica, Università di Pisa
+                    
                     <date when="2018-12">Dicembre 2018</date>
                 </edition>
                 <respStmt>
@@ -44,12 +46,13 @@
                     <persName ref="#pER">E. Ratti</persName>
                 </respStmt>
             </editionStmt>
-            
             <publicationStmt>
                 <publisher ref="#oUNIPI">
                     <choice>
                         <abbr>Unipi</abbr>
-                        <expan>Università di <placeName ref="#lPI">Pisa</placeName></expan>
+                        <expan>Università di 
+                            <placeName ref="#lPI">Pisa</placeName>
+                        </expan>
                     </choice>
                 </publisher>
                 <pubPlace ref="#lPI">Pisa</pubPlace>
@@ -68,14 +71,15 @@
                     <addrLine>Pisa</addrLine>
                 </address>
             </publicationStmt>
- 
             <sourceDesc>
                 <bibl type="postcard">
                     <title type="custom" resp="#pES">[Soldati al fronte]</title>
                     <!-- stampa della cartolina -->
-                    <publisher ref="#oEF">Eliocromia <persName ref="pF">Fumagalli</persName> &amp; C</publisher>
+                    <publisher ref="#oEF">Eliocromia 
+                        <persName ref="pF">Fumagalli</persName> &amp; C
+                    </publisher>
                     <pubPlace ref="#lMI">Milano</pubPlace>
-                    <date when="1916">1916</date>                    
+                    <date when="1916">1916</date>
                 </bibl>
                 <msDesc>
                     <msIdentifier>
@@ -84,14 +88,12 @@
                         <repository ref="#oMCE">Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
                         <idno type="postcard_id">7694_011_001/002</idno>
                     </msIdentifier>
-
                     <msContents>
                         <summary>Cartolina Artistica</summary>
                         <msItem>
                             <textLang xml:id="lang_ITA" mainLang="ita">Italiano</textLang>
                         </msItem>
                     </msContents>
-
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
@@ -101,7 +103,7 @@
                                     <dimensions unit="cm">
                                         <height>9</height>
                                         <width>14</width>
-                                    </dimensions>                                   
+                                    </dimensions>
                                     <!-- descrizione fisica dei 2 timbri -->
                                     <stamp type="postmark"> 
                                         Il timbro sinistro è parzialmente tagliato superiormente.
@@ -136,7 +138,6 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        
         <profileDesc>
             <correspDesc>
                 <correspAction type="sent">
@@ -146,10 +147,13 @@
                 </correspAction>
                 <correspAction type="received">
                     <persName ref="#pGC">Cogliola Giovanni</persName>
-                    <placeName ref="#oGDCF"><num type="ordinal" value="11">11&#176;</num> Gruppo D'Assalto, <num type="ordinal" value="2">2&#7491;</num> Divisione, <num type="ordinal" value="5">5&#7491;</num> Compagnia</placeName>
+                    <placeName ref="#oGDCF">
+                        <num type="ordinal" value="11">11&#176;</num> Gruppo D'Assalto, 
+                        <num type="ordinal" value="2">2&#7491;</num> Divisione, 
+                        <num type="ordinal" value="5">5&#7491;</num> Compagnia
+                    </placeName>
                 </correspAction>
             </correspDesc>
-        
             <textClass>
                 <keywords>
                     <term>Cartolina </term>
@@ -158,12 +162,10 @@
                     <term>Bandiera italiana</term>
                 </keywords>
             </textClass>
-
             <langUsage>
                 <language ident="it-IT">Italiano</language>
             </langUsage>
         </profileDesc>
-
         <encodingDesc>
             <p>
                 Check sintattico con xmllint e validazione con schema RNG.
@@ -202,7 +204,7 @@
             <zone xml:id="line_vertical_hw_011" start="#line-vertical-hw-011" ulx="44" uly="22" lrx="69" lry="747" />
             <!-- Vertical stamp-writing -->
             <zone xml:id="line_vertical_sw_011" start="#line-vertical-sw-011" ulx="24" uly="283" lrx="48" lry="772" />
-              <!-- 1006 -->
+            <!-- 1006 -->
             <zone xml:id="line_1006_011" start="#line-1006" ulx="776" uly="980" lrx="832" lry="1005" />
             <!-- seconda pagina - testo -->
             <zone xml:id="lineDest_1_011" start="#lineDest-1" points="942,359 1160,410 1366,437 1280,497 946,508 871,563 851,559 896,503 783,502" />
@@ -230,16 +232,20 @@
         <front>
             <div type="typo">
                 <p xml:id="line-vertical-sw-011" facs="#line_vertical_sw_011">
-                    <s rend="writing-mode(vertical-lr) text-orientation(sideways)"> 
+                    <s rend="writing-mode(vertical-lr) text-orientation(sideways)">
                         <orgName ref="#oEF" type="typography">
                             Eliocromia 
+                            
                             <persName ref="#pF">Fumagalli</persName> &amp; C. -
+                            
                             <placeName ref="#lMI">Milano</placeName>
                         </orgName>
                     </s>
                 </p>
                 <!-- (HR) linea verticale che divide messaggio da destinazione -->
-                <ab xml:id="line-1006-011" facs="#line_1006_011"><num type="cardinal" value="1006">1006</num></ab>
+                <ab xml:id="line-1006-011" facs="#line_1006_011">
+                    <num type="cardinal" value="1006">1006</num>
+                </ab>
                 <!-- (HR) linea orizzontale per la firma nella zona destinazione-->
             </div>
         </front>
@@ -270,35 +276,46 @@
                         <salute>
                             <s>
                                 <lb xml:id="lineText-1-011" facs="#lineText_1_011" />A voi miei cari
+                                
                                 <lb type="sameline" xml:id="lineText-2-011" facs="#lineText_2_011" />Eroi!
+                            
                             </s>
                             <s> Il mio
+                                
                                 <lb xml:id="lineText-3-011" facs="#lineText_3_011" />bacio e il
+                                
                                 <lb xml:id="lineText-4-011" facs="#lineText_4_011" />mio saluto
+                            
                             </s>
                         </salute>
                     </opener>
                     <!--contenuto del messaggio-->
-                    <p> 
+                    <p>
                         <s>
-                          <lb xml:id="lineText-5-011" facs="#lineText_5_011"/>
+                            <lb xml:id="lineText-5-011" facs="#lineText_5_011"/>
                           Evviva la Vittoria!
+                        
                         </s>
                         <s>
-                          <lb xml:id="lineText-6-011" facs="#lineText_6_011"/>
-                          Evviva l'<country ref="lIT">Italia</country>!
+                            <lb xml:id="lineText-6-011" facs="#lineText_6_011"/>
+                          Evviva l'
+                            <country ref="lIT">Italia</country>!
+                        
                         </s>
                     </p>
                     <!--saluto finale e firma-->
                     <p xml:id="line-vertical-hw-011" facs="#line_vertical_hw_011">
                         <!-- Testo ruotato 90° -->
-                        <s rend="writing-mode(vertical-rl) text-orientation(sideways) overwrite">Mi raccomando quella sola <unclear reason="illegible" agent="ink" cert="medium">XO</unclear></s>
+                        <s rend="writing-mode(vertical-rl) text-orientation(sideways) overwrite">Mi raccomando quella sola 
+                            <unclear reason="illegible" agent="ink" cert="medium">XO</unclear>
+                        </s>
                     </p>
                     <closer rend="align(right)">
                         <!-- Firma del mittente -->
                         <signed xml:id="lineText-8-011" facs="#lineText_8_011">
                             <s>
                                 <lb xml:id="lineText-7-011" facs="#lineText_7_011" />Tuo amico
+                                
                                 <lb/>
                                 <persName ref="#pGF">Giulio Fantoni</persName>
                             </s>
@@ -322,10 +339,10 @@
                             </stamp>
                             <!-- Timbro DX -->
                             <stamp type="postmark">
-                                    <mentioned rend="circle" >
-                                        <gap reason="illegible" agent="ink" atLeast="15" atMost="25" unit="chars"/>
+                                <mentioned rend="circle" >
+                                    <gap reason="illegible" agent="ink" atLeast="15" atMost="25" unit="chars"/>
                                     <mentioned>
-                                        <hi rend="align(center)"> 
+                                        <hi rend="align(center)">
                                             <unclear reason="faded" agent="time" cert="medium">10</unclear>
                                             <unclear reason="faded" agent="time" cert="low">.11.</unclear>
                                             <gap reason="illegible" agent="faded" atLeast="2" atMost="4" unit="chars"/>
@@ -337,7 +354,10 @@
                             <stamp type="postage" rend="transform(rotateZ(180deg))">
                                 <mentioned rend="color(red)">
                                     <orgName ref="#oPI">Poste italiane</orgName>
-                                    <hi><num rend="double" type="cardinal" value="10">10</num> centesimi <num rend="double" type="cardinal" value="10">10</num></hi>
+                                    <hi>
+                                        <num rend="double" type="cardinal" value="10">10</num> centesimi 
+                                        <num rend="double" type="cardinal" value="10">10</num>
+                                    </hi>
                                 </mentioned>
                             </stamp>
                         </ab>
@@ -347,18 +367,24 @@
                             <address>
                                 <!-- Righe della sezione: Destinatario -->
                                 <addrLine xml:id="lineDest-1-011" facs="#lineDest_1_011">Capitano</addrLine>
-                                <addrLine xml:id="lineDest-2-011" facs="#lineDest_2_011"><persName ref="#pGC"> Cogliola Giovanni</persName></addrLine>
+                                <addrLine xml:id="lineDest-2-011" facs="#lineDest_2_011">
+                                    <persName ref="#pGC"> Cogliola Giovanni</persName>
+                                </addrLine>
                                 <addrLine xml:id="lineDest-3-011" facs="#lineDest_3_011">11&#176; Gruppo D'Assalto</addrLine>
                                 <addrLine xml:id="lineDest-4-011" facs="#lineDest_4_011">2&#7491; Divisione</addrLine>
                                 <addrLine xml:id="lineDest-5-011" facs="#lineDest_5_011">5&#7491; Compagnia</addrLine>
-                                <addrLine xml:id="lineDest-6-011" facs="#lineDest_6_011"><unclear cert="low" reason="calligraphy">Faro</unclear> di Guerra</addrLine>
+                                <addrLine xml:id="lineDest-6-011" facs="#lineDest_6_011">
+                                    <unclear cert="low" reason="calligraphy">Faro</unclear> di Guerra
+                                </addrLine>
                             </address>
                         </p>
                     </div>
                     <div type="add">
                         <ab xml:id="number11-011" facs="#number11_011">
-                            <add cert="medium"> 
-                                <num type="cardinal" value="11"><ptr target="#note_1"/>11</num>
+                            <add cert="medium">
+                                <num type="cardinal" value="11">
+                                    <ptr target="#note_1"/>11
+                                </num>
                             </add>
                         </ab>
                     </div>

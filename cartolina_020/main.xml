@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <?xml-model href="..//teiCustom.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina_020">
+<TEI
+    xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina_020">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -9,11 +10,12 @@
                     <resp>Trascrizione a cura di</resp>
                     <persName ref="#GC">Giacomo Cerretini</persName>
                     <persName ref="#DB">Duccio Breschi</persName>
-                    <persName ref="#CP">Camilla Poggianti</persName>                
+                    <persName ref="#CP">Camilla Poggianti</persName>
                 </respStmt>
             </titleStmt>
             <editionStmt>
                 <edition>Studenti di Codifica di Testi, Corso di Laurea Triennale di Informatica Umanistica, Università di Pisa
+                    
                     <date when="2018-12">Dicembre 2018</date>
                 </edition>
                 <respStmt>
@@ -39,12 +41,14 @@
                     <resp>Funzionario responsabile</resp>
                     <persName ref="#pER">E. Ratti</persName>
                 </respStmt>
-            </editionStmt> 
+            </editionStmt>
             <publicationStmt>
                 <publisher ref="#oUNIPI">
                     <choice>
                         <abbr>Unipi</abbr>
-                        <expan>Università di <placeName ref="#lPI">Pisa</placeName></expan>
+                        <expan>Università di 
+                            <placeName ref="#lPI">Pisa</placeName>
+                        </expan>
                     </choice>
                 </publisher>
                 <pubPlace ref="#lPI">Pisa</pubPlace>
@@ -63,13 +67,14 @@
                     <addrLine>Pisa</addrLine>
                 </address>
             </publicationStmt>
-
             <sourceDesc>
                 <bibl type="postcard">
                     <title>Il frutto dell'amore</title>
                     <publisher ref="#oMCM">Sculture 
+                        
                         <persName ref="#pDM">MASTROIANNI</persName>
                         <placeName ref="#lRO">Roma</placeName> Cromogliptica 
+                        
                         <persName ref="#pAM"> A. Marzi</persName>
                     </publisher>
                     <pubPlace ref="#lRO">Roma</pubPlace>
@@ -97,7 +102,7 @@
                                     <dimensions unit="cm">
                                         <height>9</height>
                                         <width>14</width>
-                                    </dimensions>                                   
+                                    </dimensions>
                                     <!-- descrizione fisica dei timbri -->
                                     <stamp type="postmark"> 
                                         Non è presente nessun timbro o francobollo sulla cartolina.
@@ -129,7 +134,6 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-
         <profileDesc>
             <correspDesc>
                 <correspAction type="sent">
@@ -145,7 +149,6 @@
                 <language ident="it-IT">Italiano</language>
             </langUsage>
         </profileDesc>
-
         <encodingDesc>
             <p>
                 Check sintattico con xmllint e validazione con schema RNG.
@@ -155,7 +158,6 @@
                 Con appositi attributi è stata specificata anche la resa grafica di alcuni elementi.
             </p>
         </encodingDesc>
-        
         <revisionDesc>
             <change when="2018-11-28" resp="#CP #DB #CG">Inizio creazione teiHeader e bozza dati spedizione.</change>
             <change when="2018-12-03" resp="#CP #DB #CG">Fine teiHeader, realizzazione delle zone e facsimili, inizio codifica del retro della cartolina.</change>
@@ -185,11 +187,11 @@
             <zone xml:id="fruit_20" start="#fruit-20" ulx="203" uly="399" lrx="228" lry="629" />
             <!-- N.31 -->
             <zone xml:id="n31_20" start="#n31-20" ulx="133" uly="744" lrx="161" lry="823" />
-            <!-- riproduzione interdetta -->    
+            <!-- riproduzione interdetta -->
             <zone xml:id="interdetta_20" start="#interdetta-20" ulx="717" uly="700" lrx="749" lry="1003" />
             <!-- stampata in italia -->
             <zone xml:id="place_20" start="#place-20" ulx="723" uly="56" lrx="755" lry="302" />
-            <!-- riquadro x bollo postale -->                                
+            <!-- riquadro x bollo postale -->
             <zone xml:id="riquadro_20" start="#riquadro-20" ulx="1344" uly="78" lrx="1581" lry="355" />
             <!-- 20 -->
             <zone xml:id="number20_20" start="#number20-20" ulx="916" uly="18" lrx="1011" lry="83" />
@@ -227,25 +229,28 @@
             <div type="typo">
                 <lb/>
                 <ab>
-                    <orgName ref="#oMCM"> 
+                    <orgName ref="#oMCM">
                         <hi xml:id="autore-20" facs="#autore_20" rend="align(left)"> Sculture                        
+                            
                             <persName ref="#pDM">MASTROIANNI</persName>
                             <placeName ref="#lRO">Roma</placeName>
                         </hi>
                         <hi xml:id="edit-20" facs="#edit_20" rend="align(right)">
                             "Cromogliptica" 
+                            
                             <persName ref="#pAM">A. Marzi</persName>
                             <placeName ref="#lRO">Roma</placeName>
                         </hi>
-                    </orgName> 
-                </ab> 
+                    </orgName>
+                </ab>
                 <lb/>
                 <ab>
                     <hi xml:id="ediz-20" facs="#ediz_20" rend="align(left)">Edizione propria</hi>
                     <hi xml:id="sym-20" facs="#sym_20" rend="align(right)">
-                        <figure> 
+                        <figure>
                             <figDesc>
                                 Piccolo simbolo stampato in nero con scritto: 
+                                
                                 <mentioned>
                                     <choice>
                                         <abbr>AM</abbr>
@@ -267,13 +272,15 @@
                 <lb/>
                 <ab>
                     <hi xml:id="interdetta-20" facs="#interdetta_20" rend="align(left)">Riproduzione interdetta</hi>
-                    <hi xml:id="place-20" facs="#place_20" rend="align(right)">Stampata in <placeName ref="#lIT">Italia</placeName></hi>
+                    <hi xml:id="place-20" facs="#place_20" rend="align(right)">Stampata in 
+                        <placeName ref="#lIT">Italia</placeName>
+                    </hi>
                 </ab>
                 <!-- (HR) verticale divisone tra messaggio e destinazione-->
                 <!-- (RECT) rettangolo per francobollo -->
                 <!-- (3*HR) orizzontale per descrizione destinazione-->
                 <!-- (HR) orizzontale per firma in zona destinazione-->
-            </div>        
+            </div>
         </front>
         <body>
             <!-- ............ FRONTE | IMG | RECTO ............ -->
@@ -288,8 +295,9 @@
                         al centro, e la donna, più in alto. 
                         Inoltre al di sotto dell'uomo sono appoggiati sulla paglia un piatto, un'anfora e una cesta contenente altri oggetti. 
                         Dietro i mucchi di paglia si scorgono i tetti di alcune case e il cielo sereno. Nella parte bassa, a destra, è presente la firma dell'autore e il luogo: 
+                        
                         <mentioned xml:id="firma-20" facs="#firma_20">
-                            <persName ref="#pDM">D.Mastroianni</persName> 
+                            <persName ref="#pDM">D.Mastroianni</persName>
                             <placeName ref="#lRO">Roma</placeName>
                         </mentioned>
                     </figDesc>
@@ -311,34 +319,49 @@
                             <s>
                                 <lb xml:id="lineText-1-020" facs="#lineText_1_020"/>
                                 <persName ref="#pOT">Oliva</persName>, 
+                                
                                 <persName ref="#pOT">Oliva</persName> mia adorata,
+                            
                             </s>
                         </salute>
                     </opener>
                     <p>
                         <s>
                             <lb type="sameline" xml:id="lineText-2-020"  facs="#lineText_2_020"/>Nè ieri, nè oggi ho ricevuto tuoi scritti.
+                        
                         </s>
                         <s>Perché?</s>
                         <s>
                             <lb type="sameline" xml:id="lineText-3-020"  facs="#lineText_3_020"/>Vuoi addolorare il tuo 
+                            
                             <persName ref="#pGO">Giovannino</persName> lontano?.
+                        
                         </s>
                         <s>
                             Ho
+                            
                             <lb xml:id="lineText-4-020"  facs="#lineText_4_020"/>già fatto mille supposizioni e congetture, mi auguro
+                            
                             <lb type="sameline" xml:id="lineText-5-020"  facs="#lineText_5_020"/>che la tua salute sia ottima.
-                        </s> 
+                        
+                        </s>
                         <s>
                             Vorrei correre a te
+                            
                             <lb xml:id="lineText-6-020"  facs="#lineText_6_020"/>volare sul tuo grembo adorato e carezzevolmente ba-
+                            
                             <lb xml:id="lineText-7-020"  facs="#lineText_7_020"/>ciarti la fronte, i capelli, il volto in segno di devoto
+                            
                             <lb type="sameline" xml:id="lineText-8-020"  facs="#lineText_8_020"/>affetto e d'amore sublime.
-                        </s> 
+                        
+                        </s>
                         <s>
                             Mi raccomando
+                            
                             <lb xml:id="lineText-9-020"  facs="#lineText_9_020"/>tanto tanto scrivimi lungamente e spiegami
+                            
                             <lb xml:id="lineText-10-020" facs="#lineText_10_020"/>la ragione del tuo silenzio.
+                        
                         </s>
                     </p>
                     <closer>
@@ -346,11 +369,13 @@
                             <s>
                                 <lb xml:id="lineText-11-020" facs="#lineText_11_020"/>
                                 Un bacio immenso, infinito.
-                            </s>                        
+                            
+                            </s>
                         </salute>
                         <signed>
                             <s>
                                 tuo 
+                                
                                 <lb xml:id="lineText-12-020" facs="#lineText_12_020"/>
                                 <persName ref="#pGO" rend="underline align(right)">Giovannino</persName>
                             </s>
@@ -359,11 +384,13 @@
                 </div>
                 <div type="add">
                     <ab xml:id="number20-20" facs="#number20_20">
-                        <add  cert="medium"> 
-                            <num type="cardinal" value="20"><ptr target="#note_1"/>20</num>
+                        <add  cert="medium">
+                            <num type="cardinal" value="20">
+                                <ptr target="#note_1"/>20
+                            </num>
                         </add>
                     </ab>
-                </div>             
+                </div>
             </div>
         </body>
     </text>

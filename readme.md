@@ -32,10 +32,11 @@
 `xmllint main.xml --xinclude --postvalid --noout`
 ### Validazione con JING (Windows)
 `cls; java -jar jing.jar -t teiCustom.rng ./ext/lists.xml ./cartolina_011/main.xml ./cartolina_016/main.xml ./cartolina_020/main.xml`
-## Validazione Jing (MacOS/Linux)
+### Validazione Jing (MacOS/Linux)
 `java -jar jing.jar -t teiCustom.rng ./ext/lists.xml ./cartolina_011/main.xml ./cartolina_016/main.xml ./cartolina_020/main.xml`
 ### Trasformata XSLT (Windows/MacOS/Linux)
-`xsltproc --xinclude make.xslt corpus.xml > output.html`
+`cd .\site`
+`xsltproc --xinclude make.xslt ..\corpus.xml > index.html`
 
 ###elementi da selezionare in xsl della teiHeader
 
