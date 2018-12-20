@@ -273,11 +273,14 @@
                         </s>
                     </p>
                     <closer>
-                        <lb />
+                        
                         <signed xml:id="lineText-3-016" facs="#lineText_3_016" rend="writing-mode(vertical-lr) text-orientation(sideways)">
-                            <persName ref="pM">Mario</persName> 
-                            <persName ref="pG">Ginevra</persName>
-                            <persName ref="pN">Nino</persName>
+                            <s>
+                                <lb/>
+                                <persName ref="pM">Mario</persName> 
+                                <persName ref="pG">Ginevra</persName>
+                                <persName ref="pN"> Nino</persName>
+                            </s>
                         </signed>
                         <lb />
                         <dateline xml:id="lineText-4-016" facs="#lineText_4_016" rend="writing-mode(vertical-lr) text-orientation(sideways)">

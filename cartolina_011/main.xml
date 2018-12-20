@@ -296,9 +296,12 @@
                     </p>
                     <closer rend="align(right)">
                         <!-- Firma del mittente -->
-                        <lb xml:id="lineText-7-011" facs="#lineText_7_011" />Tuo amico
                         <signed xml:id="lineText-8-011" facs="#lineText_8_011">
-                            <persName ref="#pGF">Giulio Fantoni</persName>
+                            <s>
+                                <lb xml:id="lineText-7-011" facs="#lineText_7_011" />Tuo amico
+                                <lb/>
+                                <persName ref="#pGF">Giulio Fantoni</persName>
+                            </s>
                         </signed>
                     </closer>
                 </div>

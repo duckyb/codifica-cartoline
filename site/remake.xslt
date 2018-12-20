@@ -40,7 +40,7 @@
                   <div class="digital">
                     <!-- immagine retro generata -->
                     <!-- <xsl:apply-templates select="tei:text"/> -->
-                    <xsl:apply-templates />
+                    <xsl:apply-templates select="tei:text"/>
                   </div>
                   </section>
                 </xsl:for-each>
@@ -99,78 +99,62 @@
       </p>
       <xsl:apply-templates /> 
     </xsl:template> -->
-
+    
+    <!-- OPENER -->
     <xsl:template match="tei:div[@type='message']/tei:opener">
       <!-- dateline -->
-      <p class="dateline">
-        <xsl:value-of select="tei:dateline"/>
-      </p>
-      <!-- salute -->
+      <xsl:apply-templates select="./tei:dateline"/> 
+
+      <!-- salute s lb-->
+      <xsl:apply-templates select="./tei:salute/tei:s/tei:lb"/>
+    </xsl:template>
+    <!-- P -->
+    <xsl:template match="tei:div[@type='message']/tei:p">
+    <!-- s -->
       <xsl:apply-templates select="./tei:s/tei:lb"/>
     </xsl:template>
-    <xsl:template match="tei:div[@type='message']/tei:p">
-
-    </xsl:template>
+    <!-- CLOSER -->
     <xsl:template match="tei:div[@type='message']/tei:closer">
-
+      <!-- salute s lb -->
+      <xsl:apply-templates select="./tei:salute/tei:s/tei:lb"/>
+      <!-- signed s lb-->
+      <xsl:apply-templates select="./tei:signed/tei:s/tei:lb"/>
+      <xsl:apply-templates select="./tei:dateline"/>
     </xsl:template>
-    <xsl:template match="tei:lb">
-     <p class="manoscritto">
+    <!-- TEMPLATE DATELINE -->
+    <xsl:template match="tei:div[@type='message']//tei:dateline">
+      <p class="dateline manoscritto">
+        <xsl:value-of select="."/>
+      </p>
+    </xsl:template>
+
+    <!-- TEMPLATE PER <S> CON <LB> DENTRO -->
+    <xsl:template match="tei:div[@type='message']//tei:lb">
+      <xsl:variable name="pn" select="./following-sibling::tei:persName"/>
+      <p class="manoscritto">
+        <span class="debug-green">
         <xsl:value-of select="./following-sibling::text()" />
-        <xsl:value-of select="./following-sibling::tei:persName"/>
-        <xsl:value-of select="./following-sibling::tei:persName/following-sibling::text()"/>
+        </span>
+
+        <span class="debug-black">
+          <xsl:value-of select="$pn"/>
+        </span>
+
+        <span class="debug-red">
+        <xsl:value-of select="$pn/following-sibling::text()"/>
+        </span>
+
+        <xsl:value-of select="$pn/following-sibling::tei:persName"/>
+        <xsl:value-of select="$pn/following-sibling::tei:persName/following-sibling::tei:persName"/>
+        <xsl:value-of select="$pn/following-sibling::tei:persName/following-sibling::text()"/>
         <xsl:value-of select="./following-sibling::tei:country"/>
         <xsl:value-of select="./following-sibling::tei:country/following-sibling::text()"/>
+        
         <xsl:if test="@type='sameline'">
           <xsl:value-of select="../following-sibling::*[1]/text()"/>
         </xsl:if>
       </p>
     </xsl:template>
-    <!-- <xsl:template match="./tei:dateline/tei:date">
-      <xsl:choose>
-        <xsl:when test="./choose">
-          <xsl:value-of select="./abbr"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="."/>
-        </xsl:when>
-      </xsl:choose>
-    </xsl:template> -->
-    <!-- ****** FINE DIV VERSO ****** -->
- 
-    <!-- ****** DIV MESSAGE ****** -->
-    <!-- match su tag s del div message -->
-    <!-- <xsl:template match="tei:div[@type='message']//tei:s">
-      <xsl:apply-templates select=".//tei:lb"/>
-    </xsl:template> -->
-    <!-- match su tag p del div message -->
-    <!-- <xsl:template match="tei:div[@type='message']//p">
-      <xsl:apply-templates select=".//lb"/>
-    </xsl:template> -->
-    <!-- match su tag closer del div message -->
-    <!-- <xsl:template match="tei:div[@type='message']//tei:closer">
-      <p class="manoscritto">
-        <xsl:apply-templates />
-      </p>
-    </xsl:template> -->
-    <!-- stampa tutte le frasi regolarmente formattate come nella cartolina -->
-    <!-- <xsl:template match="tei:lb ">
-      <p class="manoscritto">
-        <xsl:value-of select="./following-sibling::text()" />
-        <xsl:value-of select="./following-sibling::tei:persName"/>
-        <xsl:value-of select="./following-sibling::tei:persName/following-sibling::text()"/>
-        <xsl:value-of select="./following-sibling::tei:country"/>
-        <xsl:value-of select="./following-sibling::tei:country/following-sibling::text()"/>
-        <xsl:if test="@type='sameline'">
-          <xsl:value-of select="../following-sibling::*[1]/text()"/>
-        </xsl:if>
-      </p>
-    </xsl:template> -of select="../following-sibling::*[1]/text()"/>
-        </xsl:if>
-      </p>
-    </xsl:template> -->
-    <!-- ****** FINE DIV MESSAGE ******  -->    
-
   <!-- raggiungo un nodo | foglia testo -->
   <xsl:template match="text()|@*"></xsl:template>
 <!-- end -->

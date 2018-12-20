@@ -322,7 +322,7 @@
                         <s>Perché?</s>
                         <s>
                             <lb type="sameline" xml:id="lineText-3-020"  facs="#lineText_3_020"/>Vuoi addolorare il tuo 
-                            <persName ref="#pGO">Giovannino</persName> lontano?
+                            <persName ref="#pGO">Giovannino</persName> lontano?.
                         </s>
                         <s>
                             Ho
@@ -344,7 +344,7 @@
                     <closer>
                         <salute rend="align(center)">
                             <s>
-                                <lb type="sameline" xml:id="lineText-11-020" facs="#lineText_11_020"/>
+                                <lb xml:id="lineText-11-020" facs="#lineText_11_020"/>
                                 Un bacio immenso, infinito.
                             </s>                        
                         </salute>
