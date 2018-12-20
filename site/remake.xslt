@@ -4,7 +4,7 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0" 
     xmlns="http://www.w3.org/1999/xhtml">
     <xsl:output omit-xml-declaration="yes" method="html" version="5" encoding="UTF-8" indent="no"/>
-    <xsl:strip-space elements="*" />
+    <xsl:strip-space elements="tei:s" />
     <xsl:template match="tei:teiCorpus">
         <html>
             <head>
@@ -39,7 +39,6 @@
                         </div>
                         <div class="digital">
                             <!-- immagine retro generata -->
-                            <!-- <xsl:apply-templates select="tei:text"/> -->
                             <xsl:apply-templates select="tei:text"/>
                         </div>
                     </section>
@@ -83,7 +82,6 @@
     </xsl:template>
     <!-- ****** FINE DIV FACSIMILIE ****** -->
     <!-- ****** DIV VERSO ****** -->
-    <!-- <xsl:template match="tei:text//tei:div[@type='verso']"><p class="manoscritto"><xsl:choose><xsl:when test=".//tei:dateline//tei:date/tei:change"><xsl:value-of select="../tei:date"/><xsl:value-of select="./tei:abbr"/></xsl:when><xsl:otherwise><xsl:value-of select="tei:dateline"/></xsl:otherwise></xsl:choose></p><xsl:apply-templates /></xsl:template> -->
     <!-- OPENER -->
     <xsl:template match="tei:div[@type='message']/tei:opener">
         <!-- dateline -->
@@ -100,17 +98,9 @@
     <xsl:template match="tei:div[@type='message']/tei:closer//tei:s">
         <xsl:for-each select="./tei:lb">
             <p class="manoscritto">
-                <xsl:value-of select="(following-sibling::text()|following-sibling::tei:persName)[1]"/>
-                <!-- <xsl:if test="./following-sibling::text()[1]">
-                    <span class="debug lime">
-                        <xsl:value-of select="./following-sibling::*[text()][1]"/>
-                    </span>
-                </xsl:if>
-                <xsl:if test="./following-sibling::*[tei:persName]//text()">
-                    <span class="debug purple">
-                        test
-                    </span>
-                </xsl:if> -->
+                <span class="debug lime">
+                    <xsl:value-of select="normalize-space((following-sibling::text()|following-sibling::tei:persName)[1])"/>
+                </span>
             </p>
         </xsl:for-each>
     </xsl:template>
@@ -124,13 +114,8 @@
     <xsl:template match="tei:div[@type='message']//tei:lb">
         <xsl:variable name="pn" select="./following-sibling::tei:persName"/>
         <p class="manoscritto">
-            <span class="debug teal">
-                <xsl:value-of select="./following-sibling::text()" />
-            </span>
-            <!-- il problema è qui -->
-            <span class="debug red">
-                <xsl:value-of select="$pn"/>
-            </span>
+            <xsl:value-of select="./following-sibling::text()" />
+            <xsl:value-of select="$pn"/>
             <xsl:value-of select="$pn/following-sibling::text()"/>
             <xsl:value-of select="$pn/following-sibling::tei:persName"/>
             <xsl:value-of select="$pn/following-sibling::tei:persName/following-sibling::tei:persName"/>
@@ -142,7 +127,5 @@
             </xsl:if>
         </p>
     </xsl:template>
-    <!-- raggiungo un nodo | foglia testo -->
     <xsl:template match="text()|@*"></xsl:template>
-    <!-- end -->
 </xsl:stylesheet>
