@@ -293,7 +293,7 @@
                         
                         <mentioned xml:id="firma-20" facs="#firma_20">
                             <persName ref="#pDM">D.Mastroianni</persName>
-                            <placeName ref="#lRO">Roma</placeName>type="print" 
+                            <placeName ref="#lRO">Roma</placeName>
                         </mentioned>
                     </figDesc>
                     <head>Il frutto dell'amore</head>
