@@ -23,6 +23,23 @@
                     <name ref="#DB">D.Breschi</name>
                     <name ref="#CP">C.Poggianti</name>
                 </respStmt>
+                <!--Referente scientifico-->
+                <respStmt>
+                    <resp>Compilatore</resp>
+                    <persName ref="#pTC">Tommaso Castagneto</persName>
+                    <!-- <name xml:id="XZ1">chi interviene sulla schedatura</name> -->
+                </respStmt>
+                <!--responsabile scientifico-->
+                <respStmt>
+                    <resp>Responsabile scientifico</resp>
+                    <persName ref="#pGP">Giacomo Paolicchi</persName>
+                    <persName ref="#pES">Enrica Salvatori</persName>
+                </respStmt>
+                <!--funzionario responsabile-->
+                <respStmt>
+                    <resp>Funzionario responsabile</resp>
+                    <persName ref="#pER">E. Ratti</persName>
+                </respStmt>
             </editionStmt>
             <publicationStmt>
                 <publisher>Unipi</publisher>

@@ -74,6 +74,22 @@ section {
     display: inline-block;
 }
 
+.overlayPath polygon,
+.overlayPath rect {
+    stroke-width: 3px;
+    transition: fill .5s linear;
+    opacity: .5;
+}
+.overlayPath polygon,
+.overlayPath rect {
+    fill: transparent;
+}
+
+.overlayPath polygon:hover,
+.overlayPath rect:hover {
+    fill:#FF4136;
+}
+
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
@@ -90,6 +106,7 @@ h4 {
   font-weight: 500;
   text-align: center;
 }
+
 .sectionTitle {
     font-size: 1.3em;
 }
@@ -171,6 +188,7 @@ img.fronte {
   min-height: 19px;
   color: #111;
 }
+
 .tipografia {
   padding: 4px;
   margin: 0;
@@ -180,6 +198,7 @@ img.fronte {
   min-height: 19px;
   color: #111;
 }
+
 .label {
     font-weight: bold;
 }

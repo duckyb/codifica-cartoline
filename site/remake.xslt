@@ -103,6 +103,11 @@
                         </div>
                     </section>
                 </xsl:for-each>
+                <footer class="footerStyle">
+                    <xsl:if test="tei:teiHeader[@xml:id='corpusHeader']//tei:editionStmt/tei:respStmt/tei:respStmt[tei:resp[not(contains(., 'Codificato da:'))]]">
+                        <xsl:message>trovato!</xsl:message>
+                    </xsl:if>
+                </footer>
             </body>
         </html>
     </xsl:template>
@@ -145,37 +150,18 @@
             <img class="scan retro" src="../{$id}/retro.jpg" title="{$id}" />
             <svg width="550.33" height="360.33" viewBox="0 0 {$width} {$height}" class="overlayPath">
                 <xsl:for-each select="tei:surface[1]/tei:zone">
+                <xsl:variable name="zonetype" select="@type"/>
                     <xsl:choose>
                         <xsl:when test="@points">
                             <xsl:variable name="points" select="@points"/>
-                            <xsl:choose>
-                                <xsl:when test="@type = 'handWriting'">
-                                    <polygon points="{$points}" style="fill:transparent; stroke: #B10DC9; stroke-width:3" />
-                                </xsl:when>
-                                <xsl:when test="@type = 'print'">
-                                    <polygon points="{$points}" style="fill:transparent; stroke: #01FF70; stroke-width:3" />
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <polygon points="{$points}" style="fill:transparent; stroke: #0074D9; stroke-width:3" />
-                                </xsl:otherwise>
-                            </xsl:choose>
+                            <polygon points="{$points}" class="{$zonetype}" />
                         </xsl:when>
                         <xsl:otherwise>
                             <xsl:variable name="pointx" select="@ulx"/>
                             <xsl:variable name="pointy" select="@uly"/>
                             <xsl:variable name="widthr" select="@lrx - @ulx"/>
                             <xsl:variable name="heightr" select="@lry - @uly"/>
-                            <xsl:choose>
-                                <xsl:when test="@type = 'handWriting'">
-                                    <rect x="{$pointx}" y="{$pointy}" height="{$heightr}" width="{$widthr}" style="fill:transparent; stroke: #B10DC9; stroke-width:3"/>
-                                </xsl:when>
-                                <xsl:when test="@type = 'print'">
-                                    <rect x="{$pointx}" y="{$pointy}" height="{$heightr}" width="{$widthr}" style="fill:transparent; stroke: #01FF70; stroke-width:3"/>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <rect x="{$pointx}" y="{$pointy}" height="{$heightr}" width="{$widthr}" style="fill:transparent; stroke: #0074D9; stroke-width:3"/>
-                                </xsl:otherwise>
-                            </xsl:choose>
+                            <rect x="{$pointx}" y="{$pointy}" height="{$heightr}" width="{$widthr}" class="{$zonetype}"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:for-each>
@@ -269,6 +255,11 @@
             </p>
         </xsl:for-each>
     </xsl:template>
+
+    <!-- FOOTER
+    <xsl:template match="tei:editionStmt">
+        <xsl:value-of select="tei:respStmt[tei:resp[not(contains(., 'Codificato da'))]]"/>        
+    </xsl:template> -->
 
     <xsl:template match="text()|@*"></xsl:template>
 </xsl:stylesheet>
