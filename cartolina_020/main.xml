@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <?xml-model href="..//teiCustom.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI
-    xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina_020">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina_020">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -106,7 +105,7 @@
                                     <!-- descrizione fisica dei timbri -->
                                     <stamp type="postmark"> 
                                         Non è presente nessun timbro o francobollo sulla cartolina.
-								    </stamp>
+                                    </stamp>
                                     <!-- descrizione fisica del francobollo -->
                                     <stamp type="postage">
                                         Sulla cartolina non è stato applicato nessun francobollo, ma c'è soltanto la stampa rettangolare 
@@ -200,17 +199,16 @@
             <!-- 1916 -->
             <zone xml:id="date_20" start="#date-20" ulx="1280" uly="3" lrx="1415" lry="54" />
             <!-- Oliva Oliva mia adorata, -->
-            <zone xml:id="line_text_1_20"  start="#line_text-1-20"  ulx="152" uly="4"   lrx="883"  
-            lry="72" />
-            <zone xml:id="line_text_2_20"  start="#line_text-2-20"  ulx="21"  uly="98"  lrx="1616" lry="186" />
-            <zone xml:id="line_text_3_20"  start="#line_text-3-20"  ulx="48"  uly="215" lrx="1569" lry="279" />
-            <zone xml:id="line_text_4_20"  start="#line_text-4-20"  ulx="48"  uly="318" lrx="1640" lry="394" />
-            <zone xml:id="line_text_5_20"  start="#line_text-5-20"  ulx="59"  uly="380" lrx="1620" lry="452" />
-            <zone xml:id="line_text_6_20"  start="#line_text-6-20"  ulx="48"  uly="447" lrx="1597" lry="526" />
-            <zone xml:id="line_text_7_20"  start="#line_text-7-20"  ulx="68"  uly="532" lrx="1637" lry="628" />
-            <zone xml:id="line_text_8_20"  start="#line_text-8-20"  ulx="99"  uly="607" lrx="1645" lry="711" />
-            <zone xml:id="line_text_9_20"  start="#line_text-9-20"  ulx="125" uly="698" lrx="1625" lry="775" />
-            <zone xml:id="line_text_10_20" start="#line_text-10-20" ulx="72"  uly="778" lrx="1000" lry="876" />
+            <zone xml:id="line_text_1_20" start="#line_text-1-20" ulx="152" uly="4" lrx="883" lry="72" />
+            <zone xml:id="line_text_2_20" start="#line_text-2-20" ulx="21" uly="98" lrx="1616" lry="186" />
+            <zone xml:id="line_text_3_20" start="#line_text-3-20" ulx="48" uly="215" lrx="1569" lry="279" />
+            <zone xml:id="line_text_4_20" start="#line_text-4-20" ulx="48" uly="318" lrx="1640" lry="394" />
+            <zone xml:id="line_text_5_20" start="#line_text-5-20" ulx="59" uly="380" lrx="1620" lry="452" />
+            <zone xml:id="line_text_6_20" start="#line_text-6-20" ulx="48" uly="447" lrx="1597" lry="526" />
+            <zone xml:id="line_text_7_20" start="#line_text-7-20" ulx="68" uly="532" lrx="1637" lry="628" />
+            <zone xml:id="line_text_8_20" start="#line_text-8-20" ulx="99" uly="607" lrx="1645" lry="711" />
+            <zone xml:id="line_text_9_20" start="#line_text-9-20" ulx="125" uly="698" lrx="1625" lry="775" />
+            <zone xml:id="line_text_10_20" start="#line_text-10-20" ulx="72" uly="778" lrx="1000" lry="876" />
             <zone xml:id="line_text_11_20" start="#line_text-11-20" ulx="183" uly="878" lrx="1269" lry="959" />
             <!-- tuo -->
             <zone xml:id="line_text_12_20" start="#line_text-12-20" ulx="1271" uly="862" lrx="1432" lry="924" />
@@ -221,7 +219,7 @@
         <surface>
             <graphic xml:id="front_postcard_20" url='fronte.jpg' width='1058px' height='1650px' />
             <!-- firma MASTROIANNI Roma -->
-            <zone xml:id="firma_20"  start="#firma-20" ulx="751" uly="1492" lrx="1015" lry="1571" />
+            <zone xml:id="firma_20" start="#firma-20" ulx="751" uly="1492" lrx="1015" lry="1571" />
         </surface>
     </facsimile>
     <text xml:lang="it">
@@ -230,27 +228,24 @@
                 <lb/>
                 <ab>
                     <orgName ref="#oMCM">
-                        <hi xml:id="autore-20" facs="#autore_20" rend="align(left)"> Sculture                        
-                            
+                        <s xml:id="autore-20" facs="#autore_20" rend="align(left)"> Sculture                        
                             <persName ref="#pDM">MASTROIANNI</persName>
                             <placeName ref="#lRO">Roma</placeName>
-                        </hi>
-                        <hi xml:id="edit-20" facs="#edit_20" rend="align(right)">
+                        </s>
+                        <s xml:id="edit-20" facs="#edit_20" rend="align(right)">
                             "Cromogliptica" 
-                            
                             <persName ref="#pAM">A. Marzi</persName>
                             <placeName ref="#lRO">Roma</placeName>
-                        </hi>
+                        </s>
                     </orgName>
                 </ab>
                 <lb/>
                 <ab>
-                    <hi xml:id="ediz-20" facs="#ediz_20" rend="align(left)">Edizione propria</hi>
-                    <hi xml:id="sym-20" facs="#sym_20" rend="align(right)">
+                    <s xml:id="ediz-20" facs="#ediz_20" rend="align(left)">Edizione propria</s>
+                    <s xml:id="sym-20" facs="#sym_20" rend="align(right)">
                         <figure>
                             <figDesc>
                                 Piccolo simbolo stampato in nero con scritto: 
-                                
                                 <mentioned>
                                     <choice>
                                         <abbr>AM</abbr>
@@ -261,20 +256,20 @@
                                 </mentioned>
                             </figDesc>
                         </figure>
-                    </hi>
+                    </s>
                 </ab>
                 <lb />
                 <ab rend="align(center)">
-                    <hi xml:id="frutto-20" facs="#frutto_20">Il frutto dell'amore</hi>
+                    <s xml:id="frutto-20" facs="#frutto_20">Il frutto dell'amore</s>
                     <lb/>
-                    <hi xml:id="fruit-20" facs="#fruit_20" xml:lang="fr">le fruit de l'amour</hi>
+                    <s xml:id="fruit-20" facs="#fruit_20" xml:lang="fr">le fruit de l'amour</s>
                 </ab>
                 <lb/>
                 <ab>
-                    <hi xml:id="interdetta-20" facs="#interdetta_20" rend="align(left)">Riproduzione interdetta</hi>
-                    <hi xml:id="place-20" facs="#place_20" rend="align(right)">Stampata in 
+                    <s xml:id="interdetta-20" facs="#interdetta_20" rend="align(left)">Riproduzione interdetta</s>
+                    <s xml:id="place-20" facs="#place_20" rend="align(right)">Stampata in 
                         <placeName ref="#lIT">Italia</placeName>
-                    </hi>
+                    </s>
                 </ab>
                 <!-- (HR) verticale divisone tra messaggio e destinazione-->
                 <!-- (RECT) rettangolo per francobollo -->
@@ -311,6 +306,7 @@
                     <opener>
                         <dateline rend="align(right)">
                             <date when="1913-12-03" rend="align(right)">
+                                <unclear reason="calligraphy" cert="medium">li</unclear>
                                 <date xml:id="date312-20" facs="#date312_20">3/12</date>
                                 <date xml:id="date-20" facs="#date_20">-1916.</date>
                             </date>
@@ -319,63 +315,55 @@
                             <s>
                                 <lb xml:id="lineText-1-020" facs="#lineText_1_020"/>
                                 <persName ref="#pOT">Oliva</persName>, 
-                                
                                 <persName ref="#pOT">Oliva</persName> mia adorata,
-                            
                             </s>
                         </salute>
                     </opener>
                     <p>
                         <s>
-                            <lb type="sameline" xml:id="lineText-2-020"  facs="#lineText_2_020"/>Nè ieri, nè oggi ho ricevuto tuoi scritti.
-                        
+                            <lb type="sameline" xml:id="lineText-2-020" facs="#lineText_2_020"/>
+                            Nè ieri, nè oggi ho ricevuto tuoi scritti.
                         </s>
-                        <s>Perché?</s>
+                        <s> Perché?</s>
                         <s>
-                            <lb type="sameline" xml:id="lineText-3-020"  facs="#lineText_3_020"/>Vuoi addolorare il tuo 
-                            
-                            <persName ref="#pGO">Giovannino</persName> lontano?.
-                        
+                            <lb type="sameline" xml:id="lineText-3-020" facs="#lineText_3_020"/>
+                            Vuoi addolorare il tuo
+                            <persName ref="#pGO"> Giovannino</persName> lontano?.
                         </s>
                         <s>
                             Ho
-                            
-                            <lb xml:id="lineText-4-020"  facs="#lineText_4_020"/>già fatto mille supposizioni e congetture, mi auguro
-                            
-                            <lb type="sameline" xml:id="lineText-5-020"  facs="#lineText_5_020"/>che la tua salute sia ottima.
-                        
+                            <lb xml:id="lineText-4-020" facs="#lineText_4_020"/>
+                            già fatto mille supposizioni e congetture, mi auguro
+                            <lb type="sameline" xml:id="lineText-5-020" facs="#lineText_5_020"/>
+                            che la tua salute sia ottima.
                         </s>
                         <s>
                             Vorrei correre a te
-                            
-                            <lb xml:id="lineText-6-020"  facs="#lineText_6_020"/>volare sul tuo grembo adorato e carezzevolmente ba-
-                            
-                            <lb xml:id="lineText-7-020"  facs="#lineText_7_020"/>ciarti la fronte, i capelli, il volto in segno di devoto
-                            
-                            <lb type="sameline" xml:id="lineText-8-020"  facs="#lineText_8_020"/>affetto e d'amore sublime.
-                        
+                            <lb xml:id="lineText-6-020" facs="#lineText_6_020"/>
+                            volare sul tuo grembo adorato e carezzevolmente ba-
+                            <lb xml:id="lineText-7-020" facs="#lineText_7_020"/>
+                            ciarti la fronte, i capelli, il volto in segno di devoto
+                            <lb type="sameline" xml:id="lineText-8-020" facs="#lineText_8_020"/>
+                            affetto e d'amore sublime.
                         </s>
                         <s>
                             Mi raccomando
-                            
-                            <lb xml:id="lineText-9-020"  facs="#lineText_9_020"/>tanto tanto scrivimi lungamente e spiegami
-                            
-                            <lb xml:id="lineText-10-020" facs="#lineText_10_020"/>la ragione del tuo silenzio.
-                        
+                            <lb xml:id="lineText-9-020" facs="#lineText_9_020"/>
+                            tanto tanto scrivimi lungamente e spiegami
+                            <lb xml:id="lineText-10-020" facs="#lineText_10_020"/>
+                            la ragione del tuo silenzio.
                         </s>
                     </p>
                     <closer>
                         <salute rend="align(center)">
                             <s>
-                                <lb xml:id="lineText-11-020" facs="#lineText_11_020"/>
-                                Un bacio immenso, infinito.
-                            
+                                <lb type="sameline" xml:id="lineText-11-020" facs="#lineText_11_020"/>
+                                Un bacio immenso, infinito
                             </s>
                         </salute>
                         <signed>
                             <s>
                                 tuo 
-                                
                                 <lb xml:id="lineText-12-020" facs="#lineText_12_020"/>
                                 <persName ref="#pGO" rend="underline align(right)">Giovannino</persName>
                             </s>
@@ -384,9 +372,10 @@
                 </div>
                 <div type="add">
                     <ab xml:id="number20-20" facs="#number20_20">
-                        <add  cert="medium">
+                        <add cert="medium">
                             <num type="cardinal" value="20">
-                                <ptr target="#note_1"/>20
+                                <ptr target="#note_1"/>
+                                20
                             </num>
                         </add>
                     </ab>

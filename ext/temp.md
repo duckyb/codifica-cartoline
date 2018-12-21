@@ -8,5 +8,5 @@
 
 ## CARTOLINA 020
     - ba - ciarti (sillabazione)
-    - (li) accanto data
+    - (li) accanto data ------- FATTO
     - trattino data e punto finale -------FATTO

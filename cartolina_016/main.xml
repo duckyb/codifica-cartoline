@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <?xml-model href="..//teiCustom.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI
-    xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina_016">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina_016">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -101,7 +100,7 @@
                                     <!-- descrizione fisica dei timbri -->
                                     <stamp type="postmark"> 
                                         Sul retro, nella metà destra della cartolina, è presente un timbro circolare. 
-								    </stamp>
+                                    </stamp>
                                     <stamp type="postmark">
                                         Sul fronte, in alto a destra, sono presenti due presunti timbri circolari:
                                         il primo più in alto, parzialmente visibile per 1/4; il secondo, leggermente sotto il primo, totalmente illeggibile.
@@ -254,7 +253,8 @@
                 <!-- Descrizione della scritta alla base della cartolina -->
                 <p xml:id="subtitle-016" facs="#subtitle_016" rend="align(center)">
                     <num type="cardinal">165</num> - 
-                    <gap reason="illegible" agent="tear" unit="chars" atLeast="1" atMost="3"/>ezione (P.Rys
+                    <gap reason="illegible" agent="tear" unit="chars" atLeast="1" atMost="3"/>
+ezione (P.Rys
                     <gap reason="illegible" agent="tear" unit="chars" atLeast="1"/>
                 </p>
             </div>
@@ -267,10 +267,10 @@
                     <!--luogo e data di scrittura della cartolina-->
                     <p>
                         <s>
-                            <lb xml:id="lineText-1-016" facs="#lineText_1_016" rend="writing-mode(vertical-lr) text-orientation(sideways)" />Auguri vivissimi e buone feste
-                            
-                            <lb xml:id="lineText-2-016" facs="#lineText_2_016" rend="writing-mode(vertical-lr) text-orientation(sideways)" />unitamente alla famiglia
-                        
+                            <lb xml:id="lineText-1-016" facs="#lineText_1_016" rend="writing-mode(vertical-lr) text-orientation(sideways)" />
+                            Auguri vivissimi e buone feste
+                            <lb xml:id="lineText-2-016" facs="#lineText_2_016" rend="writing-mode(vertical-lr) text-orientation(sideways)" />
+                            unitamente alla famiglia
                         </s>
                     </p>
                     <closer>
@@ -278,12 +278,12 @@
                             <s>
                                 <lb/>
                                 <persName ref="pM">Mario</persName>
-                                <persName ref="pG">Ginevra</persName>
+                                <persName ref="pG"> Ginevra</persName>
                                 <persName ref="pN"> Nino</persName>
                             </s>
                         </signed>
-                        <lb />
                         <dateline xml:id="lineText-4-016" facs="#lineText_4_016" rend="writing-mode(vertical-lr) text-orientation(sideways)">
+                            <lb />
                             <placeName ref="#lMI">Milano</placeName>
                             <date when="1913-03-22">22-3</date>
                         </dateline>
@@ -328,7 +328,6 @@
                                         <expan>Gentilissime</expan>
                                     </choice>
                                     Signorine
-                                
                                 </addrLine>
                                 <addrLine xml:id="lineDest-2-016" facs="#lineDest_2">
                                     <persName ref="#pAT">Antonietta</persName> ed 
@@ -336,13 +335,11 @@
                                 </addrLine>
                                 <addrLine xml:id="lineDest-4-016" facs="#lineDest_3">
                                     Via 
-                                    
                                     <choice>
                                         <abbr>Gir.</abbr>
                                         <expan>Girolamo</expan>
                                     </choice>
                                     Rossi 
-                                    
                                     <choice>
                                         <abbr>
                                             <hi rend="double-strikethrough">N</hi>.
@@ -359,7 +356,8 @@
                         <ab xml:id="number16-016" facs="#number16_016">
                             <add cert="medium">
                                 <num type="cardinal" value="16">
-                                    <ptr target="#note_1"/>16
+                                    <ptr target="#note_1"/>
+16
                                 </num>
                             </add>
                         </ab>
