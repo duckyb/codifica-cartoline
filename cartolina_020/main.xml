@@ -173,47 +173,47 @@
         <surface>
             <graphic xml:id="retro_postcard_20" url='retro.jpg' width='1646px' height='1058px' />
             <!-- sculture mastroianni roma -->
-            <zone xml:id="autore_20" start="#autore-20" ulx="47" uly="567" lrx="80" lry="1004" />
+            <zone type="print" xml:id="autore_20" start="#autore-20" ulx="47" uly="567" lrx="80" lry="1004" />
             <!-- edizione propria -->
-            <zone xml:id="ediz_20" start="#ediz-20" ulx="85" uly="682" lrx="116" lry="892" />
+            <zone type="print" xml:id="ediz_20" start="#ediz-20" ulx="85" uly="682" lrx="116" lry="892" />
             <!-- "Cromogliptica" Marzi Roma -->
-            <zone xml:id="edit_20" start="#edit-20" ulx="49" uly="36" lrx="83" lry="442" />
+            <zone type="print" xml:id="edit_20" start="#edit-20" ulx="49" uly="36" lrx="83" lry="442" />
             <!-- simbolo -->
-            <zone xml:id="sym_20" start="#sym-20" ulx="99" uly="222" lrx="133" lry="258" />
+            <zone type="print" xml:id="sym_20" start="#sym-20" ulx="99" uly="222" lrx="133" lry="258" />
             <!-- il frutto dell'amore -->
-            <zone xml:id="frutto_20" start="#frutto-20" ulx="147" uly="409" lrx="177" lry="633" />
+            <zone type="print" xml:id="frutto_20" start="#frutto-20" ulx="147" uly="409" lrx="177" lry="633" />
             <!-- le fruit dell'amour -->
-            <zone xml:id="fruit_20" start="#fruit-20" ulx="203" uly="399" lrx="228" lry="629" />
+            <zone type="print" xml:id="fruit_20" start="#fruit-20" ulx="203" uly="399" lrx="228" lry="629" />
             <!-- N.31 -->
-            <zone xml:id="n31_20" start="#n31-20" ulx="133" uly="744" lrx="161" lry="823" />
+            <zone type="print" xml:id="n31_20" start="#n31-20" ulx="133" uly="744" lrx="161" lry="823" />
             <!-- riproduzione interdetta -->
-            <zone xml:id="interdetta_20" start="#interdetta-20" ulx="717" uly="700" lrx="749" lry="1003" />
+            <zone type="print" xml:id="interdetta_20" start="#interdetta-20" ulx="717" uly="700" lrx="749" lry="1003" />
             <!-- stampata in italia -->
-            <zone xml:id="place_20" start="#place-20" ulx="723" uly="56" lrx="755" lry="302" />
+            <zone type="print" xml:id="place_20" start="#place-20" ulx="723" uly="56" lrx="755" lry="302" />
             <!-- riquadro x bollo postale -->
-            <zone xml:id="riquadro_20" start="#riquadro-20" ulx="1344" uly="78" lrx="1581" lry="355" />
+            <zone type="print" xml:id="riquadro_20" start="#riquadro-20" ulx="1344" uly="78" lrx="1581" lry="355" />
             <!-- 20 -->
-            <zone xml:id="number20_20" start="#number20-20" ulx="916" uly="18" lrx="1011" lry="83" />
+            <zone type="handWriting" xml:id="number20_20" start="#number20-20" ulx="916" uly="18" lrx="1011" lry="83" />
             <!-- h. 3/12 -->
-            <zone xml:id="date312_20" start="#date312-20" ulx="1073" uly="0" lrx="1244" lry="91" />
+            <zone type="handWriting" xml:id="date312_20" start="#date312-20" ulx="1073" uly="0" lrx="1244" lry="91" />
             <!-- 1916 -->
-            <zone xml:id="date_20" start="#date-20" ulx="1280" uly="3" lrx="1415" lry="54" />
+            <zone type="handWriting" xml:id="date_20" start="#date-20" ulx="1280" uly="3" lrx="1415" lry="54" />
             <!-- Oliva Oliva mia adorata, -->
-            <zone xml:id="line_text_1_20" start="#line_text-1-20" ulx="152" uly="4" lrx="883" lry="72" />
-            <zone xml:id="line_text_2_20" start="#line_text-2-20" ulx="21" uly="98" lrx="1616" lry="186" />
-            <zone xml:id="line_text_3_20" start="#line_text-3-20" ulx="48" uly="215" lrx="1569" lry="279" />
-            <zone xml:id="line_text_4_20" start="#line_text-4-20" ulx="48" uly="318" lrx="1640" lry="394" />
-            <zone xml:id="line_text_5_20" start="#line_text-5-20" ulx="59" uly="380" lrx="1620" lry="452" />
-            <zone xml:id="line_text_6_20" start="#line_text-6-20" ulx="48" uly="447" lrx="1597" lry="526" />
-            <zone xml:id="line_text_7_20" start="#line_text-7-20" ulx="68" uly="532" lrx="1637" lry="628" />
-            <zone xml:id="line_text_8_20" start="#line_text-8-20" ulx="99" uly="607" lrx="1645" lry="711" />
-            <zone xml:id="line_text_9_20" start="#line_text-9-20" ulx="125" uly="698" lrx="1625" lry="775" />
-            <zone xml:id="line_text_10_20" start="#line_text-10-20" ulx="72" uly="778" lrx="1000" lry="876" />
-            <zone xml:id="line_text_11_20" start="#line_text-11-20" ulx="183" uly="878" lrx="1269" lry="959" />
+            <zone type="handWriting" xml:id="line_text_1_20" start="#line_text-1-20" ulx="152" uly="4" lrx="883" lry="72" />
+            <zone type="handWriting" xml:id="line_text_2_20" start="#line_text-2-20" ulx="21" uly="98" lrx="1616" lry="186" />
+            <zone type="handWriting" xml:id="line_text_3_20" start="#line_text-3-20" ulx="48" uly="215" lrx="1569" lry="279" />
+            <zone type="handWriting" xml:id="line_text_4_20" start="#line_text-4-20" ulx="48" uly="318" lrx="1640" lry="394" />
+            <zone type="handWriting" xml:id="line_text_5_20" start="#line_text-5-20" ulx="59" uly="380" lrx="1620" lry="452" />
+            <zone type="handWriting" xml:id="line_text_6_20" start="#line_text-6-20" ulx="48" uly="447" lrx="1597" lry="526" />
+            <zone type="handWriting" xml:id="line_text_7_20" start="#line_text-7-20" ulx="68" uly="532" lrx="1637" lry="628" />
+            <zone type="handWriting" xml:id="line_text_8_20" start="#line_text-8-20" ulx="99" uly="607" lrx="1645" lry="711" />
+            <zone type="handWriting" xml:id="line_text_9_20" start="#line_text-9-20" ulx="125" uly="698" lrx="1625" lry="775" />
+            <zone type="handWriting" xml:id="line_text_10_20" start="#line_text-10-20" ulx="72" uly="778" lrx="1000" lry="876" />
+            <zone type="handWriting" xml:id="line_text_11_20" start="#line_text-11-20" ulx="183" uly="878" lrx="1269" lry="959" />
             <!-- tuo -->
-            <zone xml:id="line_text_12_20" start="#line_text-12-20" ulx="1271" uly="862" lrx="1432" lry="924" />
+            <zone type="handWriting" xml:id="line_text_12_20" start="#line_text-12-20" ulx="1271" uly="862" lrx="1432" lry="924" />
             <!-- Giovannino -->
-            <zone xml:id="line_text_13_20" start="#line_text-13-20" ulx="813" uly="944" lrx="1517" lry="1058" />
+            <zone type="handWriting" xml:id="line_text_13_20" start="#line_text-13-20" ulx="813" uly="944" lrx="1517" lry="1058" />
         </surface>
         <!-- immagine | fronte della cartolina -->
         <surface>
@@ -293,7 +293,7 @@
                         
                         <mentioned xml:id="firma-20" facs="#firma_20">
                             <persName ref="#pDM">D.Mastroianni</persName>
-                            <placeName ref="#lRO">Roma</placeName>
+                            <placeName ref="#lRO">Roma</placeName>type="print" 
                         </mentioned>
                     </figDesc>
                     <head>Il frutto dell'amore</head>

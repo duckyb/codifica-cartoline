@@ -59,7 +59,7 @@
                             <div class="meta">
                                 <p class="tipografia">
                                     <span class="label">N° di catalogazione: </span>
-                                    <xsl:value-of select="tei:text//tei:div[@type='add']"/>
+                                    <xsl:value-of select="normalize-space(tei:text//tei:div[@type='add'])"/>
                                 </p>
                                 <xsl:if test=".//tei:front//tei:orgName">
                                     <p class="tipografia">
@@ -75,12 +75,12 @@
                                 </xsl:if>
                                 <xsl:if test=".//tei:front//tei:s">
                                     <p class="tipografia">
-                                        <span class="label">Testo Tipografico:</span>
+                                        <span class="label">Testo tipografico sul retro:</span>
                                     </p>
                                 </xsl:if>
                                 <xsl:for-each select=".//tei:front//tei:s|.//tei:front//tei:num">
                                     <p class="tipografia">
-                                        > 
+                                        >
                                         <xsl:for-each select="text()|*">
                                             <xsl:choose>
                                                 <xsl:when test="self::tei:figure">
@@ -91,9 +91,14 @@
                                                 </xsl:when>
                                             </xsl:choose>
                                         </xsl:for-each>
-
                                     </p>
                                 </xsl:for-each>
+                                <xsl:if test=".//tei:div[@type='recto']/tei:figure//tei:figDesc/tei:mentioned">
+                                    <p class="tipografia">
+                                        <span class="label">Testo tipografico sul fronte:</span>
+                                        <xsl:value-of select=".//tei:div[@type='recto']/tei:figure//tei:figDesc/tei:mentioned"/>
+                                    </p>
+                                </xsl:if>
                             </div>
                         </div>
                     </section>
@@ -133,9 +138,56 @@
     <!-- ****** DIV FACSIMILIE ****** -->
     <xsl:template match="tei:facsimile">
         <xsl:variable name="id" select="../@xml:id"/>
-        <img class="scan retro" src="../{$id}/retro.jpg" title="{$id}" />
+        <xsl:variable name="width" select="substring-before(tei:surface/tei:graphic/@width, 'px')"/>
+        <xsl:variable name="height" select="substring-before(tei:surface/tei:graphic/@height, 'px')"/>
+
+        <div class="overlayWrapper">
+            <img class="scan retro" src="../{$id}/retro.jpg" title="{$id}" />
+            <svg width="550.33" height="360.33" viewBox="0 0 {$width} {$height}" class="overlayPath">
+                <xsl:for-each select="tei:surface[1]/tei:zone">
+                    <xsl:choose>
+                        <xsl:when test="@points">
+                            <xsl:variable name="points" select="@points"/>
+                            <xsl:choose>
+                                <xsl:when test="@type = 'handWriting'">
+                                    <polygon points="{$points}" style="fill:transparent; stroke: #B10DC9; stroke-width:3" />
+                                </xsl:when>
+                                <xsl:when test="@type = 'print'">
+                                    <polygon points="{$points}" style="fill:transparent; stroke: #01FF70; stroke-width:3" />
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <polygon points="{$points}" style="fill:transparent; stroke: #0074D9; stroke-width:3" />
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:variable name="pointx" select="@ulx"/>
+                            <xsl:variable name="pointy" select="@uly"/>
+                            <xsl:variable name="widthr" select="@lrx - @ulx"/>
+                            <xsl:variable name="heightr" select="@lry - @uly"/>
+                            <xsl:choose>
+                                <xsl:when test="@type = 'handWriting'">
+                                    <rect x="{$pointx}" y="{$pointy}" height="{$heightr}" width="{$widthr}" style="fill:transparent; stroke: #B10DC9; stroke-width:3"/>
+                                </xsl:when>
+                                <xsl:when test="@type = 'print'">
+                                    <rect x="{$pointx}" y="{$pointy}" height="{$heightr}" width="{$widthr}" style="fill:transparent; stroke: #01FF70; stroke-width:3"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <rect x="{$pointx}" y="{$pointy}" height="{$heightr}" width="{$widthr}" style="fill:transparent; stroke: #0074D9; stroke-width:3"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
+            </svg>
+        </div>
         <div class="fronteWrapper">
             <img class="fronte" src="../{$id}/fronte.jpg" title="{$id}" />
+            <!-- descrizione immagine linguaggio naturale -->
+            <!-- <p class="tipografia">
+                <span class="label">Descrizione dell'immagine:</span>            
+                <xsl:value-of select="../tei:text//tei:div[@type='recto']/tei:figure//tei:figDesc"/>
+            </p> -->
         </div>
     </xsl:template>
     <!-- ****** FINE DIV FACSIMILIE ****** -->
