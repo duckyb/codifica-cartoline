@@ -9,7 +9,7 @@
         <html>
             <head>
                 <!-- head -->
-                <link rel="icon" href="./sparkles.ico" />
+                <link rel="icon" href="./static/sparkles.ico" />
                 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Playfair+Display:400,700,900|  :300,400" rel="stylesheet"/>
                 <link rel="stylesheet" href="style.css" type="text/css"/>
                 <script src="main.js" type="text/javascript"/>
@@ -132,7 +132,7 @@
         <xsl:variable name="id" select="./@xml:id"/>
         <div class="contentFronte">
             <a href="#">
-                <div class="selection" style="background-image: url('../{$id}/fronte.jpg')"></div>
+                <div class="selection" style="background-image: url('./static/{$id}/fronte.jpg')"></div>
                 <h4 class="col3">
                     <xsl:value-of select="./tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:title"/>
                 </h4>
@@ -147,7 +147,7 @@
         <xsl:variable name="height" select="substring-before(tei:surface/tei:graphic/@height, 'px')"/>
 
         <div class="overlayWrapper">
-            <img class="scan retro" src="../{$id}/retro.jpg" title="{$id}" />
+            <img class="scan retro" src="./static/{$id}/retro.jpg" title="{$id}" />
             <svg width="550.33" height="360.33" viewBox="0 0 {$width} {$height}" class="overlayPath">
                 <xsl:for-each select="tei:surface[1]/tei:zone">
                 <xsl:variable name="zonetype" select="@type"/>
@@ -168,7 +168,7 @@
             </svg>
         </div>
         <div class="fronteWrapper">
-            <img class="fronte" src="../{$id}/fronte.jpg" title="{$id}" />
+            <img class="fronte" src="./static/{$id}/fronte.jpg" title="{$id}" />
             <!-- descrizione immagine linguaggio naturale -->
             <!-- <p class="tipografia">
                 <span class="label">Descrizione dell'immagine:</span>            
