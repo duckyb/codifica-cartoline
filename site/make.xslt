@@ -151,10 +151,11 @@
             <svg width="550.33" height="360.33" viewBox="0 0 {$width} {$height}" class="overlayPath">
                 <xsl:for-each select="tei:surface[1]/tei:zone">
                 <xsl:variable name="zonetype" select="@type"/>
+                <xsl:variable name="zoneID" select="@xml:id"/>
                     <xsl:choose>
                         <xsl:when test="@points">
                             <xsl:variable name="points" select="@points"/>
-                            <polygon points="{$points}" class="{$zonetype}" />
+                            <polygon points="{$points}" class="{$zonetype}" id="{$zoneID}" />
                         </xsl:when>
                         <xsl:otherwise>
                             <xsl:variable name="pointx" select="@ulx"/>
