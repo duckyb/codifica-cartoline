@@ -42,25 +42,35 @@
                 </respStmt>
             </editionStmt>
             <publicationStmt>
-                <publisher>Unipi</publisher>
+                <publisher ref="#oUNIPI">
+                    <choice>
+                        <abbr>Unipi</abbr>
+                        <expan>Università di 
+                            <placeName ref="#lPI">Pisa</placeName>
+                        </expan>
+                    </choice>
+                </publisher>
                 <pubPlace ref="#lPI">Pisa</pubPlace>
                 <availability>
                     <p>Available under licence only</p>
                 </availability>
                 <date when="2019">2019</date>
-                <distributor ref="#oCD">LabCD</distributor>
+                <distributor ref="#oCD">
+                    <choice>
+                        <abbr>LabCD</abbr>
+                        <expan>Laboratorio di Cultura Digitale</expan>
+                    </choice>
+                </distributor>
                 <address>
                     <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
                     <addrLine>Pisa</addrLine>
                 </address>
             </publicationStmt>
-
             <notesStmt>
                 <note xml:id="note_1" resp="#CP #DB #CG">
                         Si deduce che questo numero possa essere stato aggiunto in seguito alla scrittura della  da un soggetto differente dall'autore, probabilmente per soddisfare un criterio di catalogazione. Basti guardare l'evidente differenza di stile tra la calligrafia dall'autore e il carattere della presenuta aggiunta.
                 </note>
             </notesStmt>
-
             <sourceDesc>
 <!-- ____________________________ LISTA 2 - PERSONE ____________________________ -->
                 <listPerson>
@@ -290,7 +300,11 @@
                     <!--cartolina _011-->
                     <org type="typography" xml:id="oEF">
                         <orgName>Eliocromia
-                            <persName ref="#pF">Fumagalli</persName> &amp; C.
+                            <persName ref="#pF">Fumagalli</persName> &amp; 
+                            <choice>
+                                <abbr>C.</abbr>
+                                <expan>Compagnia</expan>
+                            </choice>
                         </orgName>
                     	<placeName ref="#lMI">Milano</placeName>
                         <desc>
@@ -315,7 +329,14 @@
             </sourceDesc>
 <!-- ___________________________________________________________________________ -->
         </fileDesc>
-        <revisionDesc >
+        <encodingDesc>
+            <p>
+                Check sintattico con xmllint e validazione con schema RNG.                        
+                Codifica di base rispettando le forme e le informazioni lessicali, la punteggiatura e la sillabazione del documento, 
+                normalizzando il tutto per la codifica. 
+            </p>
+        </encodingDesc>
+        <revisionDesc>
             <change when="2018-12-05" resp="#CP #DB #CG">Creazione file e inizio liste relative alle cartoline n&#176;011, n&#176;016, n&#176;016.</change>
             <change when="2018-12-10" resp="#CP #DB #CG">Accorgimenti e modifiche delle liste relative alle cartoline n&#176;011, n&#176;016, n&#176;016.</change>
             <change when="2018-12-18" resp="#CP #DB #CG">Fine della creazione del file relativo alle liste alle cartoline n&#176;011, n&#176;016, n&#176;016.</change>

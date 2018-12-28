@@ -103,11 +103,11 @@
                                         <width>14</width>
                                     </dimensions>
                                     <!-- descrizione fisica dei timbri -->
-                                    <stamp type="postmark"> 
+                                    <stamp type="postmark" n="riquadro_20"> 
                                         Non è presente nessun timbro o francobollo sulla cartolina.
                                     </stamp>
                                     <!-- descrizione fisica del francobollo -->
-                                    <stamp type="postage">
+                                    <stamp type="postage" n="riquadro_20">
                                         Sulla cartolina non è stato applicato nessun francobollo, ma c'è soltanto la stampa rettangolare 
                                         (realizzata dalla tipografia che ha pubblicato la cartolina) che identifica dove il francobollo avrebbe dovuto essere applicato.
                                     </stamp>
@@ -242,20 +242,21 @@
                 <lb/>
                 <ab>
                     <s xml:id="ediz-20" facs="#ediz_20" rend="align(left)">Edizione propria</s>
+                    <lb/>
+                    <s xml:id="n31-20" facs="#n31_20">
+                        <choice>
+                            <abbr>N.</abbr>
+                            <expan>Numero</expan>
+                        </choice>
+                        <num type="cardinal">31</num>
+                    </s>
                     <s xml:id="sym-20" facs="#sym_20" rend="align(right)">
-                        <figure>
-                            <figDesc>
-                                Piccolo simbolo stampato in nero con scritto: 
-                                <mentioned>
-                                    <choice>
-                                        <abbr>AM</abbr>
-                                        <expan>
-                                            <persName ref="#pAM">A.Marzi</persName>
-                                        </expan>
-                                    </choice>
-                                </mentioned>
-                            </figDesc>
-                        </figure>
+                        <choice>
+                            <abbr>AM</abbr>
+                            <expan>
+                                <persName ref="#pAM">A.Marzi</persName>
+                            </expan>
+                        </choice>
                     </s>
                 </ab>
                 <lb />
@@ -284,13 +285,13 @@
                     <graphic url="fronte.jpg" />
                     <!-- Descrizione dell'immagine in linguaggio naturale -->
                     <figDesc>
-                        Sul fronte della cartolina è presente la riproduzione di un opera di Domenico Mastroianni. 
-                        Nell'immagine sono presenti tre figure, in primo piano al centro un uomo è seduto su del fieno e tiene tra le braccia un neonato, infine vediamo una donna che guarda il neonato sorridendo. 
-                        La metà inferiore dell'opera è occupata da mucchi di paglia su cui sono seduti l'uomo, 
-                        al centro, e la donna, più in alto. 
-                        Inoltre al di sotto dell'uomo sono appoggiati sulla paglia un piatto, un'anfora e una cesta contenente altri oggetti. 
-                        Dietro i mucchi di paglia si scorgono i tetti di alcune case e il cielo sereno. Nella parte bassa, a destra, è presente la firma dell'autore e il luogo: 
-                        
+                    Sul fronte della cartolina è presente la riproduzione di un opera di Domenico Mastroianni. 
+                    Nell'immagine sono presenti tre figure, in primo piano al centro un uomo è seduto su del fieno e tiene tra le braccia un neonato, infine vediamo una donna che guarda il neonato sorridendo. 
+                    La metà inferiore dell'opera è occupata da mucchi di paglia su cui sono seduti l'uomo, 
+                    al centro, e la donna, più in alto. 
+                    Inoltre al di sotto dell'uomo sono appoggiati sulla paglia un piatto, un'anfora e una cesta contenente altri oggetti. 
+                    Dietro i mucchi di paglia si scorgono i tetti di alcune case e il cielo sereno. Nella parte bassa, a destra, è presente la firma dell'autore e il luogo: 
+                    
                         <mentioned xml:id="firma-20" facs="#firma_20">
                             <persName ref="#pDM">D.Mastroianni</persName>
                             <placeName ref="#lRO">Roma</placeName>
@@ -322,48 +323,48 @@
                     <p>
                         <s>
                             <lb type="sameline" xml:id="lineText-2-020" facs="#lineText_2_020"/>
-                            Nè ieri, nè oggi ho ricevuto tuoi scritti.
+                        Nè ieri, nè oggi ho ricevuto tuoi scritti.
                         </s>
                         <s> Perché?</s>
                         <s>
                             <lb type="sameline" xml:id="lineText-3-020" facs="#lineText_3_020"/>
-                            Vuoi addolorare il tuo
+                        Vuoi addolorare il tuo
                             <persName ref="#pGO"> Giovannino</persName> lontano?.
                         </s>
                         <s>
-                            Ho
+                        Ho
                             <lb xml:id="lineText-4-020" facs="#lineText_4_020"/>
-                            già fatto mille supposizioni e congetture, mi auguro
+                        già fatto mille supposizioni e congetture, mi auguro
                             <lb type="sameline" xml:id="lineText-5-020" facs="#lineText_5_020"/>
-                            che la tua salute sia ottima.
+                        che la tua salute sia ottima.
                         </s>
                         <s>
-                            Vorrei correre a te
+                        Vorrei correre a te
                             <lb xml:id="lineText-6-020" facs="#lineText_6_020"/>
-                            volare sul tuo grembo adorato e carezzevolmente ba-
+                        volare sul tuo grembo adorato e carezzevolmente ba-
                             <lb xml:id="lineText-7-020" facs="#lineText_7_020"/>
-                            ciarti la fronte, i capelli, il volto in segno di devoto
+                        ciarti la fronte, i capelli, il volto in segno di devoto
                             <lb type="sameline" xml:id="lineText-8-020" facs="#lineText_8_020"/>
-                            affetto e d'amore sublime.
+                        affetto e d'amore sublime.
                         </s>
                         <s>
-                            Mi raccomando
+                        Mi raccomando
                             <lb xml:id="lineText-9-020" facs="#lineText_9_020"/>
-                            tanto tanto scrivimi lungamente e spiegami
+                        tanto tanto scrivimi lungamente e spiegami
                             <lb xml:id="lineText-10-020" facs="#lineText_10_020"/>
-                            la ragione del tuo silenzio.
+                        la ragione del tuo silenzio.
                         </s>
                     </p>
                     <closer>
                         <salute rend="align(center)">
                             <s>
                                 <lb type="sameline" xml:id="lineText-11-020" facs="#lineText_11_020"/>
-                                Un bacio immenso, infinito
+                            Un bacio immenso, infinito
                             </s>
                         </salute>
                         <signed>
                             <s>
-                                tuo 
+                            tuo 
                                 <lb xml:id="lineText-12-020" facs="#lineText_12_020"/>
                                 <persName ref="#pGO" rend="underline align(right)">Giovannino</persName>
                             </s>
@@ -375,7 +376,7 @@
                         <add cert="medium">
                             <num type="cardinal" value="20">
                                 <ptr target="#note_1"/>
-                                20
+                            20
                             </num>
                         </add>
                     </ab>

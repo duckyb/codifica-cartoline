@@ -1,6 +1,6 @@
 # da aggiungere a list.xml
 ## CARTOLINA 011
-    -- abbr - expan data /918 -------FATTO
+    -- abbr c 
 
 ## CARTOLINA 016
     - abbr - expan gent.me ------FATTO

@@ -10,8 +10,10 @@
             <head>
                 <!-- head -->
                 <link rel="icon" href="./static/sparkles.ico" />
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Playfair+Display:400,700,900|  :300,400" rel="stylesheet"/>
                 <link rel="stylesheet" href="style.css" type="text/css"/>
+                <script src="jquery-3.3.1.min.js" type="text/javascript"/>
                 <script src="main.js" type="text/javascript"/>
                 <title>Cartoline</title>
             </head>
@@ -26,16 +28,24 @@
                 </div>
                 <!-- contenuti cartoline -->
                 <xsl:for-each select="tei:TEI">
+                    <xsl:variable name="teiid" select="@xml:id"/>
                     <xsl:comment>inizio cartolina</xsl:comment>
-                    <xsl:apply-templates select="tei:teiHeader"/>
                     <!-- immagine retro e scan -->
-                    <section>
+                    <section id="{$teiid}" class="content_postcard">
                         <h4 class="sectionTitle">
                             <xsl:value-of select="./tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
                         </h4>
                         <div class="postcardWrapper">
                             <!-- immagine scan -->
+                            <div class="filterbar">
+                                <div class="sez1"><i class="material-icons">&#xe56b;</i></div>
+                                <div class="sez2"><i class="material-icons">&#xe56b;</i></div>
+                                <div class="sez3">
+                                    <p>Info Francobolli e Illiutrazione</p>
+                                </div>
+                            </div>
                             <xsl:apply-templates select="tei:facsimile"/>
+                            <div class="toolbar" />
                         </div>
                         <div class="postcardWrapper">
                             <div class="digital">
@@ -78,13 +88,13 @@
                                         <span class="label">Testo tipografico sul retro:</span>
                                     </p>
                                 </xsl:if>
-                                <xsl:for-each select=".//tei:front//tei:s|.//tei:front//tei:num">
+                                <xsl:for-each select=".//tei:front//tei:s">
                                     <p class="tipografia">
                                         >
                                         <xsl:for-each select="text()|*">
                                             <xsl:choose>
-                                                <xsl:when test="self::tei:figure">
-                                                    <xsl:value-of select=".//tei:abbr"/>
+                                                <xsl:when test="self::tei:choice">
+                                                    <xsl:value-of select="tei:abbr"/>
                                                 </xsl:when>
                                                 <xsl:when test="self::text()|self::*">
                                                     <xsl:value-of select="."/>
@@ -131,7 +141,7 @@
     <xsl:template match="tei:TEI">
         <xsl:variable name="id" select="./@xml:id"/>
         <div class="contentFronte">
-            <a href="#">
+            <a href="#{$id}">
                 <div class="selection" style="background-image: url('./static/{$id}/fronte.jpg')"></div>
                 <h4 class="col3">
                     <xsl:value-of select="./tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:title"/>
@@ -139,6 +149,40 @@
             </a>
         </div>
     </xsl:template>
+
+    <!-- ******  POSTMARK ****** -->
+    <xsl:template match="tei:teiHeader//tei:support/tei:stamp[@type='postmark']">
+        <xsl:variable name="postid" select="count(preceding::tei:stamp)+1"/>
+        <xsl:variable name="postclass" select="@n"/>
+        <div class="tt_postmark">
+            <p class="desc {$postclass}" id="postmark{$postid}">
+                <xsl:value-of select="."/>
+            </p>
+        </div>
+    </xsl:template>
+
+    <!-- ******  POSTAGE ****** -->
+    <xsl:template match="tei:teiHeader//tei:support/tei:stamp[@type='postage']">
+        <xsl:variable name="postageid" select="count(preceding::tei:stamp)+1"/>
+        <xsl:variable name="postageclass" select="@n"/>
+        <div class="tt_postage">
+         <p class="desc {$postageclass}" id="postage{$postageid}">
+                <xsl:value-of select="."/>
+            </p>
+        </div>
+    </xsl:template>
+
+    <!-- FIGDESC -->
+    <xsl:template match="tei:text//tei:div[@type='recto']/tei:figure//tei:figDesc">
+        <xsl:variable name="figdescid" select="count(preceding::tei:figDesc)+1"/>
+        <div class="tt_figdesc">
+            <p class="desc fronte{$figdescid}">
+             <span class="label">Descrizione dell'immagine:</span>            
+             <xsl:value-of select="."/>
+            </p>
+        </div>
+    </xsl:template>
+
     <!-- ******  HEADER ****** -->
     <!-- ****** DIV FACSIMILIE ****** -->
     <xsl:template match="tei:facsimile">
@@ -162,19 +206,20 @@
                             <xsl:variable name="pointy" select="@uly"/>
                             <xsl:variable name="widthr" select="@lrx - @ulx"/>
                             <xsl:variable name="heightr" select="@lry - @uly"/>
-                            <rect x="{$pointx}" y="{$pointy}" height="{$heightr}" width="{$widthr}" class="{$zonetype}"/>
+                            <rect x="{$pointx}" y="{$pointy}" height="{$heightr}" width="{$widthr}" class="{$zonetype}" id="{$zoneID}"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:for-each>
             </svg>
         </div>
         <div class="fronteWrapper">
-            <img class="fronte" src="./static/{$id}/fronte.jpg" title="{$id}" />
-            <!-- descrizione immagine linguaggio naturale -->
-            <!-- <p class="tipografia">
-                <span class="label">Descrizione dell'immagine:</span>            
-                <xsl:value-of select="../tei:text//tei:div[@type='recto']/tei:figure//tei:figDesc"/>
-            </p> -->
+            <xsl:variable name="figdescid" select="count(preceding::tei:figDesc)+1"/>
+            <img class="fronte" src="./static/{$id}/fronte.jpg" title="{$id}" id="fronte{$figdescid}"/>
+            <div class="content_tooltip">
+                <xsl:apply-templates select="../tei:teiHeader//tei:support/tei:stamp[@type='postmark']" />
+                <xsl:apply-templates select="../tei:teiHeader//tei:support/tei:stamp[@type='postage']" />
+                <xsl:apply-templates select="../tei:text//tei:div[@type='recto']/tei:figure//tei:figDesc" />
+            </div>
         </div>
     </xsl:template>
     <!-- ****** FINE DIV FACSIMILIE ****** -->
@@ -228,6 +273,7 @@
             <xsl:value-of select="$pn/following-sibling::tei:persName/following-sibling::text()"/>
             <xsl:value-of select="./following-sibling::tei:country"/>
             <xsl:value-of select="./following-sibling::tei:country/following-sibling::text()"/>
+            <xsl:value-of select="./following-sibling::tei:unclear"/>
             <xsl:if test="@type='sameline'">
                 <xsl:value-of select="../following-sibling::*[1]/text()"/>
             </xsl:if>

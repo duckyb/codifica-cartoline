@@ -103,16 +103,16 @@
                                         <width>14</width>
                                     </dimensions>
                                     <!-- descrizione fisica dei 2 timbri -->
-                                    <stamp type="postmark"> 
+                                    <stamp type="postmark" n="stamp_left_011"> 
                                         Il timbro sinistro è parzialmente tagliato superiormente.
                                         È solo parzialmente leggibile a causa delle sbavature d'inchiostro.
                                     </stamp>
-                                    <stamp type="postmark">
+                                    <stamp type="postmark" n="stamp_right_011">
                                         Il timbro destro è interamente contenuto sul supporto cartaceo, ma è
                                         solo parzialmente leggibile a causa di sbavature d'inchiostro.
                                     </stamp>
                                     <!-- descrizione fisica del francobollo -->
-                                    <stamp type="postage">
+                                    <stamp type="postage" n="stamp_right_011">
                                          Francobollo di forma rettangolare color rosso e capovolto, parzialmente coperto dall'annullo postale.
                                     </stamp>
                                     <!-- descrizione fisica della cartolina -->
@@ -297,10 +297,13 @@
                         </s>
                     </p>
                     <!--saluto finale e firma-->
-                    <p xml:id="line-vertical-hw-011" facs="#line_vertical_hw_011">
+                    <p>
                         <!-- Testo ruotato 90° -->
-                        <s rend="writing-mode(vertical-rl) text-orientation(sideways) overwrite">Mi raccomando quella sola 
-                            <unclear reason="illegible" agent="ink" cert="medium">XO</unclear>
+
+                        <s rend="writing-mode(vertical-rl) text-orientation(sideways) overwrite">
+                            <lb xml:id="line-vertical-hw-011" facs="#line_vertical_hw_011"/>
+                            Mi raccomando quella sola 
+                            <unclear reason="illegible" agent="ink" cert="medium"> XO</unclear>
                         </s>
                     </p>
                     <closer rend="align(right)">

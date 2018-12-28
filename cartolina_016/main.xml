@@ -98,15 +98,15 @@
                                         <width>14</width>
                                     </dimensions>
                                     <!-- descrizione fisica dei timbri -->
-                                    <stamp type="postmark"> 
+                                    <stamp type="postmark" n="stamp_016"> 
                                         Sul retro, nella metà destra della cartolina, è presente un timbro circolare. 
                                     </stamp>
-                                    <stamp type="postmark">
+                                    <stamp type="postmark" n="">
                                         Sul fronte, in alto a destra, sono presenti due presunti timbri circolari:
                                         il primo più in alto, parzialmente visibile per 1/4; il secondo, leggermente sotto il primo, totalmente illeggibile.
                                     </stamp>
                                     <!-- descrizione fisica del francobollo -->
-                                    <stamp type="postage"> 
+                                    <stamp type="postage" n="stamp_016"> 
                                          Francobollo di forma rettangolare color verde scuro, parzialmente coperto dall'annullo postale.
                                     </stamp>
                                     <!-- descrizione fisica della cartolina -->
