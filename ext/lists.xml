@@ -26,8 +26,7 @@
                 <!--Referente scientifico-->
                 <respStmt>
                     <resp>Compilatore</resp>
-                    <persName ref="#pTC">Tommaso Castagneto</persName>
-                    <!-- <name xml:id="XZ1">chi interviene sulla schedatura</name> -->
+                    <persName ref="#pTC"> Tommaso Castagneto</persName>
                 </respStmt>
                 <!--responsabile scientifico-->
                 <respStmt>
@@ -68,7 +67,7 @@
             </publicationStmt>
             <notesStmt>
                 <note xml:id="note_1" resp="#CP #DB #CG">
-                        Si deduce che questo numero possa essere stato aggiunto in seguito alla scrittura della  da un soggetto differente dall'autore, probabilmente per soddisfare un criterio di catalogazione. Basti guardare l'evidente differenza di stile tra la calligrafia dall'autore e il carattere della presenuta aggiunta.
+                    Si deduce che questo numero possa essere stato aggiunto in seguito alla scrittura della  da un soggetto differente dall'autore, probabilmente per soddisfare un criterio di catalogazione. Basti guardare l'evidente differenza di stile tra la calligrafia dall'autore e il carattere della presenuta aggiunta.
                 </note>
             </notesStmt>
             <sourceDesc>
@@ -87,7 +86,7 @@
                     <person xml:id="pGP" >
                         <persName>
                             <forename>Giacomo</forename>
-                            <surname>Paolocchi</surname>
+                            <surname>Paolicchi</surname>
                         </persName>
                         <sex>M</sex>
                         <note>Responsabile scientifico della cartolina</note>

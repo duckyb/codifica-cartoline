@@ -31,7 +31,6 @@
                 <respStmt>
                     <resp>Compilatore</resp>
                     <persName ref="#pTC">Tommaso Castagneto</persName>
-                    <!-- <name xml:id="XZ1">chi interviene sulla schedatura</name> -->
                 </respStmt>
                 <!--responsabile scientifico-->
                 <respStmt>
@@ -197,7 +196,7 @@
             <!-- Milano 22-3 -->
             <zone type="handWriting" xml:id="lineText_4_016" start="#lineText-4-016" points = " 16,383 60,386 75,534 196,536 163,717 84,729 73,830 115,854 116,1045 36,1080 " />
             <!-- 16 -->
-            <zone type="handWriting" xml:id="number16_016" start="#number16-016" points = " 1184,38 1145,98 1185,117 1245,110 1233,34 " />
+            <zone type="catalog" xml:id="number16_016" start="#number16-016" points = " 1184,38 1145,98 1185,117 1245,110 1233,34 " />
             <!-- stamp & postmark -->
             <zone type="postage" xml:id="stamp_016" start="#note_1_016" points = " 1380,2 1301,36 1288,165 1317,341 1491,356 1635,262 1645,133 1576,1 " />
             <!-- Gent.me Signorine -->

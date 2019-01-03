@@ -30,7 +30,6 @@
                 <respStmt>
                     <resp>Compilatore</resp>
                     <persName ref="#pTC">Tommaso Castagneto</persName>
-                    <!-- <name xml:id="XZ1">chi interviene sulla schedatura</name> -->
                 </respStmt>
                 <!--responsabile scientifico-->
                 <respStmt>
@@ -196,10 +195,12 @@
             <zone type="handWriting" xml:id="lineText_4_011" start="#lineText-4" points="75,623 124,585 227,597 252,567 274,570 276,592 496,590 530,555 567,561 534,608 612,596 702,553 721,606 668,652 453,675 87,657" />
             <zone type="handWriting" xml:id="lineText_5_011" start="#lineText-5" points="66,726 162,670 214,684 203,722 315,724 340,686 366,687 365,721 478,711 516,680 683,670 805,684 850,688 884,658 909,678 823,768 547,763 224,782 87,782" />
             <zone type="handWriting" xml:id="lineText_6_011" start="#lineText-6" points="68,792 139,768 166,802 243,799 266,785 451,768 601,765 779,780 876,772 804,872 361,863 186,876 0,913 0,858" />
-            <zone type="handWriting" xml:id="lineText_7_011" start="#lineText-7" points="168,959 160,910 236,878 316,872 399,903 648,898 802,936 744,972 499,960" />
-            <zone type="handWriting" xml:id="lineText_8_011" start="#lineText-8" points="87,1053 90,1031 314,958 526,999 597,958 623,961 573,1001 710,1009 782,988 888,996 839,1053" />
             <!-- Vertical hand-writing -->
             <zone type="handWriting" xml:id="line_vertical_hw_011" start="#line-vertical-hw-011" ulx="44" uly="22" lrx="69" lry="747" />
+            <!-- tuo amico -->
+            <zone type="handWriting" xml:id="lineText_7_011" start="#lineText-7" points="168,959 160,910 236,878 316,872 399,903 648,898 802,936 744,972 499,960" />
+            <!-- Giulio Fantoni -->
+            <zone type="handWriting" xml:id="lineText_8_011" start="#lineText-8" points="87,1053 90,1031 314,958 526,999 597,958 623,961 573,1001 710,1009 782,988 888,996 839,1053" />
             <!-- Vertical stamp-writing -->
             <zone type="print" xml:id="line_vertical_sw_011" start="#line-vertical-sw-011" ulx="24" uly="283" lrx="48" lry="772" />
             <!-- 1006 -->
@@ -212,7 +213,7 @@
             <zone type="handWriting" xml:id="lineDest_5_011" start="#lineDest-5" points="880,846 936,795 1107,778 1118,797 1101,817 1263,806 1372,811 1507,791 1554,817 1533,857 1295,882 1156,886 888,864" />
             <zone type="handWriting" xml:id="lineDest_6_011" start="#lineDest-6" points="1013,985 1021,934 1140,888 1285,856 1286,869 1200,922 1336,929 1308,885 1359,879 1406,903 1533,863 1552,873 1494,925 1596,918 1627,929 1627,983 1490,974 1392,1001 1359,973 1134,980 1100,996 1041,1002" />
             <!-- 11 -->
-            <zone type="handWriting" xml:id="number11_011" start="#number11-011" points="1465,470 1492,422 1545,413 1557,480 1496,492" />
+            <zone type="catalog" xml:id="number11_011" start="#number11-011" points="1465,470 1492,422 1545,413 1557,480 1496,492" />
             <!-- timbro SX -->
             <zone type="postage" xml:id="stamp_left_011" start="#stamp-left" points="817,1 770,79 769,176 827,267 934,313 1044,281 1109,201 1115,101 1067,3" />
             <!-- timbro DX e francobollo-->

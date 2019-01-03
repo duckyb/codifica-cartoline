@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
-  padding-bottom: 50px;
+  color: #111;
 }
 
 a {
@@ -76,18 +76,19 @@ section {
 .overlayPath polygon,
 .overlayPath rect {
     stroke-width: 3px;
-    transition: fill .2s linear;
-    opacity: .5;
+    transition: all .2s linear;
+    fill-opacity: .5;
 }
 .overlayPath polygon,
 .overlayPath rect {
     fill: transparent;
 }
 
-.overlayPath polygon:hover,
+/* .overlayPath polygon:hover,
 .overlayPath rect:hover {
-    fill:#FF4136;
-}
+    stroke: #FF4136;
+    fill: #FF4136;
+} */
 
 h1 {
   font-family: 'Playfair Display', serif;
@@ -184,9 +185,8 @@ img.fronte {
   margin: 0;
   border-bottom: 1px dashed #7FDBFF;
   border-left: 2px solid #0074D9;
-  background-color: #fff;
   min-height: 19px;
-  color: #111;
+  transition: all .2s linear;
 }
 
 .tipografia {
@@ -279,6 +279,9 @@ img.fronte {
   padding: 20px;
   box-sizing: border-box;
 }
+.postage, img.fronte, .print{
+  cursor: pointer;
+}
 
 .desc{
   font-family: "Playfair Display", serif;
@@ -296,12 +299,23 @@ img.fronte {
     color: #fff;
     z-index: 0;
 }
+.sez3 h3{
+  color: #333;
+  font-family: "Playfair Display", serif;
+  font-size: 1em;
+  margin: 0;
+  margin-left: 15px;
+}
 .sez1, .sez2 {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding-left: 10px;
 }
+
+.sez1 *, .sez2 * {
+  margin-left: 5px;  
+}
+
 .filterbar .sez1 {
     width: calc(1651px/3);
     height: 30px;
@@ -321,4 +335,75 @@ img.fronte {
     width: calc(1651px/1.5);
     /* background: #111;
     opacity: .5; */
+}
+footer{
+  font-family: "Lato", serif;
+  background: #525d66;
+  margin-top: 100px;
+  width:100%;
+  overflow: hidden;
+  position: relative;
+  bottom: 0;
+  color: #fff;
+}
+
+div.info_list{
+  width: 30%;
+  float: left;
+  font-size: 0.8em;
+}
+.info_list i{
+  width: 12px;
+}
+span.span_info{
+  position: relative;
+  left: 20px;
+}
+div.info_list p{
+  margin: 0;
+  position: relative;
+  left: 10px;
+}
+
+.vl {
+  border-left: 2px solid #fff;
+  position: relative;
+  top: 15px;
+  height: 110px;
+  width: 1px;
+  margin: 0 10px;
+  float: left;
+}
+
+#title_info span.span_info {
+  display: block;
+}
+img.icon{
+  width: 25px;
+  margin-left: 2px;
+}
+.section_footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.section_footer p{
+  align-items: center;
+}
+.pers_role{
+  font-weight: 900;
+  margin-right: 5px;
+}
+.pers_name, .pers_role{
+  bottom: 8px;
+}
+.pers_name{
+  padding-right: 10px;  
+}
+.info_list{
+  margin-left:10px; 
+}
+
+#title_info .pers_name{
+  bottom: 0;
 }

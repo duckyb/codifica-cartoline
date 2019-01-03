@@ -38,14 +38,28 @@
                         <div class="postcardWrapper">
                             <!-- immagine scan -->
                             <div class="filterbar">
-                                <div class="sez1"><i class="material-icons">&#xe56b;</i></div>
-                                <div class="sez2"><i class="material-icons">&#xe56b;</i></div>
+                                <div class="sez1">
+                                    <a href="static/{$teiid}/retro.jpg" target="_blank">
+                                        <i class="material-icons {$teiid}">&#xe56b;</i>
+                                    </a>
+                                    <span>Filtri</span>
+                                    <button class="btn-hand">HandWriting</button>
+                                    <button class="btn-typo">Typographic</button> 
+                                    <button class="btn-stmp">Stamps</button>
+                                    <button class="btn-clr">Clear</button>
+                                </div>
+                                <div class="sez2">
+                                    <a href="static/{$teiid}/fronte.jpg" target="_blank">
+                                        <i class="material-icons {$teiid}">&#xe56b;</i>
+                                    </a>        
+                                </div>
                                 <div class="sez3">
-                                    <p>Info Francobolli e Illiutrazione</p>
+                                    <h3>Info Francobolli, Timbri e Illutrazione</h3>
                                 </div>
                             </div>
+                            
                             <xsl:apply-templates select="tei:facsimile"/>
-                            <div class="toolbar" />
+                            <!-- <div class="toolbar" /> -->
                         </div>
                         <div class="postcardWrapper">
                             <div class="digital">
@@ -114,8 +128,24 @@
                     </section>
                 </xsl:for-each>
                 <footer class="footerStyle">
-                    <xsl:if test="tei:teiHeader[@xml:id='corpusHeader']//tei:editionStmt/tei:respStmt/tei:respStmt[tei:resp[not(contains(., 'Codificato da:'))]]">
-                        <xsl:message>trovato!</xsl:message>
+                    <xsl:if test="tei:teiHeader[@xml:id='corpusHeader']">
+                        <div id="publication_info" class="info_list">
+                            <h3>Informazioni di pubblicazione e distribuzione:</h3>
+                            <xsl:apply-templates select="tei:teiHeader[@xml:id='corpusHeader']//tei:publicationStmt"/>
+                        </div>
+                        <div class="vl"></div>
+                        <div id="edition_info" class="info_list">
+                            <h3>Responsabili di edizione:</h3>
+                            <xsl:if test="tei:teiHeader[@xml:id='corpusHeader']//tei:editionStmt//tei:respStmt[position() > 1]">
+                                <xsl:apply-templates select="tei:teiHeader[@xml:id='corpusHeader']//tei:editionStmt//tei:respStmt" />
+                            </xsl:if>
+                        </div>
+                        <div class="vl"></div>
+                        
+                        <div id="title_info" class="info_list">
+                            <h3>Responsabili     di codifica:</h3>
+                            <xsl:apply-templates select="tei:teiHeader[@xml:id='corpusHeader']//tei:persName[@type='person']"/>
+                        </div>
                     </xsl:if>
                 </footer>
             </body>
@@ -253,7 +283,6 @@
                 </xsl:choose>
             </p>
         </xsl:for-each>
-        <!-- <xsl:apply-templates select="../../tei:dateline"/> -->
     </xsl:template>
     <!-- TEMPLATE DATELINE -->
     <xsl:template match="tei:div[@type='message']//tei:dateline">
@@ -307,6 +336,59 @@
     <xsl:template match="tei:editionStmt">
         <xsl:value-of select="tei:respStmt[tei:resp[not(contains(., 'Codificato da'))]]"/>        
     </xsl:template> -->
+    <xsl:template match="tei:teiHeader[@xml:id='corpusHeader']//tei:publicationStmt">
+        <div class="section_footer">
+            <i class="material-icons">account_balance</i>
+            <p id="location_unipi" class="location">
+                <span id="abbr" class="span_info">
+                    <xsl:value-of select="tei:publisher//tei:abbr"/> -
+                </span>
+                <span id="expan" class="span_info">
+                    <xsl:value-of select="tei:publisher//tei:expan"/>
+                </span>
+            </p>
+        </div>
+        <div class="section_footer">
+            <i class="material-icons">edit_location</i>
+            <p id="location_labcd" class="location">
+                <span id="abbr" class="span_info">
+                    <xsl:value-of select="tei:distributor//tei:abbr"/> - 
+                </span>
+                <span id="expan" class="span_info">
+                    <xsl:value-of select="tei:distributor//tei:expan"/>
+                </span>
+            </p>
+        </div>
+    </xsl:template>
+    <xsl:template match="tei:teiHeader[@xml:id='corpusHeader']//tei:editionStmt//tei:respStmt[not(contains(tei:resp, 'Codificato da:'))]">     
+        <div class="section_footer">
+            <p>
+                <i class="material-icons">assignment</i>
+                <span class="pers_role span_info">
+                    <xsl:value-of select="tei:resp"/>:
+                </span>
+                <xsl:for-each select="tei:persName">
+                    <span class="pers_name span_info">
+                        <xsl:value-of select="."/>
+                    </span>
+                </xsl:for-each>
+            </p> 
+        </div>
+    </xsl:template>
+
+    <xsl:template match="tei:teiHeader[@xml:id='corpusHeader']//tei:persName[@type='person']">
+        <div class="section_footer">
+            <i class="material-icons">person</i>
+            <p>
+                <xsl:for-each select=".">
+                    <span class="pers_name span_info">
+                        <xsl:value-of select="."/>
+                    </span>
+                </xsl:for-each>
+            </p>
+        </div>
+        
+    </xsl:template>
 
     <xsl:template match="text()|@*"></xsl:template>
 </xsl:stylesheet>
