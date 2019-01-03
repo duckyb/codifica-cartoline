@@ -38,7 +38,7 @@ $(document).ready(function () {
 
     for (let i = 0; i < btnHand.length; i++) {
         // filtro: mostra handwriting
-        btnHand[i].onclick = e => {
+        btnHand[i].onclick = function (e) {
             let zone = cartoline[i].getElementsByClassName("handWriting")
             for (let i = 0; i < zone.length; i++) {
                 zone[i].style = highlight
@@ -48,7 +48,7 @@ $(document).ready(function () {
 
     for (let i = 0; i < btnStmp.length; i++) {
         // filtro: mostra timbri
-        btnStmp[i].onclick = e => {
+        btnStmp[i].onclick = function (e) {
             let zone = cartoline[i].getElementsByClassName("postage")
             for (let i = 0; i < zone.length; i++) {
                 zone[i].style = blueHighlight
@@ -58,7 +58,7 @@ $(document).ready(function () {
 
     for (let i = 0; i < btnTypo.length; i++) {
         // filtro: mostra typography
-        btnTypo[i].onclick = e => {
+        btnTypo[i].onclick = function (e) {
             let zone = cartoline[i].getElementsByClassName("print")
             if (!zone) {
                 btnTypo[i].style = 'display: none'
@@ -76,11 +76,11 @@ $(document).ready(function () {
 
     for (let i = 0; i < manoscritti.length; i++) {
         // dai paragrafi coloro paragrafi e zone
-        manoscritti[i].onmouseenter = e => {
+        manoscritti[i].onmouseenter = function (e) {
             e.target.style = highlight
             zoneManoscr[i].style = highlight
         }
-        manoscritti[i].onmouseleave = e => {
+        manoscritti[i].onmouseleave = function (e) {
             e.target.style = remHighlight
             zoneManoscr[i].style = remHighlight
         }
@@ -88,11 +88,11 @@ $(document).ready(function () {
 
     for (let i = 0; i < zoneManoscr.length; i++) {
         // dalle zone coloro paragrafi e zone
-        zoneManoscr[i].onmouseenter = e => {
+        zoneManoscr[i].onmouseenter = function (e) {
             e.target.style = highlight
             manoscritti[i].style = highlight
         }
-        zoneManoscr[i].onmouseleave = e => {
+        zoneManoscr[i].onmouseleave = function (e) {
             e.target.style = remHighlight
             manoscritti[i].style = remHighlight
         }
@@ -100,11 +100,11 @@ $(document).ready(function () {
 
     for (let i = 0; i < typography.length; i++) {
         // coloro di giallo typography
-        typography[i].onmouseenter = e => {
+        typography[i].onmouseenter = function (e) {
             e.target.style = yellowHighlight
         }
         // rimuovo giallo da typography
-        typography[i].onmouseleave = e => {
+        typography[i].onmouseleave = function (e) {
             e.target.style = remHighlight
         }
     }
@@ -114,16 +114,16 @@ $(document).ready(function () {
         // visualizza testo descrittivo cliccando
         postagemark[i].onclick = par_show;
         // attiva/disattiva colore al passaggio del mouse
-        postagemark[i].onmouseenter = e => {
+        postagemark[i].onmouseenter = function (e) {
             e.target.style = blueHighlight
         }
-        postagemark[i].onmouseleave = e => {
+        postagemark[i].onmouseleave = function (e) {
             e.target.style = remHighlight
         }
     }
 });
 
-clearZones = () => {
+function clearZones() {
     // nascondi tutte le aree colorate dalla pagina
     let zones = document.querySelectorAll('.postage, .print, .handwriting')
     for (let i = 0; i < zones.length; i++) {
