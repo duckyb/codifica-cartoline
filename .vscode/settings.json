@@ -1,5 +1,6 @@
 {
   "editor.tabSize": 4,
   "editor.formatOnSave": true,
-  "git.postCommitCommand": "push"
+  "git.postCommitCommand": "push",
+  "diffEditor.originalEditable": true,
 }

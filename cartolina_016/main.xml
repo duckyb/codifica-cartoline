@@ -3,25 +3,31 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartolina_016">
     <teiHeader>
         <fileDesc>
+            <!-- Info titolo edizione digitale e responsabilità del contenuto  -->
             <titleStmt>
                 <title xml:lang="ita">Mario Ginevra Nino, a Antonietta e Oliva, Milano, 22 Marzo 1913</title>
                 <respStmt>
+                    <!-- trascrittori -->
                     <resp>Trascrizione a cura di</resp>
                     <persName ref="#GC">Giacomo Cerretini</persName>
                     <persName ref="#DB">Duccio Breschi</persName>
                     <persName ref="#CP">Camilla Poggianti</persName>
                 </respStmt>
                 <respStmt>
+                    <!-- ente di appartenenza -->
                     <resp>Ente di Appartenenza</resp>
                     <name type="comune" ref="#lSP">Comune della Spezia</name>
                 </respStmt>
             </titleStmt>
+
+            <!-- Info riguardanti l'edizione -->
             <editionStmt>
                 <edition>Studenti di Codifica di Testi, Corso di Laurea Triennale di Informatica Umanistica, Università di Pisa
                     
                     <date when="2018-12">Dicembre 2018</date>
                 </edition>
                 <respStmt>
+                    <!-- compilatori -->
                     <resp>Codificato da</resp>
                     <persName ref="#CP">C.Poggianti</persName>
                     <persName ref="#DB">D.Breschi</persName>
@@ -44,6 +50,8 @@
                     <persName ref="#pER">E. Ratti</persName>
                 </respStmt>
             </editionStmt>
+
+            <!-- Info sulla pubblicazione e distribuzione del documento elettronico -->
             <publicationStmt>
                 <publisher ref="#oUNIPI">
                     <choice>
@@ -69,24 +77,32 @@
                     <addrLine>Pisa</addrLine>
                 </address>
             </publicationStmt>
+
+            <!-- Info sulla fonte originale da cui deriva il documento elettronico -->
             <sourceDesc>
                 <bibl type="postcard">
                     <title>La lezione</title>
                 </bibl>
                 <msDesc>
+                    <!-- descrizione del manoscritto -->
                     <msIdentifier>
+                        <!-- info per identificare il manoscritto -->
                         <country ref="#lIT">Italia</country>
                         <settlement ref="#lSP">La Spezia (SP)</settlement>
+                        <!-- collocazione specifica -->
                         <repository ref="#oMCE">Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
+                        <!-- codice identificativo -->
                         <idno type="postcard_id">7694_016_001/002</idno>
                     </msIdentifier>
                     <msContents>
+                        <!-- Info sul contenuto della cartolina -->
                         <summary>Cartolina Artistica</summary>
                         <msItem>
                             <textLang xml:id="lang_ITA" mainLang="ita">Italiano</textLang>
                         </msItem>
                     </msContents>
                     <physDesc>
+                        <!-- descrizione fisica del manoscritto -->
                         <objectDesc>
                             <supportDesc>
                                 <support>
@@ -129,7 +145,10 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+
+        <!-- Descrizione degli aspetti non bibliografici -->
         <profileDesc>
+            <!-- Descrizione delle azioni relative a un atto di corrispondenza -->
             <correspDesc>
                 <correspAction type="sent">
                     <persName ref="#pM">Mario</persName>
@@ -149,20 +168,27 @@
                     </location>
                 </correspAction>
             </correspDesc>
+
+            <!-- Info di classificazione del testo -->
             <textClass>
                 <keywords>
+                    <!--soggettario-->
                     <term>Cartolina</term>
+                    <!--tipologia-->
                     <term>Cartolina Artistica</term>
+                    <!--descrizione-->
                     <term>Lezione</term>
                     <term>Anziano</term>
                     <term>Bambina</term>
                 </keywords>
             </textClass>
+            <!-- Linguaggio usato nel testo -->
             <langUsage>
-                <!--language ref="lang_ITA">Italiano</language-->
                 <language ident="it-IT">Italiano</language>
             </langUsage>
         </profileDesc>
+
+        <!-- Descrizione della codifica -->
         <encodingDesc>
             <p>
                 Check sintattico con xmllint e validazione con schema RNG.
@@ -172,6 +198,8 @@
                 Con appositi attributi è stata specificata anche la resa grafica di alcuni elementi.
             </p>
         </encodingDesc>
+
+        <!-- Storia delle revisioni del documento digitale -->
         <revisionDesc>
             <change when="2018-11-28" resp="#CP #DB #CG">Inizio creazione teiHeader e bozza dati spedizione.</change>
             <change when="2018-12-03" resp="#CP #DB #CG">Fine teiHeader, realizzazione delle zone e facsimili, inizio codifica del retro della cartolina.</change>
@@ -180,12 +208,16 @@
             <change when="2018-12-17" resp="#CP #DB #CG">Codifica delle info stampate sulla cartolina</change>
             <change when="2018-12-18" resp="#CP #DB #CG">Correzione della codifica seguendo il modello fornito dal docente</change>
             <change when="2018-12-19" resp="#CP #DB #CG">Aggiunta di informazioni e riferimenti</change>
+            <change when="2018-12-23" resp="#CP #DB #CG">Piccole modifiche</change>
+            <change when="2019-01-04" resp="#CP #DB #CG">Aggiunta di commenti</change>
         </revisionDesc>
     </teiHeader>
-    <!-- ...................................... T E X T ...................................... -->
+
+    <!-- Rappresentazione digitale di una fonte con testo scritto espressa attraverso un insieme di immagini -->
     <facsimile>
-        <!-- zonazione retro della cartolina -->
+        <!-- Definizione della superficie di scrittura in termini di uno spazio espresso attraverso un sistema di coordinate -->
         <surface>
+            <!-- zonazione retro della cartolina -->
             <graphic xml:id="retro_postcard_016" url="retro.jpg" width="1651px" height="1081px" />
             <!-- auguri vivissimi e buone feste -->
             <zone type="handWriting" xml:id="lineText_1_016" start="#lineText-1-016" points = " 713,14 728,92 661,186 677,274 688,408 679,680 717,908 664,1026 612,1050 527,905 557,681 515,436 497,197 569,18" />
@@ -219,7 +251,9 @@
             <zone xml:id="subtitle_016" start="#subtitle-016" ulx="349" uly="1614" lrx="709" lry="1643" />
         </surface>
     </facsimile>
-    <text xml:lang="it">
+
+    <!-- testo -->
+    <text xml:lang="it" type="postcard">
         <body>
             <!-- ............ FRONTE | IMG | RECTO ............ -->
             <div type="recto" xml:id="front-postcard-016" facs="#front_postcard_016">
@@ -240,17 +274,18 @@
                             <gap reason="illegible" agent="tear" unit="chars" atLeast="1"/>
                         </mentioned>
                     </figDesc>
+                    <!-- titolo dell'immagine / della cartolina -->
                     <head>La lezione</head>
                 </figure>
-                <!-- Timbri -->
+                <!-- Timbri sul fronte della cartolina-->
                 <ab xml:id="stampFront-016" facs="#stampFront_016">
-                    <!-- Timbro.1 -->
+                    <!-- Timbro fronte 1-->
                     <stamp type="postmark">
                         <mentioned rend="circle">
                             <gap reason="illegible" agent="faded" unit="chars"/>
                         </mentioned>
                     </stamp>
-                    <!-- Timbro.2 -->
+                    <!-- Timbro fronte 2 -->
                     <stamp type="postmark">
                         <mentioned rend="circle">
                             <gap reason="illegible" agent="faded" unit="chars"/>
@@ -260,11 +295,9 @@
             </div>
             <!-- ............ RETRO | TEXT | VERSO ............ -->
             <div type="verso" xml:id="retro-postcard-016" facs="#retro_postcard_016">
-                <!-- (HR) verticale divisone tra messaggio e destinazione-->
-                <!-- (4*HR) orizzontale per descrizione destinazione-->
-                <!-- (HR) orizzontale per firma in zona destinazione-->
+                <!-- div per le info di stampa della cartolina -->
                 <div type="message">
-                    <!--luogo e data di scrittura della cartolina-->
+                    <!--contenuto del messaggio-->
                     <p>
                         <s>
                             <lb xml:id="lineText-1-016" facs="#lineText_1_016" rend="writing-mode(vertical-lr) text-orientation(sideways)" />
@@ -273,7 +306,9 @@
                             unitamente alla famiglia
                         </s>
                     </p>
+                    <!--saluto finale e firma-->
                     <closer>
+                        <!-- Firme dei mittenti -->
                         <signed xml:id="lineText-3-016" facs="#lineText_3_016" rend="writing-mode(vertical-lr) text-orientation(sideways)">
                             <s>
                                 <lb/>
@@ -282,6 +317,7 @@
                                 <persName ref="pN"> Nino</persName>
                             </s>
                         </signed>
+                        <!--luogo e data di scrittura della cartolina-->
                         <dateline xml:id="lineText-4-016" facs="#lineText_4_016" rend="writing-mode(vertical-lr) text-orientation(sideways)">
                             <lb />
                             <placeName ref="#lMI">Milano</placeName>
@@ -317,7 +353,6 @@
                     </div>
                     <div n="2">
                         <p>
-                            <!--address type="receiver"-->
                             <address>
                                 <!-- Righe della sezione: Destinatario -->
                                 <addrLine xml:id="lineDest-1-016" facs="#lineDest_1">

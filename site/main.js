@@ -12,28 +12,41 @@ $(document).ready(function () {
         }
     });
 
-    var typography = document.getElementsByClassName("print");
+    var typography = document.getElementsByClassName("print"); // testo stampato
+    var catalog = document.getElementsByClassName("catalog");
 
-    var manoscritti = document.getElementsByClassName("manoscritto"); // paragrafi
-    var zoneManoscr = document.getElementsByClassName("handWriting"); // zone
+    var manoscritti = document.getElementsByClassName("manoscritto"); // paragrafi manoscritti
+    var zoneManoscr = document.getElementsByClassName("handWriting"); // zone colorate
     // stili per aree cartolina
     var highlight = 'background: #FF4136; color: #fff; fill: #FF4136; stroke: #ff4136'
     var blueHighlight = 'background: #FF4136; color: #fff; fill: #0074D9; stroke: #0074D9;'
     var yellowHighlight = 'background: #FF4136; color: #fff; fill: #FFDC00; stroke: #FFDC00;'
+    var greenHighlight = 'background: #FF4136; color: #fff; fill: #2ECC40; stroke: #2ECC40;'
     var remHighlight = 'background: inherit; fill: transparent; color: inherit'
     // .filterbar buttons
-    var btnHand = document.getElementsByClassName("btn-hand")
-    var btnTypo = document.getElementsByClassName("btn-typo")
-    var btnStmp = document.getElementsByClassName("btn-stmp")
-    var btnClr = document.getElementsByClassName("btn-clr")
+    var btnHand = document.getElementsByClassName("btn-hand");
+    var btnTypo = document.getElementsByClassName("btn-typo");
+    var btnStmp = document.getElementsByClassName("btn-stmp");
+    var btnCata = document.getElementsByClassName("btn-cata");
+    var btnClr = document.getElementsByClassName("btn-clr");
 
     // sezioni delle cartoline
-    var cartoline = document.querySelectorAll('#cartolina_011, #cartolina_016, #cartolina_020')
+    var cartoline = document.querySelectorAll('#cartolina_011, #cartolina_016, #cartolina_020');
 
-    svgAreas = document.getElementsByClassName("overlayPath")
+    var svgAreas = document.getElementsByClassName("overlayPath");
     for (let i = 0; i < svgAreas.length; i++) {
         // quando il cursore entra nella cartolina rimuovi i colori
         svgAreas[i].onmouseenter = clearZones
+    }
+
+    for (let i = 0; i < btnCata.length; i++) {
+        //filtro: mostra numeri catalogazione
+        let zone = cartoline[i].getElementsByClassName("catalog")
+        btnCata[i].onclick = function (e) {
+            for (let i = 0; i < zone.length; i++) {
+                zone[i].style = greenHighlight
+            }
+        }
     }
 
     for (let i = 0; i < btnHand.length; i++) {
@@ -48,24 +61,30 @@ $(document).ready(function () {
 
     for (let i = 0; i < btnStmp.length; i++) {
         // filtro: mostra timbri
-        btnStmp[i].onclick = function (e) {
-            let zone = cartoline[i].getElementsByClassName("postage")
-            for (let i = 0; i < zone.length; i++) {
-                zone[i].style = blueHighlight
+        let zone = cartoline[i].getElementsByClassName("postage")
+        if (zone.length) {
+            btnStmp[i].onclick = function (e) {
+                for (let i = 0; i < zone.length; i++) {
+                    zone[i].style = blueHighlight
+                }
             }
+        } else {
+            // se non ci sono timbri disabilito il pulsante
+            btnStmp[i].disabled = true
         }
     }
 
     for (let i = 0; i < btnTypo.length; i++) {
         // filtro: mostra typography
-        btnTypo[i].onclick = function (e) {
-            let zone = cartoline[i].getElementsByClassName("print")
-            if (!zone) {
-                btnTypo[i].style = 'display: none'
+        let zone = cartoline[i].getElementsByClassName("print")
+        if (zone.length) {
+            btnTypo[i].onclick = function (e) {
+                for (let i = 0; i < zone.length; i++) {
+                    zone[i].style = yellowHighlight
+                }
             }
-            for (let i = 0; i < zone.length; i++) {
-                zone[i].style = yellowHighlight
-            }
+        } else {
+            btnTypo[i].disabled = true
         }
     }
 
@@ -109,11 +128,22 @@ $(document).ready(function () {
         }
     }
 
-    postagemark = document.querySelectorAll(".postage, .postmark, .fronte, #riquadro_20")
+    for (let i = 0; i < catalog.length; i++) {
+        // coloro di verde catalogazione
+        catalog[i].onmouseenter = function (e) {
+            e.target.style = greenHighlight
+        }
+        // rimuovo verde da catalogazione
+        catalog[i].onmouseleave = function (e) {
+            e.target.style = remHighlight
+        }
+    }
+
+    var postagemark = document.querySelectorAll(".postage, .postmark, .fronte")
     for (var i = 0; i < postagemark.length; i++) {
         // visualizza testo descrittivo cliccando
         postagemark[i].onclick = par_show;
-        // attiva/disattiva colore al passaggio del mouse
+        // attiva/disattiva colore blu al passaggio del mouse
         postagemark[i].onmouseenter = function (e) {
             e.target.style = blueHighlight
         }
@@ -121,11 +151,20 @@ $(document).ready(function () {
             e.target.style = remHighlight
         }
     }
+    // gestione eccezione per riquadro_20 che deve essere giallo
+    var riquadro_20 = document.getElementById("riquadro_20")
+    riquadro_20.onclick = par_show;
+    riquadro_20.onmouseenter = function (e) {
+        e.target.style = yellowHighlight;
+    }
+    riquadro_20.onmouseleave = function (e) {
+        e.target.style = remHighlight
+    }
 });
 
 function clearZones() {
     // nascondi tutte le aree colorate dalla pagina
-    let zones = document.querySelectorAll('.postage, .print, .handwriting')
+    let zones = document.querySelectorAll('.postage, .print, .handwriting, .catalog')
     for (let i = 0; i < zones.length; i++) {
         zones[i].style = 'background: inherit; fill: transparent; color: inherit'
     }

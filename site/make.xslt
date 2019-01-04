@@ -42,11 +42,11 @@
                                     <a href="static/{$teiid}/retro.jpg" target="_blank">
                                         <i class="material-icons {$teiid}">&#xe56b;</i>
                                     </a>
-                                    <span>Filtri</span>
-                                    <button class="btn-hand">HandWriting</button>
-                                    <button class="btn-typo">Typographic</button> 
-                                    <button class="btn-stmp">Stamps</button>
-                                    <button class="btn-clr">Clear</button>
+                                    <button class="btn-hand">Testo</button>
+                                    <button class="btn-typo">Tipografia</button> 
+                                    <button class="btn-stmp">Timbri|Francobolli</button>
+                                    <button class="btn-cata">Catalogazione</button>
+                                    <button class="btn-clr">Reset</button>
                                 </div>
                                 <div class="sez2">
                                     <a href="static/{$teiid}/fronte.jpg" target="_blank">
@@ -102,7 +102,7 @@
                                         <span class="label">Testo tipografico sul retro:</span>
                                     </p>
                                 </xsl:if>
-                                <xsl:for-each select=".//tei:front//tei:s">
+                                <xsl:for-each select=".//tei:front//tei:s|.//tei:front//tei:ab">
                                     <p class="tipografia">
                                         >
                                         <xsl:for-each select="text()|*">
@@ -111,6 +111,9 @@
                                                     <xsl:value-of select="tei:abbr"/>
                                                 </xsl:when>
                                                 <xsl:when test="self::text()|self::*">
+                                                    <xsl:value-of select="."/>
+                                                </xsl:when>
+                                                <xsl:when test="self::tei:num">
                                                     <xsl:value-of select="."/>
                                                 </xsl:when>
                                             </xsl:choose>

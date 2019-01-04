@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE teiCorpus SYSTEM "./teiCustom.dtd">
-<teiCorpus version="3.3.0" xmlns="http://www.tei-c.org/ns/1.0">
-    <!-- header for corpus -->
+<teiCorpus version="3.3.0" 
+    xmlns="http://www.tei-c.org/ns/1.0">
+    <!-- HEADER del corpus -->
+    <!-- meccanismo di inclusione del file lists.xml -->
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" xpointer="corpusHeader" href="./ext/lists.xml">
-        <xi:fallback>risorsa corpus header</xi:fallback>
+        <xi:fallback>risorsa corpus header mancante</xi:fallback>
     </xi:include>
-
+    <!-- meccanismo di inclusione dei vari file main.xml-->
     <!-- Cartolina 011 -->
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" xpointer="cartolina_011" href="./cartolina_011/main.xml">
         <xi:fallback>risorsa cartolina 1 mancante</xi:fallback>
